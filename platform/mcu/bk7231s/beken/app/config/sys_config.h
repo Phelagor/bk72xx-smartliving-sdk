@@ -106,7 +106,6 @@
 #define CFG_USE_DHCP                               1
 
 /*section 10-----patch*/
-#define CFG_BK7221_MDM_WATCHDOG_PATCH              0
 
 /*section 11-----temperature detect*/
 #define CFG_USE_TEMPERATURE_DETECT                 1

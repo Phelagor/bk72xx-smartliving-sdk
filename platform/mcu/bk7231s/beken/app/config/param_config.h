@@ -2,7 +2,9 @@
 #define _ARCH_CONFIG_H_
 
 #include "mac.h"
+#if (CFG_SUPPORT_ALIOS)
 #include "mac_config.h"
+#endif
 
 #define PARAM_CFG_DEBUG
 
@@ -16,11 +18,16 @@
 #define PARAM_CFG_FATAL    null_prf
 #endif
 
-#if 0
+#if (CFG_OS_FREERTOS)
 #define CONFIG_ROLE_NULL        0
 #define CONFIG_ROLE_AP          1
 #define CONFIG_ROLE_STA         2
 #define CONFIG_ROLE_COEXIST     3
+
+#define MAC_EFUSE                0
+#define MAC_ITEM                 1
+#define MAC_RF_OTP_FLASH         2
+#define WIFI_MAC_POS             MAC_RF_OTP_FLASH
 #endif
 
 #define DEFAULT_CHANNEL_AP   11
@@ -44,6 +51,7 @@ typedef struct ap_param
 {
     struct mac_addr bssid;
     struct mac_ssid ssid;
+	
     uint8_t chann;
     uint8_t cipher_suite;
     uint8_t key[65];
@@ -67,7 +75,7 @@ extern sta_param_t *g_sta_param_ptr;
 
 uint32_t cfg_param_init(void);
 
-#if 0
+#if (CFG_OS_FREERTOS)
 extern uint8_t system_mac[];
 
 void cfg_load_mac(u8 *mac);
