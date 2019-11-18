@@ -1,6 +1,8 @@
 #ifndef _BLE_API_H_
 #define _BLE_API_H_
 
+#define MAX_ADV_DATA_LEN           (0x1F)
+
 #define ABIT(n) (1 << n)
 
 #define BK_PERM_SET(access, right) \
@@ -8,16 +10,6 @@
 
 #define BK_PERM_GET(perm, access)\
     (((perm) & (access ## _MASK)) >> (access ## _POS))
-
-
-/// Attribute & Service access mode
-enum
-{
-    /// Disable access
-    BK_PERM_RIGHT_DISABLE   = 0,
-    /// Enable access
-    BK_PERM_RIGHT_ENABLE   = 1,
-};
 
 typedef enum
 {
@@ -119,6 +111,41 @@ typedef enum
     RI_POS           = 15,
 }bk_ext_perm_mask;
 
+/// Attribute & Service access mode
+enum
+{
+    /// Disable access
+    BK_PERM_RIGHT_DISABLE   = 0,
+    /// Enable access
+    BK_PERM_RIGHT_ENABLE   = 1,
+};
+
+/// Attribute & Service access rights
+enum
+{
+    /// No Authentication
+    BK_PERM_RIGHT_NO_AUTH  = 0,
+    /// Access Requires Unauthenticated link
+    BK_PERM_RIGHT_UNAUTH   = 1,
+    /// Access Requires Authenticated link
+    BK_PERM_RIGHT_AUTH     = 2,
+    /// Access Requires Secure Connection link
+    BK_PERM_RIGHT_SEC_CON  = 3,
+};
+
+/// Attribute & Service UUID Length
+enum
+{
+    /// 16  bits UUID
+    BK_PERM_RIGHT_UUID_16         = 0,
+    /// 32  bits UUID
+    BK_PERM_RIGHT_UUID_32         = 1,
+    /// 128 bits UUID
+    BK_PERM_RIGHT_UUID_128        = 2,
+    /// Invalid
+    BK_PERM_RIGHT_UUID_RFU        = 3,
+};
+
 
 typedef enum
 {
@@ -139,6 +166,7 @@ typedef enum
     ERR_WRITE_FAIL,
     ERR_REQ_RF,
     ERR_PROFILE,
+    ERR_CREATE_DB,
     ERR_CMD_NOT_SUPPORT,
     /* Add more BLE error code hereafter */
 } ble_err_t;
@@ -158,22 +186,22 @@ typedef enum
 
 typedef struct
 {
-    uint8  advData[MAX_ADV_DATA_LEN];
-    uint8  advDataLen;
-    uint8  respData[MAX_ADV_DATA_LEN];
-    uint8  respDataLen;
-    uint8  channel_map;
-    uint16 interval_min;
-    uint16 interval_max;
+    uint8_t  advData[MAX_ADV_DATA_LEN];
+    uint8_t  advDataLen;
+    uint8_t  respData[MAX_ADV_DATA_LEN];
+    uint8_t  respDataLen;
+    uint8_t  channel_map;
+    uint16_t interval_min;
+    uint16_t interval_max;
     /* Subject to add more hereafter in the future */
 } adv_info_t;
 
 typedef struct
 {
-    uint8  filter_en;
-    uint8  channel_map;
-    uint16 interval;
-    uint16 window;
+    uint8_t  filter_en;
+    uint8_t  channel_map;
+    uint16_t interval;
+    uint16_t window;
 } scan_info_t;
 
 typedef enum

@@ -7,8 +7,6 @@
 
 #define BLE_CMD_MAGIC              (0xe2a0000)
 
-#define MAX_ADV_DATA_LEN           (0x1F)
-
 enum
 {
     CMD_BLE_REG_INIT = BLE_CMD_MAGIC + 1,

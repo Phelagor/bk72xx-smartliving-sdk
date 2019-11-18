@@ -36,6 +36,11 @@ int32_t hal_timer_init(timer_dev_t *tim)
     }
 }
 
+int32_t hal_timer_start(timer_dev_t *tim)
+{
+    krhino_timer_start((ktimer_t **)&tim->priv);
+}
+
 void hal_timer_stop(timer_dev_t *tmr)
 {
     krhino_timer_stop(tmr->priv);

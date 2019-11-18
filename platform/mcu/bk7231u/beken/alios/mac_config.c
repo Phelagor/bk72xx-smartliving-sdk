@@ -7,7 +7,7 @@
 #define MAC_EFUSE           0
 #define MAC_ITEM            1
 #define MAC_RF_OTP_FLASH    2
-#define WIFI_MAC_POS        MAC_EFUSE
+#define WIFI_MAC_POS        MAC_ITEM
 
 #if ((CFG_SOC_NAME == SOC_BK7231) && (WIFI_MAC_POS == MAC_EFUSE))
 #error "BK7231 not support efuse!"
