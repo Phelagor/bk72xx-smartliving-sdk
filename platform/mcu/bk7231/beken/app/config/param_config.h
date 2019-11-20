@@ -2,7 +2,9 @@
 #define _ARCH_CONFIG_H_
 
 #include "mac.h"
+#if (CFG_SUPPORT_ALIOS)
 #include "mac_config.h"
+#endif
 
 #define PARAM_CFG_DEBUG
 
@@ -16,9 +18,7 @@
 #define PARAM_CFG_FATAL    null_prf
 #endif
 
-#define DEFAULT_CHANNEL_AP      11
-
-#if 0
+#if (CFG_OS_FREERTOS)
 #define CONFIG_ROLE_NULL        0
 #define CONFIG_ROLE_AP          1
 #define CONFIG_ROLE_STA         2
@@ -29,6 +29,8 @@
 #define MAC_RF_OTP_FLASH         2
 #define WIFI_MAC_POS             MAC_RF_OTP_FLASH
 #endif
+
+#define DEFAULT_CHANNEL_AP      11
 
 typedef struct fast_connect_param
 {
@@ -73,10 +75,11 @@ extern sta_param_t *g_sta_param_ptr;
 
 uint32_t cfg_param_init(void);
 
-#if 0
+#if (CFG_OS_FREERTOS)
 extern uint8_t system_mac[];
 
 void cfg_load_mac(u8 *mac);
+
 void wifi_get_mac_address(char *mac, u8 type);
 int wifi_set_mac_address(char *mac);
 int wifi_set_mac_address_to_efuse(UINT8 *mac);
@@ -85,5 +88,4 @@ int wifi_get_mac_address_from_efuse(UINT8 *mac);
 int wifi_write_efuse(UINT8 addr, UINT8 data);
 UINT8 wifi_read_efuse(UINT8 addr);
 #endif
-
 #endif
