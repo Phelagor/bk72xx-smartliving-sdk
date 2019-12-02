@@ -222,7 +222,7 @@ ais_err_t ble_send_indication(uint8_t *p_data, uint16_t length, void (*txdone)(u
 void ble_disconnect(uint8_t reason)
 {
     bk_printf("ble_disconnect\r\n");
-    appm_disconnect(0x13);
+    appm_disconnect();
 }
 
 ais_err_t ble_advertising_start(ais_adv_init_t *adv)

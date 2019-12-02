@@ -40,7 +40,7 @@ int32_t hal_pwm_stop(pwm_dev_t *pwm)
     UINT32 param;
 
     param = pwm->port;
-    ret = sddev_control(PWM_DEV_NAME, CMD_PWM_UINT_DISABLE, &param);
+    ret = sddev_control(PWM_DEV_NAME, CMD_PWM_UNIT_DISABLE, &param);
 
     return ret;
 }

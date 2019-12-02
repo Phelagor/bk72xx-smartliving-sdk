@@ -18,7 +18,7 @@
 #define PARAM_CFG_FATAL    null_prf
 #endif
 
-#if (CFG_OS_FREERTOS)
+#if (CFG_OS_FREERTOS) || (CFG_SUPPORT_RTT)
 #define CONFIG_ROLE_NULL        0
 #define CONFIG_ROLE_AP          1
 #define CONFIG_ROLE_STA         2
@@ -75,7 +75,7 @@ extern sta_param_t *g_sta_param_ptr;
 
 uint32_t cfg_param_init(void);
 
-#if (CFG_OS_FREERTOS)
+#if (CFG_OS_FREERTOS) || (CFG_SUPPORT_RTT)
 extern uint8_t system_mac[];
 
 void cfg_load_mac(u8 *mac);

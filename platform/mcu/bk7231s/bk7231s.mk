@@ -43,7 +43,8 @@ GLOBAL_INCLUDES +=  beken/alios/entry \
                     beken/func/uart_debug \
                     beken/driver/include \
                     beken/driver/common \
-                    beken/ip/common
+                    beken/ip/common \
+					config
 
 GLOBAL_LDFLAGS += -mcpu=arm968e-s           \
                   -march=armv5te            \

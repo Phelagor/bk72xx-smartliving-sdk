@@ -187,9 +187,13 @@ extern UINT32 power_save_get_rf_ps_dtim_time(void);
 /***************************************************************************/
 
 #if((0 == CFG_USE_BLE_PS) && (0 == CFG_USE_STA_PS))
+#define CHECK_NEED_WAKE_IF_STA_IN_SLEEP()
+#define CHECK_NEED_WAKE_IF_STA_IN_SLEEP_END()
 #define CHECK_OPERATE_RF_REG_IF_IN_SLEEP()
 #define CHECK_OPERATE_RF_REG_IF_IN_SLEEP_END()
 #elif (CFG_USE_BLE_PS && (0 == CFG_USE_STA_PS))
+#define CHECK_NEED_WAKE_IF_STA_IN_SLEEP()
+#define CHECK_NEED_WAKE_IF_STA_IN_SLEEP_END()
 #define CHECK_OPERATE_RF_REG_IF_IN_SLEEP()      CHECK_BLE_RF_IF_IN_SLEEP()
 #define CHECK_OPERATE_RF_REG_IF_IN_SLEEP_END()  CHECK_RF_REG_IF_IN_SLEEP_END()
 #elif ((1 == CFG_USE_STA_PS))

@@ -10,6 +10,7 @@ $(NAME)_COMPONENTS += protocols.net
 $(NAME)_COMPONENTS += platform/mcu/bk7231u/hal_init
 #$(NAME)_COMPONENTS += platform/mcu/bk7231u/beken
 #$(NAME)_COMPONENTS += platform/mcu/bk7231u/beken/ip
+#$(NAME)_COMPONENTS += platform/mcu/bk7231u/beken/driver/ble
 #$(NAME)_COMPONENTS += platform/mcu/bk7231u/beken/driver/ble/ble_lib
 $(NAME)_COMPONENTS += platform/mcu/bk7231u/beken/alios/entry
 $(NAME)_COMPONENTS += platform/mcu/bk7231u/aos/framework_runtime
@@ -44,7 +45,8 @@ GLOBAL_INCLUDES +=  beken/alios/entry \
                     beken/func/uart_debug \
                     beken/driver/include \
                     beken/driver/common \
-                    beken/ip/common
+                    beken/ip/common \
+					config
 
 GLOBAL_LDFLAGS += -mcpu=arm968e-s           \
                   -march=armv5te            \
@@ -90,6 +92,7 @@ $(NAME)_SOURCES += hal/breeze_hal/breeze_hal_sec.c
 
 $(NAME)_PREBUILT_LIBRARY := beken/beken.a
 $(NAME)_PREBUILT_LIBRARY += beken/ip/ip.a
+$(NAME)_PREBUILT_LIBRARY += beken/driver/ble/ble.a
 $(NAME)_PREBUILT_LIBRARY += beken/driver/ble/ble_lib.a
 
 GLOBAL_LDFLAGS += -Wl,--wrap=boot_undefined

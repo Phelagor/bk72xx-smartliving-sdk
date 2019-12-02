@@ -138,7 +138,8 @@ typedef struct _network_InitTypeDef_st
     char gateway_ip_addr[16];     /**< Static IP configuration, Router IP address. */
     char dns_server_ip_addr[16];   /**< Static IP configuration, DNS server IP address. */
     char dhcp_mode;                /**< DHCP mode, @ref DHCP_Disable, @ref DHCP_Client and @ref DHCP_Server. */
-    char reserved[32];
+    char wifi_bssid[6];
+    char reserved[26];
     int  wifi_retry_interval;     /**< Retry interval if an error is occured when connecting an access point,
                                      time unit is millisecond. */
 } network_InitTypeDef_st;

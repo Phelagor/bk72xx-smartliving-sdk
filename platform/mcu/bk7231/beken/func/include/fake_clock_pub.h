@@ -11,8 +11,8 @@
 #else
 #define FCLK_DURATION_MS      2
 #define FCLK_SECOND           (1000/FCLK_DURATION_MS)
-#define TICK_PER_SECOND       FCLK_SECOND
 #endif
+#define TICK_PER_SECOND       FCLK_SECOND
 
 #define BK_MS_TO_TICKS(x)  ((x) / (FCLK_DURATION_MS))
 #define BK_TICKS_TO_MS(x)  ((x) * (FCLK_DURATION_MS))

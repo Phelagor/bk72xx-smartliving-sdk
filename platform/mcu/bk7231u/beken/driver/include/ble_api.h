@@ -2,6 +2,7 @@
 #define _BLE_API_H_
 
 #define MAX_ADV_DATA_LEN           (0x1F)
+#define MAX_SCAN_NUM               (15)
 
 #define ABIT(n) (1 << n)
 
@@ -245,6 +246,40 @@ typedef struct
     uint16_t size;
 } read_req_t;
 
+typedef struct
+{
+    ///Event type:
+    /// - ADV_CONN_UNDIR: Connectable Undirected advertising
+    /// - ADV_CONN_DIR: Connectable directed advertising
+    /// - ADV_DISC_UNDIR: Discoverable undirected advertising
+    /// - ADV_NONCONN_UNDIR: Non-connectable undirected advertising
+    uint8_t        evt_type;
+    ///Advertising address type: public/random
+    uint8_t        adv_addr_type;
+    ///Advertising address value
+    uint8_t        adv_addr[6];
+    ///Data length in advertising packet
+    uint8_t        data_len;
+    ///Data of advertising packet
+    uint8_t        data[MAX_ADV_DATA_LEN];
+    ///RSSI value for advertising packet
+    uint8_t        rssi;
+} recv_adv_t;
+
+typedef struct
+{
+	uint8_t addr_type;
+	uint8_t rssi;
+	uint8_t adv_type;
+	uint8_t adv_addr[6];
+}device_info_t;
+
+typedef struct
+{
+    uint8_t scan_count;
+	device_info_t info[MAX_SCAN_NUM];
+}ble_scan_list_t;
+
 struct ble_get_key_ind
 {
     uint8_t *pri_key;
@@ -294,7 +329,7 @@ struct bk_ble_db_cfg
 };
 
 typedef void (*ble_event_cb_t)(ble_event_t event, void *param);
-typedef void (*ble_recv_adv_cb_t)(uint8_t *buf, uint8_t len);
+typedef void (*ble_recv_adv_cb_t)(recv_adv_t *recv_adv);
 typedef uint8_t (*bk_ble_read_cb_t)(read_req_t *read_req);
 typedef void (*bk_ble_write_cb_t)(write_req_t *write_req);
 
@@ -311,6 +346,14 @@ void ble_set_event_cb(ble_event_cb_t func);
 void ble_set_read_cb(bk_ble_read_cb_t func);
 void ble_set_recv_adv_cb(ble_recv_adv_cb_t func);
 ble_err_t bk_ble_create_db (struct bk_ble_db_cfg* ble_db_cfg);
+
+ble_err_t appm_start_advertising(void);
+ble_err_t appm_stop_advertising(void);
+uint8_t appm_start_scanning(void);
+uint8_t appm_stop_scanning(void);
+ble_scan_list_t *appm_get_scan_result(void);
+void appm_disconnect(void);
+
 ble_err_t bk_ble_send_ntf_value(uint32_t len, uint8_t *buf, uint16_t prf_id, uint16_t att_idx);
 ble_err_t bk_ble_send_ind_value(uint32_t len, uint8_t *buf, uint16_t prf_id, uint16_t att_idx);
 
