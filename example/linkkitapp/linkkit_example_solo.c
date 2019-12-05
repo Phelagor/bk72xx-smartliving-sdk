@@ -12,10 +12,10 @@
 #define USE_CUSTOME_DOMAIN      (0)
 
 // for demo only
-#define PRODUCT_KEY      "a2RKwtBBKkE"
-#define PRODUCT_SECRET   "YhxyRXSCTJBGObso"
-#define DEVICE_NAME      "ocean_test"
-#define DEVICE_SECRET    "MbU6SVOEcWUVD5lBakPcLRhvBOrbBpfy"
+#define PRODUCT_KEY      "a1ec6boKYSt"
+#define PRODUCT_SECRET   "oEQwArRCgA3G0OzK"
+#define DEVICE_NAME      "lamp_test"
+#define DEVICE_SECRET    "Z6m63PAZMZyunQmX5VbOahODiNlq3Zbo"
 
 #if USE_CUSTOME_DOMAIN
     #define CUSTOME_DOMAIN_MQTT     "iot-as-mqtt.cn-shanghai.aliyuncs.com"
@@ -590,7 +590,7 @@ int linkkit_main(void *paras)
     IOT_Ioctl(IOTX_IOCTL_SET_MQTT_DOMAIN, (void *)CUSTOME_DOMAIN_MQTT);
     IOT_Ioctl(IOTX_IOCTL_SET_HTTP_DOMAIN, (void *)CUSTOME_DOMAIN_HTTP);
 #else
-    int domain_type = IOTX_CLOUD_REGION_SINGAPORE;
+    int domain_type = IOTX_CLOUD_REGION_SHANGHAI;
     IOT_Ioctl(IOTX_IOCTL_SET_DOMAIN, (void *)&domain_type);
 #endif
 
