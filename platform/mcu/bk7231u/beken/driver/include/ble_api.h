@@ -112,6 +112,43 @@ typedef enum
     RI_POS           = 15,
 }bk_ext_perm_mask;
 
+/**
+ * Service permissions
+ *
+ *    7    6    5    4    3    2    1    0
+ * +----+----+----+----+----+----+----+----+
+ * |SEC |UUID_LEN |DIS |  AUTH   |EKS | MI |
+ * +----+----+----+----+----+----+----+----+
+ *
+ * Bit [0]  : Task that manage service is multi-instantiated (Connection index is conveyed)
+ * Bit [1]  : Encryption key Size must be 16 bytes
+ * Bit [2-3]: Service Permission      (0 = NO_AUTH, 1 = UNAUTH, 2 = AUTH, 3 = Secure Connect)
+ * Bit [4]  : Disable the service
+ * Bit [5-6]: UUID Length             (0 = 16 bits, 1 = 32 bits, 2 = 128 bits, 3 = RFU)
+ * Bit [7]  : Secondary Service       (0 = Primary Service, 1 = Secondary Service)
+ */
+typedef enum
+{
+    /// Task that manage service is multi-instantiated
+    SVC_MI_MASK        = 0x01,
+    SVC_MI_POS         = 0,
+    /// Check Encryption key size for service Access
+    SVC_EKS_MASK       = 0x02,
+    SVC_EKS_POS        = 1,
+    /// Service Permission authentication
+    SVC_AUTH_MASK      = 0x0C,
+    SVC_AUTH_POS       = 2,
+    /// Disable the service
+    SVC_DIS_MASK       = 0x10,
+    SVC_DIS_POS        = 4,
+    /// Service UUID Length
+    SVC_UUID_LEN_MASK  = 0x60,
+    SVC_UUID_LEN_POS   = 5,
+    /// Service type Secondary
+    SVC_SECONDARY_MASK = 0x80,
+    SVC_SECONDARY_POS  = 7,
+}bk_svc_perm_mask;
+
 /// Attribute & Service access mode
 enum
 {
@@ -302,7 +339,7 @@ struct ble_gen_dh_key_ind
 typedef struct
 {
     /// 16 bits UUID LSB First
-    uint16_t uuid;
+    uint8_t uuid[16];
     /// Attribute Permissions (@see enum attm_perm_mask)
     uint16_t perm;
     /// Attribute Extended Permissions (@see enum attm_value_perm_mask)
@@ -317,7 +354,7 @@ struct bk_ble_db_cfg
 {
     uint16_t prf_task_id;
     ///Service uuid
-    uint16_t uuid;
+    uint8_t uuid[16];
     ///Number of db
 	uint8_t att_db_nb;
     ///Start handler, 0 means autoalloc

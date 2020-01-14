@@ -9,36 +9,48 @@ static ais_bt_init_t ais_bt_init_info;
 static void (*g_indication_txdone)(uint8_t res);
 breeze_config_t breeze_cfg; 
 
+#define BK_ATT_DECL_PRIMARY_SERVICE     {0x00,0x28,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+#define BK_ATT_DECL_CHARACTERISTIC      {0x03,0x28,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+#define BK_ATT_DESC_CLIENT_CHAR_CFG     {0x02,0x29,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+
+#define BK_ATT_FEB3S_IDX_FED4_VAL_VALUE {0xD4,0xFE,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+#define BK_ATT_FEB3S_IDX_FED5_VAL_VALUE {0xD5,0xFE,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+#define BK_ATT_FEB3S_IDX_FED6_VAL_VALUE {0xD6,0xFE,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+#define BK_ATT_FEB3S_IDX_FED7_VAL_VALUE {0xD7,0xFE,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+#define BK_ATT_FEB3S_IDX_FED8_VAL_VALUE {0xD8,0xFE,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+
+uint8_t uuid_feb3[16] = {0xB3,0xFE,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+
 const bk_attm_desc_t feb3_att_db[FEB3S_IDX_NB] =
 {
 	// FEB3 Service Declaration
-	[FEB3S_IDX_SVC]                  =   {0x2800, BK_PERM_SET(RD, ENABLE), 0, 0},
+	[FEB3S_IDX_SVC]                  =   {BK_ATT_DECL_PRIMARY_SERVICE, BK_PERM_SET(RD, ENABLE), 0, 0},
 	// fed4  Characteristic Declaration
-	[FEB3S_IDX_FED4_VAL_CHAR]        =   {0x2803, BK_PERM_SET(RD, ENABLE), 0, 0},
+	[FEB3S_IDX_FED4_VAL_CHAR]        =   {BK_ATT_DECL_CHARACTERISTIC, BK_PERM_SET(RD, ENABLE), 0, 0},
 	// fed4  Characteristic Value
-	[FEB3S_IDX_FED4_VAL_VALUE]       =   {0xFED4, BK_PERM_SET(RD, ENABLE), BK_PERM_SET(RI, ENABLE), FEB3_CHAR_DATA_LEN},
+	[FEB3S_IDX_FED4_VAL_VALUE]       =   {BK_ATT_FEB3S_IDX_FED4_VAL_VALUE, BK_PERM_SET(RD, ENABLE), BK_PERM_SET(RI, ENABLE), FEB3_CHAR_DATA_LEN},
 	
 	// fed5  Characteristic Declaration
-	[FEB3S_IDX_FED5_VAL_CHAR]        =   {0x2803, BK_PERM_SET(RD, ENABLE), 0, 0},
+	[FEB3S_IDX_FED5_VAL_CHAR]        =   {BK_ATT_DECL_CHARACTERISTIC, BK_PERM_SET(RD, ENABLE), 0, 0},
 	// fed5  Characteristic Value
-	[FEB3S_IDX_FED5_VAL_VALUE]       =   {0xFED5, BK_PERM_SET(WRITE_REQ, ENABLE)|BK_PERM_SET(RD, ENABLE), BK_PERM_SET(RI, ENABLE), FEB3_CHAR_DATA_LEN},
+	[FEB3S_IDX_FED5_VAL_VALUE]       =   {BK_ATT_FEB3S_IDX_FED5_VAL_VALUE, BK_PERM_SET(WRITE_REQ, ENABLE)|BK_PERM_SET(RD, ENABLE), BK_PERM_SET(RI, ENABLE), FEB3_CHAR_DATA_LEN},
 	
 	// fed6  Characteristic Declaration
-	[FEB3S_IDX_FED6_VAL_CHAR]        =   {0x2803, BK_PERM_SET(RD, ENABLE), 0, 0},
+	[FEB3S_IDX_FED6_VAL_CHAR]        =   {BK_ATT_DECL_CHARACTERISTIC, BK_PERM_SET(RD, ENABLE), 0, 0},
 	// fed6  Characteristic Value
-	[FEB3S_IDX_FED6_VAL_VALUE]       =   {0xFED6, BK_PERM_SET(IND, ENABLE)|BK_PERM_SET(RD, ENABLE), BK_PERM_SET(RI, ENABLE), FEB3_CHAR_DATA_LEN},
-	[FFB3S_IDX_FED6_VAL_IND_CFG]     =   {0x2902, BK_PERM_SET(RD, ENABLE)|BK_PERM_SET(WRITE_REQ, ENABLE), 0, 0},
+	[FEB3S_IDX_FED6_VAL_VALUE]       =   {BK_ATT_FEB3S_IDX_FED6_VAL_VALUE, BK_PERM_SET(IND, ENABLE)|BK_PERM_SET(RD, ENABLE), BK_PERM_SET(RI, ENABLE), FEB3_CHAR_DATA_LEN},
+	[FFB3S_IDX_FED6_VAL_IND_CFG]     =   {BK_ATT_DESC_CLIENT_CHAR_CFG, BK_PERM_SET(RD, ENABLE)|BK_PERM_SET(WRITE_REQ, ENABLE), 0, 0},
 	
 	// fed7  Characteristic Declaration
-	[FEB3S_IDX_FED7_VAL_CHAR]        =   {0x2803, BK_PERM_SET(RD, ENABLE), 0, 0},
+	[FEB3S_IDX_FED7_VAL_CHAR]        =   {BK_ATT_DECL_CHARACTERISTIC, BK_PERM_SET(RD, ENABLE), 0, 0},
 	// fed7  Characteristic Value
-	[FEB3S_IDX_FED7_VAL_VALUE]       =   {0xFED7, BK_PERM_SET(WRITE_COMMAND, ENABLE)|BK_PERM_SET(RD, ENABLE), BK_PERM_SET(RI, ENABLE), FEB3_CHAR_DATA_LEN},
+	[FEB3S_IDX_FED7_VAL_VALUE]       =   {BK_ATT_FEB3S_IDX_FED7_VAL_VALUE, BK_PERM_SET(WRITE_COMMAND, ENABLE)|BK_PERM_SET(RD, ENABLE), BK_PERM_SET(RI, ENABLE), FEB3_CHAR_DATA_LEN},
 	
 	// fed8  Characteristic Declaration
-	[FEB3S_IDX_FED8_VAL_CHAR]        =   {0x2803, BK_PERM_SET(RD, ENABLE), 0, 0},
+	[FEB3S_IDX_FED8_VAL_CHAR]        =   {BK_ATT_DECL_CHARACTERISTIC, BK_PERM_SET(RD, ENABLE), 0, 0},
 	// fed8  Characteristic Value
-	[FEB3S_IDX_FED8_VAL_VALUE]       =   {0xFED8, BK_PERM_SET(NTF, ENABLE)|BK_PERM_SET(RD, ENABLE), BK_PERM_SET(RI, ENABLE), FEB3_CHAR_DATA_LEN},
-	[FFB3S_IDX_FED8_VAL_NTF_CFG]     =   {0x2902, BK_PERM_SET(RD, ENABLE)|BK_PERM_SET(WRITE_REQ, ENABLE), 0, 0},
+	[FEB3S_IDX_FED8_VAL_VALUE]       =   {BK_ATT_FEB3S_IDX_FED8_VAL_VALUE, BK_PERM_SET(NTF, ENABLE)|BK_PERM_SET(RD, ENABLE), BK_PERM_SET(RI, ENABLE), FEB3_CHAR_DATA_LEN},
+	[FFB3S_IDX_FED8_VAL_NTF_CFG]     =   {BK_ATT_DESC_CLIENT_CHAR_CFG, BK_PERM_SET(RD, ENABLE)|BK_PERM_SET(WRITE_REQ, ENABLE), 0, 0},
 };/// Macro used to retrieve permission value from access and rights on attribute.
 
 static ble_err_t ble_create_db(void)
@@ -51,7 +63,7 @@ static ble_err_t ble_create_db(void)
     ble_db_cfg.prf_task_id = 0;
     ble_db_cfg.start_hdl = 0;
     ble_db_cfg.svc_perm = 0;
-    ble_db_cfg.uuid = 0xFEB3;
+    memcpy(&(ble_db_cfg.uuid[0]), &uuid_feb3[0], 16);
 
     status = bk_ble_create_db(&ble_db_cfg);
 

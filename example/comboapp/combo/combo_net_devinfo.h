@@ -11,12 +11,20 @@
 #define PRODUCT_SECRET "iX6XqAjaCTXBv4h3"
 #endif
 
-#if 1
+#if 0
 #define PRODUCT_ID     1876219
 #define DEVICE_SECRET  "tMzieQqK2xh325kQvJSqOn8DA3lMncuD"
 #define DEVICE_NAME    "bz_awss_001"
 #define PRODUCT_KEY    "a1vVLY7zUvg"
 #define PRODUCT_SECRET "GOSnddBlr9x3kjyt"
-
 #endif
+
+#if 1
+#define PRODUCT_ID     178239
+#define DEVICE_SECRET  "Z6m63PAZMZyunQmX5VbOahODiNlq3Zbo"
+#define DEVICE_NAME    "lamp_test"
+#define PRODUCT_KEY    "a1ec6boKYSt"
+#define PRODUCT_SECRET "oEQwArRCgA3G0OzK"
+#endif
+
 #endif

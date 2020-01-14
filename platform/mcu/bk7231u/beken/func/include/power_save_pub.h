@@ -124,8 +124,13 @@ extern UINT8 power_save_if_sleep_first(void);
 extern PS_MODE_STATUS power_save_ps_mode_get(void);
 extern void power_save_ps_mode_set(PS_MODE_STATUS );
 extern void power_save_rf_ps_wkup_semlist_init(void);
+extern void * power_save_rf_ps_wkup_semlist_create(void);
 extern void * power_save_rf_ps_wkup_semlist_insert(void);
 extern void power_save_rf_ps_wkup_semlist_wait(void *);
+extern void power_save_rf_ps_wkup_semlist_destroy(void *);
+extern void power_save_rf_ps_wkup_semlist_get(void *);
+
+
 extern void power_save_set_dtim_count(UINT8 );
 extern void power_save_set_dtim_period(UINT8 );
 extern void power_save_sleep_status_set(void);

@@ -19,6 +19,7 @@
 #endif
 
 extern int ate_gpio_port;
+#define ATE_ENABLE_GIPO_LEVEL  0
 
 void ate_gpio_init(void);
 uint32_t ate_mode_check(void);

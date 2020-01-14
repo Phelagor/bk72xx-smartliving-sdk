@@ -38,7 +38,7 @@
  */
 
 /// Address of the NEXT_TBTT register
-#define NXMAC_NEXT_TBTT_ADDR   0xC0008040
+#define NXMAC_NEXT_TBTT_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000040)
 /// Offset of the NEXT_TBTT register from the base address
 #define NXMAC_NEXT_TBTT_OFFSET 0x00000040
 /// Index of the NEXT_TBTT register
@@ -96,7 +96,7 @@ __INLINE uint16_t nxmac_next_tbtt_getf(void)
  */
 
 /// Address of the DOZE_CNTRL_2 register
-#define NXMAC_DOZE_CNTRL_2_ADDR   0xC0008048
+#define NXMAC_DOZE_CNTRL_2_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000048)
 /// Offset of the DOZE_CNTRL_2 register from the base address
 #define NXMAC_DOZE_CNTRL_2_OFFSET 0x00000048
 /// Index of the DOZE_CNTRL_2 register
@@ -236,7 +236,7 @@ __INLINE void nxmac_wake_up_sw_setf(uint8_t wakeupsw)
  */
 
 /// Address of the MAC_CNTRL_2 register
-#define NXMAC_MAC_CNTRL_2_ADDR   0xC0008050
+#define NXMAC_MAC_CNTRL_2_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000050)
 /// Offset of the MAC_CNTRL_2 register from the base address
 #define NXMAC_MAC_CNTRL_2_OFFSET 0x00000050
 /// Index of the MAC_CNTRL_2 register
@@ -338,7 +338,7 @@ __INLINE void nxmac_soft_reset_setf(uint8_t softreset)
  */
 
 /// Address of the GEN_INT_STATUS register
-#define NXMAC_GEN_INT_STATUS_ADDR   0xC000806C
+#define NXMAC_GEN_INT_STATUS_ADDR   (REG_MAC_PL_BASE_ADDR + 0x0000006C)
 /// Offset of the GEN_INT_STATUS register from the base address
 #define NXMAC_GEN_INT_STATUS_OFFSET 0x0000006C
 /// Index of the GEN_INT_STATUS register
@@ -1162,7 +1162,7 @@ __INLINE void nxmac_status_imp_pri_tbtt_setf(uint8_t imppritbtt)
  */
 
 /// Address of the GEN_INT_ACK register
-#define NXMAC_GEN_INT_ACK_ADDR   0xC0008070
+#define NXMAC_GEN_INT_ACK_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000070)
 /// Offset of the GEN_INT_ACK register from the base address
 #define NXMAC_GEN_INT_ACK_OFFSET 0x00000070
 /// Index of the GEN_INT_ACK register
@@ -1590,7 +1590,7 @@ __INLINE void nxmac_ack_imp_pri_tbtt_clearf(uint8_t imppritbtt)
  */
 
 /// Address of the GEN_INT_ENABLE register
-#define NXMAC_GEN_INT_ENABLE_ADDR   0xC0008074
+#define NXMAC_GEN_INT_ENABLE_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000074)
 /// Offset of the GEN_INT_ENABLE register from the base address
 #define NXMAC_GEN_INT_ENABLE_OFFSET 0x00000074
 /// Index of the GEN_INT_ENABLE register
@@ -2622,7 +2622,7 @@ __INLINE void nxmac_enable_imp_pri_tbtt_setf(uint8_t imppritbtt)
  */
 
 /// Address of the TX_RX_INT_STATUS register
-#define NXMAC_TX_RX_INT_STATUS_ADDR   0xC0008078
+#define NXMAC_TX_RX_INT_STATUS_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000078)
 /// Offset of the TX_RX_INT_STATUS register from the base address
 #define NXMAC_TX_RX_INT_STATUS_OFFSET 0x00000078
 /// Index of the TX_RX_INT_STATUS register
@@ -3570,7 +3570,7 @@ __INLINE void nxmac_status_ac_0_prot_trigger_setf(uint8_t ac0prottrigger)
  */
 
 /// Address of the TX_RX_INT_ACK register
-#define NXMAC_TX_RX_INT_ACK_ADDR   0xC000807C
+#define NXMAC_TX_RX_INT_ACK_ADDR   (REG_MAC_PL_BASE_ADDR + 0x0000007C)
 /// Offset of the TX_RX_INT_ACK register from the base address
 #define NXMAC_TX_RX_INT_ACK_OFFSET 0x0000007C
 /// Index of the TX_RX_INT_ACK register
@@ -4062,7 +4062,7 @@ __INLINE void nxmac_ack_ac_0_prot_trigger_clearf(uint8_t ac0prottrigger)
  */
 
 /// Address of the TX_RX_INT_ENABLE register
-#define NXMAC_TX_RX_INT_ENABLE_ADDR   0xC0008080
+#define NXMAC_TX_RX_INT_ENABLE_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000080)
 /// Offset of the TX_RX_INT_ENABLE register from the base address
 #define NXMAC_TX_RX_INT_ENABLE_OFFSET 0x00000080
 /// Index of the TX_RX_INT_ENABLE register
@@ -5219,7 +5219,7 @@ __INLINE void nxmac_enable_ac_0_prot_trigger_setf(uint8_t ac0prottrigger)
  */
 
 /// Address of the TIMERS_INT_EVENT_SET register
-#define NXMAC_TIMERS_INT_EVENT_SET_ADDR   0xC0008084
+#define NXMAC_TIMERS_INT_EVENT_SET_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000084)
 /// Offset of the TIMERS_INT_EVENT_SET register from the base address
 #define NXMAC_TIMERS_INT_EVENT_SET_OFFSET 0x00000084
 /// Index of the TIMERS_INT_EVENT_SET register
@@ -5656,7 +5656,7 @@ __INLINE void nxmac_abs_timers_0_setf(uint8_t abstimers0)
  */
 
 /// Address of the TIMERS_INT_EVENT_CLEAR register
-#define NXMAC_TIMERS_INT_EVENT_CLEAR_ADDR   0xC0008088
+#define NXMAC_TIMERS_INT_EVENT_CLEAR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000088)
 /// Offset of the TIMERS_INT_EVENT_CLEAR register from the base address
 #define NXMAC_TIMERS_INT_EVENT_CLEAR_OFFSET 0x00000088
 /// Index of the TIMERS_INT_EVENT_CLEAR register
@@ -5858,7 +5858,7 @@ __INLINE void nxmac_abs_timers_0_clearf(uint8_t abstimers0)
  */
 
 /// Address of the TIMERS_INT_UN_MASK register
-#define NXMAC_TIMERS_INT_UN_MASK_ADDR   0xC000808C
+#define NXMAC_TIMERS_INT_UN_MASK_ADDR   (REG_MAC_PL_BASE_ADDR + 0x0000008C)
 /// Offset of the TIMERS_INT_UN_MASK register from the base address
 #define NXMAC_TIMERS_INT_UN_MASK_OFFSET 0x0000008C
 /// Index of the TIMERS_INT_UN_MASK register
@@ -6286,7 +6286,7 @@ __INLINE void nxmac_maskabs_timers_0_setf(uint8_t maskabstimers0)
  */
 
 /// Address of the TSF_LO register
-#define NXMAC_TSF_LO_ADDR   0xC00080A4
+#define NXMAC_TSF_LO_ADDR   (REG_MAC_PL_BASE_ADDR + 0x000000A4)
 /// Offset of the TSF_LO register from the base address
 #define NXMAC_TSF_LO_OFFSET 0x000000A4
 /// Index of the TSF_LO register
@@ -6366,7 +6366,7 @@ __INLINE void nxmac_tsf_timer_low_setf(uint32_t tsftimerlow)
  */
 
 /// Address of the TSF_HI register
-#define NXMAC_TSF_HI_ADDR   0xC00080A8
+#define NXMAC_TSF_HI_ADDR   (REG_MAC_PL_BASE_ADDR + 0x000000A8)
 /// Offset of the TSF_HI register from the base address
 #define NXMAC_TSF_HI_OFFSET 0x000000A8
 /// Index of the TSF_HI register
@@ -6451,7 +6451,7 @@ __INLINE void nxmac_tsf_timer_high_setf(uint32_t tsftimerhigh)
  */
 
 /// Address of the TIME_ON_AIR_PARAM_1 register
-#define NXMAC_TIME_ON_AIR_PARAM_1_ADDR   0xC0008160
+#define NXMAC_TIME_ON_AIR_PARAM_1_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000160)
 /// Offset of the TIME_ON_AIR_PARAM_1 register from the base address
 #define NXMAC_TIME_ON_AIR_PARAM_1_OFFSET 0x00000160
 /// Index of the TIME_ON_AIR_PARAM_1 register
@@ -6745,7 +6745,7 @@ __INLINE void nxmac_ppdu_length_setf(uint32_t ppdulength)
  */
 
 /// Address of the TIME_ON_AIR_PARAM_2 register
-#define NXMAC_TIME_ON_AIR_PARAM_2_ADDR   0xC0008164
+#define NXMAC_TIME_ON_AIR_PARAM_2_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000164)
 /// Offset of the TIME_ON_AIR_PARAM_2 register from the base address
 #define NXMAC_TIME_ON_AIR_PARAM_2_OFFSET 0x00000164
 /// Index of the TIME_ON_AIR_PARAM_2 register
@@ -6827,7 +6827,7 @@ __INLINE void nxmac_ppdu_mcs_index_setf(uint8_t ppdumcsindex)
  */
 
 /// Address of the TIME_ON_AIR_VALUE register
-#define NXMAC_TIME_ON_AIR_VALUE_ADDR   0xC0008168
+#define NXMAC_TIME_ON_AIR_VALUE_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000168)
 /// Offset of the TIME_ON_AIR_VALUE register from the base address
 #define NXMAC_TIME_ON_AIR_VALUE_OFFSET 0x00000168
 /// Index of the TIME_ON_AIR_VALUE register
@@ -6981,7 +6981,7 @@ __INLINE uint16_t nxmac_time_on_air_getf(void)
  */
 
 /// Address of the DMA_CNTRL_SET register
-#define NXMAC_DMA_CNTRL_SET_ADDR   0xC0008180
+#define NXMAC_DMA_CNTRL_SET_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000180)
 /// Offset of the DMA_CNTRL_SET register from the base address
 #define NXMAC_DMA_CNTRL_SET_OFFSET 0x00000180
 /// Index of the DMA_CNTRL_SET register
@@ -7751,7 +7751,7 @@ __INLINE void nxmac_tx_bcn_new_tail_setf(uint8_t txbcnnewtail)
  */
 
 /// Address of the DMA_CNTRL_CLEAR register
-#define NXMAC_DMA_CNTRL_CLEAR_ADDR   0xC0008184
+#define NXMAC_DMA_CNTRL_CLEAR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000184)
 /// Offset of the DMA_CNTRL_CLEAR register from the base address
 #define NXMAC_DMA_CNTRL_CLEAR_OFFSET 0x00000184
 /// Index of the DMA_CNTRL_CLEAR register
@@ -8085,7 +8085,7 @@ __INLINE void nxmac_tx_bcn_new_tail_clearf(uint8_t txbcnnewtail)
  */
 
 /// Address of the DMA_STATUS_1 register
-#define NXMAC_DMA_STATUS_1_ADDR   0xC0008188
+#define NXMAC_DMA_STATUS_1_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000188)
 /// Offset of the DMA_STATUS_1 register from the base address
 #define NXMAC_DMA_STATUS_1_OFFSET 0x00000188
 /// Index of the DMA_STATUS_1 register
@@ -8323,7 +8323,7 @@ __INLINE uint8_t nxmac_tx_bcn_state_getf(void)
  */
 
 /// Address of the DMA_STATUS_2 register
-#define NXMAC_DMA_STATUS_2_ADDR   0xC000818C
+#define NXMAC_DMA_STATUS_2_ADDR   (REG_MAC_PL_BASE_ADDR + 0x0000018C)
 /// Offset of the DMA_STATUS_2 register from the base address
 #define NXMAC_DMA_STATUS_2_OFFSET 0x0000018C
 /// Index of the DMA_STATUS_2 register
@@ -9008,7 +9008,7 @@ __INLINE uint8_t nxmac_tx_bcn_len_mismatch_getf(void)
  */
 
 /// Address of the DMA_STATUS_3 register
-#define NXMAC_DMA_STATUS_3_ADDR   0xC0008190
+#define NXMAC_DMA_STATUS_3_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000190)
 /// Offset of the DMA_STATUS_3 register from the base address
 #define NXMAC_DMA_STATUS_3_OFFSET 0x00000190
 /// Index of the DMA_STATUS_3 register
@@ -9238,7 +9238,7 @@ __INLINE uint8_t nxmac_rx_hdr_u_pattern_err_getf(void)
  */
 
 /// Address of the DMA_STATUS_4 register
-#define NXMAC_DMA_STATUS_4_ADDR   0xC0008194
+#define NXMAC_DMA_STATUS_4_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000194)
 /// Offset of the DMA_STATUS_4 register from the base address
 #define NXMAC_DMA_STATUS_4_OFFSET 0x00000194
 /// Index of the DMA_STATUS_4 register
@@ -9601,7 +9601,7 @@ __INLINE uint8_t nxmac_tx_bcn_startup_getf(void)
  */
 
 /// Address of the TX_BCN_HEAD_PTR register
-#define NXMAC_TX_BCN_HEAD_PTR_ADDR   0xC0008198
+#define NXMAC_TX_BCN_HEAD_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000198)
 /// Offset of the TX_BCN_HEAD_PTR register from the base address
 #define NXMAC_TX_BCN_HEAD_PTR_OFFSET 0x00000198
 /// Index of the TX_BCN_HEAD_PTR register
@@ -9681,7 +9681,7 @@ __INLINE void nxmac_tx_bcn_head_ptr_setf(uint32_t txbcnheadptr)
  */
 
 /// Address of the TX_AC_0_HEAD_PTR register
-#define NXMAC_TX_AC_0_HEAD_PTR_ADDR   0xC000819C
+#define NXMAC_TX_AC_0_HEAD_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x0000019C)
 /// Offset of the TX_AC_0_HEAD_PTR register from the base address
 #define NXMAC_TX_AC_0_HEAD_PTR_OFFSET 0x0000019C
 /// Index of the TX_AC_0_HEAD_PTR register
@@ -9761,7 +9761,7 @@ __INLINE void nxmac_tx_ac_0_head_ptr_setf(uint32_t txac0headptr)
  */
 
 /// Address of the TX_AC_1_HEAD_PTR register
-#define NXMAC_TX_AC_1_HEAD_PTR_ADDR   0xC00081A0
+#define NXMAC_TX_AC_1_HEAD_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x000001A0)
 /// Offset of the TX_AC_1_HEAD_PTR register from the base address
 #define NXMAC_TX_AC_1_HEAD_PTR_OFFSET 0x000001A0
 /// Index of the TX_AC_1_HEAD_PTR register
@@ -9841,7 +9841,7 @@ __INLINE void nxmac_tx_ac_1_head_ptr_setf(uint32_t txac1headptr)
  */
 
 /// Address of the TX_AC_2_HEAD_PTR register
-#define NXMAC_TX_AC_2_HEAD_PTR_ADDR   0xC00081A4
+#define NXMAC_TX_AC_2_HEAD_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x000001A4)
 /// Offset of the TX_AC_2_HEAD_PTR register from the base address
 #define NXMAC_TX_AC_2_HEAD_PTR_OFFSET 0x000001A4
 /// Index of the TX_AC_2_HEAD_PTR register
@@ -9921,7 +9921,7 @@ __INLINE void nxmac_tx_ac_2_head_ptr_setf(uint32_t txac2headptr)
  */
 
 /// Address of the TX_AC_3_HEAD_PTR register
-#define NXMAC_TX_AC_3_HEAD_PTR_ADDR   0xC00081A8
+#define NXMAC_TX_AC_3_HEAD_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x000001A8)
 /// Offset of the TX_AC_3_HEAD_PTR register from the base address
 #define NXMAC_TX_AC_3_HEAD_PTR_OFFSET 0x000001A8
 /// Index of the TX_AC_3_HEAD_PTR register
@@ -10005,7 +10005,7 @@ __INLINE void nxmac_tx_ac_3_head_ptr_setf(uint32_t txac3headptr)
  */
 
 /// Address of the TX_STRUCT_SIZES register
-#define NXMAC_TX_STRUCT_SIZES_ADDR   0xC00081AC
+#define NXMAC_TX_STRUCT_SIZES_ADDR   (REG_MAC_PL_BASE_ADDR + 0x000001AC)
 /// Offset of the TX_STRUCT_SIZES register from the base address
 #define NXMAC_TX_STRUCT_SIZES_OFFSET 0x000001AC
 /// Index of the TX_STRUCT_SIZES register
@@ -10264,7 +10264,7 @@ __INLINE void nxmac_pt_entry_size_setf(uint8_t ptentrysize)
  */
 
 /// Address of the RX_HEADER_HEAD_PTR register
-#define NXMAC_RX_HEADER_HEAD_PTR_ADDR   0xC00081B8
+#define NXMAC_RX_HEADER_HEAD_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x000001B8)
 /// Offset of the RX_HEADER_HEAD_PTR register from the base address
 #define NXMAC_RX_HEADER_HEAD_PTR_OFFSET 0x000001B8
 /// Index of the RX_HEADER_HEAD_PTR register
@@ -10407,7 +10407,7 @@ __INLINE void nxmac_rx_header_head_ptr_valid_setf(uint8_t rxheaderheadptrvalid)
  */
 
 /// Address of the RX_PAYLOAD_HEAD_PTR register
-#define NXMAC_RX_PAYLOAD_HEAD_PTR_ADDR   0xC00081BC
+#define NXMAC_RX_PAYLOAD_HEAD_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x000001BC)
 /// Offset of the RX_PAYLOAD_HEAD_PTR register from the base address
 #define NXMAC_RX_PAYLOAD_HEAD_PTR_OFFSET 0x000001BC
 /// Index of the RX_PAYLOAD_HEAD_PTR register
@@ -10550,7 +10550,7 @@ __INLINE void nxmac_rx_payload_head_ptr_valid_setf(uint8_t rxpayloadheadptrvalid
  */
 
 /// Address of the DMA_THRESHOLD register
-#define NXMAC_DMA_THRESHOLD_ADDR   0xC00081C0
+#define NXMAC_DMA_THRESHOLD_ADDR   (REG_MAC_PL_BASE_ADDR + 0x000001C0)
 /// Offset of the DMA_THRESHOLD register from the base address
 #define NXMAC_DMA_THRESHOLD_OFFSET 0x000001C0
 /// Index of the DMA_THRESHOLD register
@@ -10697,7 +10697,7 @@ __INLINE void nxmac_tx_fifo_threshold_setf(uint8_t txfifothreshold)
  */
 
 /// Address of the EDCA_AC_HAS_DATA_SET register
-#define NXMAC_EDCA_AC_HAS_DATA_SET_ADDR   0xC0008210
+#define NXMAC_EDCA_AC_HAS_DATA_SET_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000210)
 /// Offset of the EDCA_AC_HAS_DATA_SET register from the base address
 #define NXMAC_EDCA_AC_HAS_DATA_SET_OFFSET 0x00000210
 /// Index of the EDCA_AC_HAS_DATA_SET register
@@ -10912,7 +10912,7 @@ __INLINE void nxmac_ac_0_has_data_setf(uint8_t ac0hasdata)
  */
 
 /// Address of the EDCA_AC_HAS_DATA_CLEAR register
-#define NXMAC_EDCA_AC_HAS_DATA_CLEAR_ADDR   0xC0008214
+#define NXMAC_EDCA_AC_HAS_DATA_CLEAR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000214)
 /// Offset of the EDCA_AC_HAS_DATA_CLEAR register from the base address
 #define NXMAC_EDCA_AC_HAS_DATA_CLEAR_OFFSET 0x00000214
 /// Index of the EDCA_AC_HAS_DATA_CLEAR register
@@ -11016,7 +11016,7 @@ __INLINE void nxmac_ac_0_has_data_clearf(uint8_t ac0hasdata)
  */
 
 /// Address of the MOT_1 register
-#define NXMAC_MOT_1_ADDR   0xC0008228
+#define NXMAC_MOT_1_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000228)
 /// Offset of the MOT_1 register from the base address
 #define NXMAC_MOT_1_OFFSET 0x00000228
 /// Index of the MOT_1 register
@@ -11111,7 +11111,7 @@ __INLINE uint16_t nxmac_ac_0mot_getf(void)
  */
 
 /// Address of the MOT_2 register
-#define NXMAC_MOT_2_ADDR   0xC000822C
+#define NXMAC_MOT_2_ADDR   (REG_MAC_PL_BASE_ADDR + 0x0000022C)
 /// Offset of the MOT_2 register from the base address
 #define NXMAC_MOT_2_OFFSET 0x0000022C
 /// Index of the MOT_2 register
@@ -11206,7 +11206,7 @@ __INLINE uint16_t nxmac_ac_2mot_getf(void)
  */
 
 /// Address of the MOT_3 register
-#define NXMAC_MOT_3_ADDR   0xC0008230
+#define NXMAC_MOT_3_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000230)
 /// Offset of the MOT_3 register from the base address
 #define NXMAC_MOT_3_OFFSET 0x00000230
 /// Index of the MOT_3 register
@@ -11300,7 +11300,7 @@ __INLINE uint16_t nxmac_hcca_qapmot_getf(void)
  */
 
 /// Address of the TX_BW_DROP_INFO register
-#define NXMAC_TX_BW_DROP_INFO_ADDR   0xC0008330
+#define NXMAC_TX_BW_DROP_INFO_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000330)
 /// Offset of the TX_BW_DROP_INFO register from the base address
 #define NXMAC_TX_BW_DROP_INFO_OFFSET 0x00000330
 /// Index of the TX_BW_DROP_INFO register
@@ -11381,7 +11381,7 @@ __INLINE uint8_t nxmac_tx_bw_after_drop_getf(void)
  */
 
 /// Address of the SEC_USERS_TX_INT_EVENT_SET register
-#define NXMAC_SEC_USERS_TX_INT_EVENT_SET_ADDR   0xC0008364
+#define NXMAC_SEC_USERS_TX_INT_EVENT_SET_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000364)
 /// Offset of the SEC_USERS_TX_INT_EVENT_SET register from the base address
 #define NXMAC_SEC_USERS_TX_INT_EVENT_SET_OFFSET 0x00000364
 /// Index of the SEC_USERS_TX_INT_EVENT_SET register
@@ -12338,7 +12338,7 @@ __INLINE void nxmac_sec_u_1ac_0_tx_trigger_setf(uint8_t secu1ac0txtrigger)
  */
 
 /// Address of the SEC_USERS_TX_INT_EVENT_CLEAR register
-#define NXMAC_SEC_USERS_TX_INT_EVENT_CLEAR_ADDR   0xC0008368
+#define NXMAC_SEC_USERS_TX_INT_EVENT_CLEAR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000368)
 /// Offset of the SEC_USERS_TX_INT_EVENT_CLEAR register from the base address
 #define NXMAC_SEC_USERS_TX_INT_EVENT_CLEAR_OFFSET 0x00000368
 /// Index of the SEC_USERS_TX_INT_EVENT_CLEAR register
@@ -12767,7 +12767,7 @@ __INLINE void nxmac_sec_u_1ac_0_tx_trigger_clearf(uint8_t secu1ac0txtrigger)
  */
 
 /// Address of the SEC_USERS_TX_INT_EVENT_UN_MASK register
-#define NXMAC_SEC_USERS_TX_INT_EVENT_UN_MASK_ADDR   0xC000836C
+#define NXMAC_SEC_USERS_TX_INT_EVENT_UN_MASK_ADDR   (REG_MAC_PL_BASE_ADDR + 0x0000036C)
 /// Offset of the SEC_USERS_TX_INT_EVENT_UN_MASK register from the base address
 #define NXMAC_SEC_USERS_TX_INT_EVENT_UN_MASK_OFFSET 0x0000036C
 /// Index of the SEC_USERS_TX_INT_EVENT_UN_MASK register
@@ -13736,7 +13736,7 @@ __INLINE void nxmac_masksec_u_1ac_0_tx_trigger_setf(uint8_t masksecu1ac0txtrigge
  */
 
 /// Address of the DEBUG_BCN_S_PTR register
-#define NXMAC_DEBUG_BCN_S_PTR_ADDR   0xC0008524
+#define NXMAC_DEBUG_BCN_S_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000524)
 /// Offset of the DEBUG_BCN_S_PTR register from the base address
 #define NXMAC_DEBUG_BCN_S_PTR_OFFSET 0x00000524
 /// Index of the DEBUG_BCN_S_PTR register
@@ -13793,7 +13793,7 @@ __INLINE uint32_t nxmac_bcn_status_pointer_getf(void)
  */
 
 /// Address of the DEBUG_AC_0S_PTR register
-#define NXMAC_DEBUG_AC_0S_PTR_ADDR   0xC0008528
+#define NXMAC_DEBUG_AC_0S_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000528)
 /// Offset of the DEBUG_AC_0S_PTR register from the base address
 #define NXMAC_DEBUG_AC_0S_PTR_OFFSET 0x00000528
 /// Index of the DEBUG_AC_0S_PTR register
@@ -13850,7 +13850,7 @@ __INLINE uint32_t nxmac_ac_0_status_pointer_getf(void)
  */
 
 /// Address of the DEBUG_AC_1S_PTR register
-#define NXMAC_DEBUG_AC_1S_PTR_ADDR   0xC000852C
+#define NXMAC_DEBUG_AC_1S_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x0000052C)
 /// Offset of the DEBUG_AC_1S_PTR register from the base address
 #define NXMAC_DEBUG_AC_1S_PTR_OFFSET 0x0000052C
 /// Index of the DEBUG_AC_1S_PTR register
@@ -13907,7 +13907,7 @@ __INLINE uint32_t nxmac_ac_1_status_pointer_getf(void)
  */
 
 /// Address of the DEBUG_AC_2S_PTR register
-#define NXMAC_DEBUG_AC_2S_PTR_ADDR   0xC0008530
+#define NXMAC_DEBUG_AC_2S_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000530)
 /// Offset of the DEBUG_AC_2S_PTR register from the base address
 #define NXMAC_DEBUG_AC_2S_PTR_OFFSET 0x00000530
 /// Index of the DEBUG_AC_2S_PTR register
@@ -13964,7 +13964,7 @@ __INLINE uint32_t nxmac_ac_2_status_pointer_getf(void)
  */
 
 /// Address of the DEBUG_AC_3S_PTR register
-#define NXMAC_DEBUG_AC_3S_PTR_ADDR   0xC0008534
+#define NXMAC_DEBUG_AC_3S_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000534)
 /// Offset of the DEBUG_AC_3S_PTR register from the base address
 #define NXMAC_DEBUG_AC_3S_PTR_OFFSET 0x00000534
 /// Index of the DEBUG_AC_3S_PTR register
@@ -14021,7 +14021,7 @@ __INLINE uint32_t nxmac_ac_3_status_pointer_getf(void)
  */
 
 /// Address of the DEBUG_TX_C_PTR register
-#define NXMAC_DEBUG_TX_C_PTR_ADDR   0xC0008540
+#define NXMAC_DEBUG_TX_C_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000540)
 /// Offset of the DEBUG_TX_C_PTR register from the base address
 #define NXMAC_DEBUG_TX_C_PTR_OFFSET 0x00000540
 /// Index of the DEBUG_TX_C_PTR register
@@ -14078,7 +14078,7 @@ __INLINE uint32_t nxmac_tx_current_pointer_getf(void)
  */
 
 /// Address of the DEBUG_RX_PAY_S_PTR register
-#define NXMAC_DEBUG_RX_PAY_S_PTR_ADDR   0xC0008544
+#define NXMAC_DEBUG_RX_PAY_S_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000544)
 /// Offset of the DEBUG_RX_PAY_S_PTR register from the base address
 #define NXMAC_DEBUG_RX_PAY_S_PTR_OFFSET 0x00000544
 /// Index of the DEBUG_RX_PAY_S_PTR register
@@ -14135,7 +14135,7 @@ __INLINE uint32_t nxmac_rx_pay_stat_pointer_getf(void)
  */
 
 /// Address of the DEBUG_RX_HDR_C_PTR register
-#define NXMAC_DEBUG_RX_HDR_C_PTR_ADDR   0xC0008548
+#define NXMAC_DEBUG_RX_HDR_C_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000548)
 /// Offset of the DEBUG_RX_HDR_C_PTR register from the base address
 #define NXMAC_DEBUG_RX_HDR_C_PTR_OFFSET 0x00000548
 /// Index of the DEBUG_RX_HDR_C_PTR register
@@ -14192,7 +14192,7 @@ __INLINE uint32_t nxmac_rx_hdr_stat_pointer_getf(void)
  */
 
 /// Address of the DEBUG_RX_PAY_C_PTR register
-#define NXMAC_DEBUG_RX_PAY_C_PTR_ADDR   0xC000854C
+#define NXMAC_DEBUG_RX_PAY_C_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x0000054C)
 /// Offset of the DEBUG_RX_PAY_C_PTR register from the base address
 #define NXMAC_DEBUG_RX_PAY_C_PTR_OFFSET 0x0000054C
 /// Index of the DEBUG_RX_PAY_C_PTR register
@@ -14280,7 +14280,7 @@ __INLINE uint32_t nxmac_rx_pay_current_pointer_getf(void)
  */
 
 /// Address of the SW_PROFILING register
-#define NXMAC_SW_PROFILING_ADDR   0xC0008560
+#define NXMAC_SW_PROFILING_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000560)
 /// Offset of the SW_PROFILING register from the base address
 #define NXMAC_SW_PROFILING_OFFSET 0x00000560
 /// Index of the SW_PROFILING register
@@ -15531,7 +15531,7 @@ __INLINE void nxmac_sw_prof_0_setf(uint8_t swprof0)
  */
 
 /// Address of the SW_SET_PROFILING register
-#define NXMAC_SW_SET_PROFILING_ADDR   0xC0008564
+#define NXMAC_SW_SET_PROFILING_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000564)
 /// Offset of the SW_SET_PROFILING register from the base address
 #define NXMAC_SW_SET_PROFILING_OFFSET 0x00000564
 /// Index of the SW_SET_PROFILING register
@@ -16782,7 +16782,7 @@ __INLINE void nxmac_sw_set_prof_0_setf(uint8_t swsetprof0)
  */
 
 /// Address of the SW_CLEAR_PROFILING register
-#define NXMAC_SW_CLEAR_PROFILING_ADDR   0xC0008568
+#define NXMAC_SW_CLEAR_PROFILING_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000568)
 /// Offset of the SW_CLEAR_PROFILING register from the base address
 #define NXMAC_SW_CLEAR_PROFILING_OFFSET 0x00000568
 /// Index of the SW_CLEAR_PROFILING register
@@ -18003,7 +18003,7 @@ __INLINE void nxmac_sw_clear_prof_0_clearf(uint8_t swclearprof0)
  */
 
 /// Address of the DEBUG_SEC_U_1_TX_C_PTR register
-#define NXMAC_DEBUG_SEC_U_1_TX_C_PTR_ADDR   0xC0008570
+#define NXMAC_DEBUG_SEC_U_1_TX_C_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000570)
 /// Offset of the DEBUG_SEC_U_1_TX_C_PTR register from the base address
 #define NXMAC_DEBUG_SEC_U_1_TX_C_PTR_OFFSET 0x00000570
 /// Index of the DEBUG_SEC_U_1_TX_C_PTR register
@@ -18062,7 +18062,7 @@ __INLINE uint32_t nxmac_sec_u_1_tx_current_pointer_getf(void)
  */
 
 /// Address of the DEBUG_SEC_U_2_TX_C_PTR register
-#define NXMAC_DEBUG_SEC_U_2_TX_C_PTR_ADDR   0xC0008574
+#define NXMAC_DEBUG_SEC_U_2_TX_C_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000574)
 /// Offset of the DEBUG_SEC_U_2_TX_C_PTR register from the base address
 #define NXMAC_DEBUG_SEC_U_2_TX_C_PTR_OFFSET 0x00000574
 /// Index of the DEBUG_SEC_U_2_TX_C_PTR register
@@ -18121,7 +18121,7 @@ __INLINE uint32_t nxmac_sec_u_2_tx_current_pointer_getf(void)
  */
 
 /// Address of the DEBUG_SEC_U_3_TX_C_PTR register
-#define NXMAC_DEBUG_SEC_U_3_TX_C_PTR_ADDR   0xC0008578
+#define NXMAC_DEBUG_SEC_U_3_TX_C_PTR_ADDR   (REG_MAC_PL_BASE_ADDR + 0x00000578)
 /// Offset of the DEBUG_SEC_U_3_TX_C_PTR register from the base address
 #define NXMAC_DEBUG_SEC_U_3_TX_C_PTR_OFFSET 0x00000578
 /// Index of the DEBUG_SEC_U_3_TX_C_PTR register
