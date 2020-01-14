@@ -37,7 +37,7 @@
  */
 
 /// Address of the NXVERSION register
-#define MDM_NXVERSION_ADDR   0x01000000
+#define MDM_NXVERSION_ADDR   REG_MDM_STAT_BASE_ADDR
 /// Offset of the NXVERSION register from the base address
 #define MDM_NXVERSION_OFFSET 0x00000000
 /// Index of the NXVERSION register
@@ -94,7 +94,7 @@ __INLINE uint32_t mdm_phy_config_getf(void)
  */
 
 /// Address of the TDOFFSETSTAT0 register
-#define MDM_TDOFFSETSTAT0_ADDR   0x01000004
+#define MDM_TDOFFSETSTAT0_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000004)
 /// Offset of the TDOFFSETSTAT0 register from the base address
 #define MDM_TDOFFSETSTAT0_OFFSET 0x00000004
 /// Index of the TDOFFSETSTAT0 register
@@ -151,7 +151,7 @@ __INLINE uint32_t mdm_coarsefoangle_getf(void)
  */
 
 /// Address of the TDOFFSETSTAT1 register
-#define MDM_TDOFFSETSTAT1_ADDR   0x01000008
+#define MDM_TDOFFSETSTAT1_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000008)
 /// Offset of the TDOFFSETSTAT1 register from the base address
 #define MDM_TDOFFSETSTAT1_OFFSET 0x00000008
 /// Index of the TDOFFSETSTAT1 register
@@ -209,7 +209,7 @@ __INLINE uint32_t mdm_finefoangle_getf(void)
  */
 
 /// Address of the FDTOFFSETSTAT0 register
-#define MDM_FDTOFFSETSTAT0_ADDR   0x0100000C
+#define MDM_FDTOFFSETSTAT0_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x0000000C)
 /// Offset of the FDTOFFSETSTAT0 register from the base address
 #define MDM_FDTOFFSETSTAT0_OFFSET 0x0000000C
 /// Index of the FDTOFFSETSTAT0 register
@@ -303,7 +303,7 @@ __INLINE uint8_t mdm_tdsynchoffstat_getf(void)
  */
 
 /// Address of the FDTOFFSETSTAT1 register
-#define MDM_FDTOFFSETSTAT1_ADDR   0x01000010
+#define MDM_FDTOFFSETSTAT1_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000010)
 /// Offset of the FDTOFFSETSTAT1 register from the base address
 #define MDM_FDTOFFSETSTAT1_OFFSET 0x00000010
 /// Index of the FDTOFFSETSTAT1 register
@@ -361,7 +361,7 @@ __INLINE uint32_t mdm_cpeslopestat_getf(void)
  */
 
 /// Address of the RXFSMSTAT0 register
-#define MDM_RXFSMSTAT0_ADDR   0x01000014
+#define MDM_RXFSMSTAT0_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000014)
 /// Offset of the RXFSMSTAT0 register from the base address
 #define MDM_RXFSMSTAT0_OFFSET 0x00000014
 /// Index of the RXFSMSTAT0 register
@@ -461,7 +461,7 @@ __INLINE uint16_t mdm_tdsymbolnr_getf(void)
  */
 
 /// Address of the RXFSMSTAT1 register
-#define MDM_RXFSMSTAT1_ADDR   0x01000018
+#define MDM_RXFSMSTAT1_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000018)
 /// Offset of the RXFSMSTAT1 register from the base address
 #define MDM_RXFSMSTAT1_OFFSET 0x00000018
 /// Index of the RXFSMSTAT1 register
@@ -668,7 +668,7 @@ __INLINE uint8_t mdm_fdsymboltype_getf(void)
  */
 
 /// Address of the TXFSMSTAT1 register
-#define MDM_TXFSMSTAT1_ADDR   0x0100001C
+#define MDM_TXFSMSTAT1_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x0000001C)
 /// Offset of the TXFSMSTAT1 register from the base address
 #define MDM_TXFSMSTAT1_OFFSET 0x0000001C
 /// Index of the TXFSMSTAT1 register
@@ -729,7 +729,7 @@ __INLINE uint8_t mdm_phy_tx_abort_stat_getf(void)
  */
 
 /// Address of the ERRSTAT register
-#define MDM_ERRSTAT_ADDR   0x01000020
+#define MDM_ERRSTAT_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000020)
 /// Offset of the ERRSTAT register from the base address
 #define MDM_ERRSTAT_OFFSET 0x00000020
 /// Index of the ERRSTAT register
@@ -938,7 +938,7 @@ __INLINE uint8_t mdm_lsigparity_getf(void)
  */
 
 /// Address of the IRQSTAT register
-#define MDM_IRQSTAT_ADDR   0x01000024
+#define MDM_IRQSTAT_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000024)
 /// Offset of the IRQSTAT register from the base address
 #define MDM_IRQSTAT_OFFSET 0x00000024
 /// Index of the IRQSTAT register
@@ -1302,7 +1302,7 @@ __INLINE uint8_t mdm_irqccatimeout_getf(void)
  */
 
 /// Address of the RXVECTOR0 register
-#define MDM_RXVECTOR0_ADDR   0x01000028
+#define MDM_RXVECTOR0_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000028)
 /// Offset of the RXVECTOR0 register from the base address
 #define MDM_RXVECTOR0_OFFSET 0x00000028
 /// Index of the RXVECTOR0 register
@@ -1401,7 +1401,7 @@ __INLINE uint16_t mdm_rxleglength_getf(void)
  */
 
 /// Address of the RXVECTOR1 register
-#define MDM_RXVECTOR1_ADDR   0x0100002C
+#define MDM_RXVECTOR1_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x0000002C)
 /// Offset of the RXVECTOR1 register from the base address
 #define MDM_RXVECTOR1_OFFSET 0x0000002C
 /// Index of the RXVECTOR1 register
@@ -1590,7 +1590,7 @@ __INLINE uint32_t mdm_rxhtlength_getf(void)
  */
 
 /// Address of the RXVECTOR2 register
-#define MDM_RXVECTOR2_ADDR   0x01000030
+#define MDM_RXVECTOR2_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000030)
 /// Offset of the RXVECTOR2 register from the base address
 #define MDM_RXVECTOR2_OFFSET 0x00000030
 /// Index of the RXVECTOR2 register
@@ -1861,7 +1861,7 @@ __INLINE uint8_t mdm_rxformat_getf(void)
  */
 
 /// Address of the RXVECTOR3 register
-#define MDM_RXVECTOR3_ADDR   0x01000034
+#define MDM_RXVECTOR3_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000034)
 /// Offset of the RXVECTOR3 register from the base address
 #define MDM_RXVECTOR3_OFFSET 0x00000034
 /// Index of the RXVECTOR3 register
@@ -2003,7 +2003,7 @@ __INLINE uint8_t mdm_rssi1_getf(void)
  */
 
 /// Address of the RXVECTOR4 register
-#define MDM_RXVECTOR4_ADDR   0x01000038
+#define MDM_RXVECTOR4_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000038)
 /// Offset of the RXVECTOR4 register from the base address
 #define MDM_RXVECTOR4_OFFSET 0x00000038
 /// Index of the RXVECTOR4 register
@@ -2123,7 +2123,7 @@ __INLINE uint8_t mdm_rcpi_getf(void)
  */
 
 /// Address of the RXVECTOR5 register
-#define MDM_RXVECTOR5_ADDR   0x0100003C
+#define MDM_RXVECTOR5_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x0000003C)
 /// Offset of the RXVECTOR5 register from the base address
 #define MDM_RXVECTOR5_OFFSET 0x0000003C
 /// Index of the RXVECTOR5 register
@@ -2270,7 +2270,7 @@ __INLINE uint8_t mdm_evm1_getf(void)
  */
 
 /// Address of the TXVECTOR0 register
-#define MDM_TXVECTOR0_ADDR   0x01000040
+#define MDM_TXVECTOR0_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000040)
 /// Offset of the TXVECTOR0 register from the base address
 #define MDM_TXVECTOR0_OFFSET 0x00000040
 /// Index of the TXVECTOR0 register
@@ -2498,7 +2498,7 @@ __INLINE uint8_t mdm_txpwlevel_getf(void)
  */
 
 /// Address of the TXVECTOR1 register
-#define MDM_TXVECTOR1_ADDR   0x01000044
+#define MDM_TXVECTOR1_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000044)
 /// Offset of the TXVECTOR1 register from the base address
 #define MDM_TXVECTOR1_OFFSET 0x00000044
 /// Index of the TXVECTOR1 register
@@ -2661,7 +2661,7 @@ __INLINE uint8_t mdm_txmcs_getf(void)
  */
 
 /// Address of the TXVECTOR2 register
-#define MDM_TXVECTOR2_ADDR   0x01000048
+#define MDM_TXVECTOR2_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000048)
 /// Offset of the TXVECTOR2 register from the base address
 #define MDM_TXVECTOR2_OFFSET 0x00000048
 /// Index of the TXVECTOR2 register
@@ -2783,7 +2783,7 @@ __INLINE uint16_t mdm_txleglentgh_getf(void)
  */
 
 /// Address of the TXVECTOR3 register
-#define MDM_TXVECTOR3_ADDR   0x0100004C
+#define MDM_TXVECTOR3_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x0000004C)
 /// Offset of the TXVECTOR3 register from the base address
 #define MDM_TXVECTOR3_OFFSET 0x0000004C
 /// Index of the TXVECTOR3 register
@@ -2964,7 +2964,7 @@ __INLINE uint32_t mdm_txhtlength_getf(void)
  */
 
 /// Address of the TXVECTOR4 register
-#define MDM_TXVECTOR4_ADDR   0x01000050
+#define MDM_TXVECTOR4_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000050)
 /// Offset of the TXVECTOR4 register from the base address
 #define MDM_TXVECTOR4_OFFSET 0x00000050
 /// Index of the TXVECTOR4 register
@@ -3065,7 +3065,7 @@ __INLINE uint16_t mdm_txpartialaid_getf(void)
  */
 
 /// Address of the TXVECDECSTAT register
-#define MDM_TXVECDECSTAT_ADDR   0x01000054
+#define MDM_TXVECDECSTAT_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000054)
 /// Offset of the TXVECDECSTAT register from the base address
 #define MDM_TXVECDECSTAT_OFFSET 0x00000054
 /// Index of the TXVECDECSTAT register
@@ -3284,7 +3284,7 @@ __INLINE uint8_t mdm_txvecsounderr_getf(void)
  */
 
 /// Address of the MIMOCMDSTAT register
-#define MDM_MIMOCMDSTAT_ADDR   0x01000058
+#define MDM_MIMOCMDSTAT_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000058)
 /// Offset of the MIMOCMDSTAT register from the base address
 #define MDM_MIMOCMDSTAT_OFFSET 0x00000058
 /// Index of the MIMOCMDSTAT register
@@ -3425,7 +3425,7 @@ __INLINE uint8_t mdm_mimocmd_getf(void)
  */
 
 /// Address of the TBESTAT0 register
-#define MDM_TBESTAT0_ADDR   0x0100005C
+#define MDM_TBESTAT0_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x0000005C)
 /// Offset of the TBESTAT0 register from the base address
 #define MDM_TBESTAT0_OFFSET 0x0000005C
 /// Index of the TBESTAT0 register
@@ -3522,7 +3522,7 @@ __INLINE uint8_t mdm_tbecount_getf(void)
  */
 
 /// Address of the AGCGAINSTAT register
-#define MDM_AGCGAINSTAT_ADDR   0x01000060
+#define MDM_AGCGAINSTAT_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000060)
 /// Offset of the AGCGAINSTAT register from the base address
 #define MDM_AGCGAINSTAT_OFFSET 0x00000060
 /// Index of the AGCGAINSTAT register
@@ -3665,7 +3665,7 @@ __INLINE uint8_t mdm_agcgain0_getf(void)
  */
 
 /// Address of the AGCADCPOWSTAT register
-#define MDM_AGCADCPOWSTAT_ADDR   0x01000064
+#define MDM_AGCADCPOWSTAT_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000064)
 /// Offset of the AGCADCPOWSTAT register from the base address
 #define MDM_AGCADCPOWSTAT_OFFSET 0x00000064
 /// Index of the AGCADCPOWSTAT register
@@ -3805,7 +3805,7 @@ __INLINE uint8_t mdm_adcpowdbv0_getf(void)
  */
 
 /// Address of the RADARFIFOSTAT register
-#define MDM_RADARFIFOSTAT_ADDR   0x01000068
+#define MDM_RADARFIFOSTAT_ADDR   (REG_MDM_STAT_BASE_ADDR + 0x00000068)
 /// Offset of the RADARFIFOSTAT register from the base address
 #define MDM_RADARFIFOSTAT_OFFSET 0x00000068
 /// Index of the RADARFIFOSTAT register

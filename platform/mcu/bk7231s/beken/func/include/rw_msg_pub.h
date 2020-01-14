@@ -7,14 +7,23 @@ typedef enum {
 } wifi_country_policy_t;
 
 typedef enum {
-	MSG_IDLE = 0,
-	MSG_CONNECTING,
-	MSG_PASSWD_WRONG,
-	MSG_NO_AP_FOUND,
-	MSG_CONN_FAIL,
-	MSG_CONN_SUCCESS,
-	MSG_GOT_IP,
-}msg_sta_states;
+    /* for station mode */
+	RW_EVT_STA_IDLE = 0,
+	RW_EVT_STA_CONNECTING,
+    RW_EVT_STA_BEACON_LOSE,
+    RW_EVT_STA_PASSWORD_WRONG,
+    RW_EVT_STA_NO_AP_FOUND,
+    RW_EVT_STA_ASSOC_FULL,
+    RW_EVT_STA_DISCONNECTED,    /* disconnect with server */
+    RW_EVT_STA_CONNECT_FAILED, /* authentication failed */
+	RW_EVT_STA_CONNECTED,	 /* authentication success */
+	RW_EVT_STA_GOT_IP,
+    /* for softap mode */
+    RW_EVT_AP_CONNECTED,          /* a client association success */
+    RW_EVT_AP_DISCONNECTED,    /* a client disconnect */
+    RW_EVT_AP_CONNECT_FAILED, /* a client association failed */
+    RW_EVT_MAX
+}rw_evt_type;
 
 /** @brief Structure describing WiFi country-based regional restrictions. */
 typedef struct {
@@ -46,8 +55,8 @@ typedef struct scanu_rst_upload
     struct sta_scan_res **res;
 }SCAN_RST_UPLOAD_T, *SCAN_RST_UPLOAD_PTR;
 
-extern void mhdr_set_station_status(msg_sta_states val);
-extern msg_sta_states mhdr_get_station_status(void);
+extern void mhdr_set_station_status(rw_evt_type val);
+extern rw_evt_type mhdr_get_station_status(void);
 UINT32 rw_ieee80211_set_country(const wifi_country_t *country);
 UINT32 rw_ieee80211_get_country(wifi_country_t *country);
 

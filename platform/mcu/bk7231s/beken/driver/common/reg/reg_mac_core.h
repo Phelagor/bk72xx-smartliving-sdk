@@ -38,7 +38,7 @@
  */
 
 /// Address of the SIGNATURE register
-#define NXMAC_SIGNATURE_ADDR   0xC0000000
+#define NXMAC_SIGNATURE_ADDR   REG_MAC_CORE_BASE_ADDR
 /// Offset of the SIGNATURE register from the base address
 #define NXMAC_SIGNATURE_OFFSET 0x00000000
 /// Index of the SIGNATURE register
@@ -112,7 +112,7 @@ __INLINE uint32_t nxmac_signature_getf(void)
  */
 
 /// Address of the VERSION_1 register
-#define NXMAC_VERSION_1_ADDR   0xC0000004
+#define NXMAC_VERSION_1_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000004)
 /// Offset of the VERSION_1 register from the base address
 #define NXMAC_VERSION_1_OFFSET 0x00000004
 /// Index of the VERSION_1 register
@@ -541,7 +541,7 @@ __INLINE uint8_t nxmac_qos_getf(void)
  */
 
 /// Address of the VERSION_2 register
-#define NXMAC_VERSION_2_ADDR   0xC0000008
+#define NXMAC_VERSION_2_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000008)
 /// Offset of the VERSION_2 register from the base address
 #define NXMAC_VERSION_2_OFFSET 0x00000008
 /// Index of the VERSION_2 register
@@ -679,7 +679,7 @@ __INLINE uint8_t nxmac_um_version_getf(void)
  */
 
 /// Address of the BITMAP_CNT register
-#define NXMAC_BITMAP_CNT_ADDR   0xC000000C
+#define NXMAC_BITMAP_CNT_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000000C)
 /// Offset of the BITMAP_CNT register from the base address
 #define NXMAC_BITMAP_CNT_OFFSET 0x0000000C
 /// Index of the BITMAP_CNT register
@@ -736,7 +736,7 @@ __INLINE uint16_t nxmac_bitmap_cnt_getf(void)
  */
 
 /// Address of the MAC_ADDR_LOW register
-#define NXMAC_MAC_ADDR_LOW_ADDR   0xC0000010
+#define NXMAC_MAC_ADDR_LOW_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000010)
 /// Offset of the MAC_ADDR_LOW register from the base address
 #define NXMAC_MAC_ADDR_LOW_OFFSET 0x00000010
 /// Index of the MAC_ADDR_LOW register
@@ -816,7 +816,7 @@ __INLINE void nxmac_mac_addr_low_setf(uint32_t macaddrlow)
  */
 
 /// Address of the MAC_ADDR_HI register
-#define NXMAC_MAC_ADDR_HI_ADDR   0xC0000014
+#define NXMAC_MAC_ADDR_HI_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000014)
 /// Offset of the MAC_ADDR_HI register from the base address
 #define NXMAC_MAC_ADDR_HI_OFFSET 0x00000014
 /// Index of the MAC_ADDR_HI register
@@ -896,7 +896,7 @@ __INLINE void nxmac_mac_addr_high_setf(uint16_t macaddrhigh)
  */
 
 /// Address of the MAC_ADDR_LOW_MASK register
-#define NXMAC_MAC_ADDR_LOW_MASK_ADDR   0xC0000018
+#define NXMAC_MAC_ADDR_LOW_MASK_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000018)
 /// Offset of the MAC_ADDR_LOW_MASK register from the base address
 #define NXMAC_MAC_ADDR_LOW_MASK_OFFSET 0x00000018
 /// Index of the MAC_ADDR_LOW_MASK register
@@ -976,7 +976,7 @@ __INLINE void nxmac_mac_addr_low_mask_setf(uint32_t macaddrlowmask)
  */
 
 /// Address of the MAC_ADDR_HI_MASK register
-#define NXMAC_MAC_ADDR_HI_MASK_ADDR   0xC000001C
+#define NXMAC_MAC_ADDR_HI_MASK_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000001C)
 /// Offset of the MAC_ADDR_HI_MASK register from the base address
 #define NXMAC_MAC_ADDR_HI_MASK_OFFSET 0x0000001C
 /// Index of the MAC_ADDR_HI_MASK register
@@ -1056,7 +1056,7 @@ __INLINE void nxmac_mac_addr_high_mask_setf(uint16_t macaddrhighmask)
  */
 
 /// Address of the BSS_ID_LOW register
-#define NXMAC_BSS_ID_LOW_ADDR   0xC0000020
+#define NXMAC_BSS_ID_LOW_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000020)
 /// Offset of the BSS_ID_LOW register from the base address
 #define NXMAC_BSS_ID_LOW_OFFSET 0x00000020
 /// Index of the BSS_ID_LOW register
@@ -1136,7 +1136,7 @@ __INLINE void nxmac_bss_id_low_setf(uint32_t bssidlow)
  */
 
 /// Address of the BSS_ID_HI register
-#define NXMAC_BSS_ID_HI_ADDR   0xC0000024
+#define NXMAC_BSS_ID_HI_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000024)
 /// Offset of the BSS_ID_HI register from the base address
 #define NXMAC_BSS_ID_HI_OFFSET 0x00000024
 /// Index of the BSS_ID_HI register
@@ -1216,7 +1216,7 @@ __INLINE void nxmac_bss_id_high_setf(uint16_t bssidhigh)
  */
 
 /// Address of the BSS_ID_LOW_MASK register
-#define NXMAC_BSS_ID_LOW_MASK_ADDR   0xC0000028
+#define NXMAC_BSS_ID_LOW_MASK_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000028)
 /// Offset of the BSS_ID_LOW_MASK register from the base address
 #define NXMAC_BSS_ID_LOW_MASK_OFFSET 0x00000028
 /// Index of the BSS_ID_LOW_MASK register
@@ -1296,7 +1296,7 @@ __INLINE void nxmac_bss_id_low_mask_setf(uint32_t bssidlowmask)
  */
 
 /// Address of the BSS_ID_HI_MASK register
-#define NXMAC_BSS_ID_HI_MASK_ADDR   0xC000002C
+#define NXMAC_BSS_ID_HI_MASK_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000002C)
 /// Offset of the BSS_ID_HI_MASK register from the base address
 #define NXMAC_BSS_ID_HI_MASK_OFFSET 0x0000002C
 /// Index of the BSS_ID_HI_MASK register
@@ -1377,7 +1377,7 @@ __INLINE void nxmac_bss_id_high_mask_setf(uint16_t bssidhighmask)
  */
 
 /// Address of the STATE_CNTRL register
-#define NXMAC_STATE_CNTRL_ADDR   0xC0000038
+#define NXMAC_STATE_CNTRL_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000038)
 /// Offset of the STATE_CNTRL register from the base address
 #define NXMAC_STATE_CNTRL_OFFSET 0x00000038
 /// Index of the STATE_CNTRL register
@@ -1494,7 +1494,7 @@ __INLINE uint8_t nxmac_current_state_getf(void)
  */
 
 /// Address of the SCAN_CNTRL register
-#define NXMAC_SCAN_CNTRL_ADDR   0xC000003C
+#define NXMAC_SCAN_CNTRL_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000003C)
 /// Offset of the SCAN_CNTRL register from the base address
 #define NXMAC_SCAN_CNTRL_OFFSET 0x0000003C
 /// Index of the SCAN_CNTRL register
@@ -1576,7 +1576,7 @@ __INLINE void nxmac_probe_delay_setf(uint16_t probedelay)
  */
 
 /// Address of the DOZE_CNTRL_1 register
-#define NXMAC_DOZE_CNTRL_1_ADDR   0xC0000044
+#define NXMAC_DOZE_CNTRL_1_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000044)
 /// Offset of the DOZE_CNTRL_1 register from the base address
 #define NXMAC_DOZE_CNTRL_1_OFFSET 0x00000044
 /// Index of the DOZE_CNTRL_1 register
@@ -1772,7 +1772,7 @@ __INLINE void nxmac_listen_interval_setf(uint16_t listeninterval)
  */
 
 /// Address of the MAC_CNTRL_1 register
-#define NXMAC_MAC_CNTRL_1_ADDR   0xC000004C
+#define NXMAC_MAC_CNTRL_1_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000004C)
 /// Offset of the MAC_CNTRL_1 register from the base address
 #define NXMAC_MAC_CNTRL_1_OFFSET 0x0000004C
 /// Index of the MAC_CNTRL_1 register
@@ -2462,7 +2462,7 @@ __INLINE void nxmac_bss_type_setf(uint8_t bsstype)
  */
 
 /// Address of the MAC_ERR_REC_CNTRL register
-#define NXMAC_MAC_ERR_REC_CNTRL_ADDR   0xC0000054
+#define NXMAC_MAC_ERR_REC_CNTRL_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000054)
 /// Offset of the MAC_ERR_REC_CNTRL register from the base address
 #define NXMAC_MAC_ERR_REC_CNTRL_OFFSET 0x00000054
 /// Index of the MAC_ERR_REC_CNTRL register
@@ -2842,7 +2842,7 @@ __INLINE uint8_t nxmac_use_err_rec_getf(void)
  */
 
 /// Address of the MAC_ERR_SET_STATUS register
-#define NXMAC_MAC_ERR_SET_STATUS_ADDR   0xC0000058
+#define NXMAC_MAC_ERR_SET_STATUS_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000058)
 /// Offset of the MAC_ERR_SET_STATUS register from the base address
 #define NXMAC_MAC_ERR_SET_STATUS_OFFSET 0x00000058
 /// Index of the MAC_ERR_SET_STATUS register
@@ -3057,7 +3057,7 @@ __INLINE void nxmac_err_in_tx_level_1_setf(uint8_t errintxlevel1)
  */
 
 /// Address of the MAC_ERR_CLEAR_STATUS register
-#define NXMAC_MAC_ERR_CLEAR_STATUS_ADDR   0xC000005C
+#define NXMAC_MAC_ERR_CLEAR_STATUS_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000005C)
 /// Offset of the MAC_ERR_CLEAR_STATUS register from the base address
 #define NXMAC_MAC_ERR_CLEAR_STATUS_OFFSET 0x0000005C
 /// Index of the MAC_ERR_CLEAR_STATUS register
@@ -3300,7 +3300,7 @@ __INLINE void nxmac_clear_err_in_tx_level_1_clearf(uint8_t clearerrintxlevel1)
  */
 
 /// Address of the RX_CNTRL register
-#define NXMAC_RX_CNTRL_ADDR   0xC0000060
+#define NXMAC_RX_CNTRL_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000060)
 /// Offset of the RX_CNTRL register from the base address
 #define NXMAC_RX_CNTRL_OFFSET 0x00000060
 /// Index of the RX_CNTRL register
@@ -4508,7 +4508,7 @@ __INLINE void nxmac_exc_unencrypted_setf(uint8_t excunencrypted)
  */
 
 /// Address of the BCN_CNTRL_1 register
-#define NXMAC_BCN_CNTRL_1_ADDR   0xC0000064
+#define NXMAC_BCN_CNTRL_1_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000064)
 /// Offset of the BCN_CNTRL_1 register from the base address
 #define NXMAC_BCN_CNTRL_1_OFFSET 0x00000064
 /// Index of the BCN_CNTRL_1 register
@@ -4728,7 +4728,7 @@ __INLINE void nxmac_beacon_int_setf(uint16_t beaconint)
  */
 
 /// Address of the BCN_CNTRL_2 register
-#define NXMAC_BCN_CNTRL_2_ADDR   0xC0000068
+#define NXMAC_BCN_CNTRL_2_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000068)
 /// Offset of the BCN_CNTRL_2 register from the base address
 #define NXMAC_BCN_CNTRL_2_OFFSET 0x00000068
 /// Index of the BCN_CNTRL_2 register
@@ -4912,7 +4912,7 @@ __INLINE void nxmac_bcn_update_offset_setf(uint8_t bcnupdateoffset)
  */
 
 /// Address of the DTIM_CFP_1 register
-#define NXMAC_DTIM_CFP_1_ADDR   0xC0000090
+#define NXMAC_DTIM_CFP_1_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000090)
 /// Offset of the DTIM_CFP_1 register from the base address
 #define NXMAC_DTIM_CFP_1_OFFSET 0x00000090
 /// Index of the DTIM_CFP_1 register
@@ -5092,7 +5092,7 @@ __INLINE void nxmac_dtim_period_setf(uint8_t dtimperiod)
  */
 
 /// Address of the DTIM_CFP_2 register
-#define NXMAC_DTIM_CFP_2_ADDR   0xC0000094
+#define NXMAC_DTIM_CFP_2_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000094)
 /// Offset of the DTIM_CFP_2 register from the base address
 #define NXMAC_DTIM_CFP_2_OFFSET 0x00000094
 /// Index of the DTIM_CFP_2 register
@@ -5173,7 +5173,7 @@ __INLINE void nxmac_cfp_max_duration_setf(uint16_t cfpmaxduration)
  */
 
 /// Address of the RETRY_LIMITS register
-#define NXMAC_RETRY_LIMITS_ADDR   0xC0000098
+#define NXMAC_RETRY_LIMITS_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000098)
 /// Offset of the RETRY_LIMITS register from the base address
 #define NXMAC_RETRY_LIMITS_OFFSET 0x00000098
 /// Index of the RETRY_LIMITS register
@@ -5319,7 +5319,7 @@ __INLINE void nxmac_dot_11_short_retry_limit_setf(uint8_t dot11shortretrylimit)
  */
 
 /// Address of the BB_SERVICE register
-#define NXMAC_BB_SERVICE_ADDR   0xC000009C
+#define NXMAC_BB_SERVICE_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000009C)
 /// Offset of the BB_SERVICE register from the base address
 #define NXMAC_BB_SERVICE_OFFSET 0x0000009C
 /// Index of the BB_SERVICE register
@@ -5502,7 +5502,7 @@ __INLINE void nxmac_bb_service_a_setf(uint16_t bbservicea)
  */
 
 /// Address of the MAX_POWER_LEVEL register
-#define NXMAC_MAX_POWER_LEVEL_ADDR   0xC00000A0
+#define NXMAC_MAX_POWER_LEVEL_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000A0)
 /// Offset of the MAX_POWER_LEVEL register from the base address
 #define NXMAC_MAX_POWER_LEVEL_OFFSET 0x000000A0
 /// Index of the MAX_POWER_LEVEL register
@@ -5646,7 +5646,7 @@ __INLINE void nxmac_ofdm_max_pwr_level_setf(uint8_t ofdmmaxpwrlevel)
  */
 
 /// Address of the ENCR_KEY_0 register
-#define NXMAC_ENCR_KEY_0_ADDR   0xC00000AC
+#define NXMAC_ENCR_KEY_0_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000AC)
 /// Offset of the ENCR_KEY_0 register from the base address
 #define NXMAC_ENCR_KEY_0_OFFSET 0x000000AC
 /// Index of the ENCR_KEY_0 register
@@ -5726,7 +5726,7 @@ __INLINE void nxmac_encr_key_ram_word_0_setf(uint32_t encrkeyramword0)
  */
 
 /// Address of the ENCR_KEY_1 register
-#define NXMAC_ENCR_KEY_1_ADDR   0xC00000B0
+#define NXMAC_ENCR_KEY_1_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000B0)
 /// Offset of the ENCR_KEY_1 register from the base address
 #define NXMAC_ENCR_KEY_1_OFFSET 0x000000B0
 /// Index of the ENCR_KEY_1 register
@@ -5806,7 +5806,7 @@ __INLINE void nxmac_encr_key_ram_word_1_setf(uint32_t encrkeyramword1)
  */
 
 /// Address of the ENCR_KEY_2 register
-#define NXMAC_ENCR_KEY_2_ADDR   0xC00000B4
+#define NXMAC_ENCR_KEY_2_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000B4)
 /// Offset of the ENCR_KEY_2 register from the base address
 #define NXMAC_ENCR_KEY_2_OFFSET 0x000000B4
 /// Index of the ENCR_KEY_2 register
@@ -5886,7 +5886,7 @@ __INLINE void nxmac_encr_key_ram_word_2_setf(uint32_t encrkeyramword2)
  */
 
 /// Address of the ENCR_KEY_3 register
-#define NXMAC_ENCR_KEY_3_ADDR   0xC00000B8
+#define NXMAC_ENCR_KEY_3_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000B8)
 /// Offset of the ENCR_KEY_3 register from the base address
 #define NXMAC_ENCR_KEY_3_OFFSET 0x000000B8
 /// Index of the ENCR_KEY_3 register
@@ -5966,7 +5966,7 @@ __INLINE void nxmac_encr_key_ram_word_3_setf(uint32_t encrkeyramword3)
  */
 
 /// Address of the ENCR_MAC_ADDR_LOW register
-#define NXMAC_ENCR_MAC_ADDR_LOW_ADDR   0xC00000BC
+#define NXMAC_ENCR_MAC_ADDR_LOW_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000BC)
 /// Offset of the ENCR_MAC_ADDR_LOW register from the base address
 #define NXMAC_ENCR_MAC_ADDR_LOW_OFFSET 0x000000BC
 /// Index of the ENCR_MAC_ADDR_LOW register
@@ -6046,7 +6046,7 @@ __INLINE void nxmac_mac_addr_ram_low_setf(uint32_t macaddrramlow)
  */
 
 /// Address of the ENCR_MAC_ADDR_HIGH register
-#define NXMAC_ENCR_MAC_ADDR_HIGH_ADDR   0xC00000C0
+#define NXMAC_ENCR_MAC_ADDR_HIGH_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000C0)
 /// Offset of the ENCR_MAC_ADDR_HIGH register from the base address
 #define NXMAC_ENCR_MAC_ADDR_HIGH_OFFSET 0x000000C0
 /// Index of the ENCR_MAC_ADDR_HIGH register
@@ -6142,7 +6142,7 @@ enum
 };
 
 /// Address of the ENCR_CNTRL register
-#define NXMAC_ENCR_CNTRL_ADDR   0xC00000C4
+#define NXMAC_ENCR_CNTRL_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000C4)
 /// Offset of the ENCR_CNTRL register from the base address
 #define NXMAC_ENCR_CNTRL_OFFSET 0x000000C4
 /// Index of the ENCR_CNTRL register
@@ -6579,7 +6579,7 @@ __INLINE void nxmac_c_len_ram_setf(uint8_t clenram)
  */
 
 /// Address of the ENCR_WPI_INT_KEY_0 register
-#define NXMAC_ENCR_WPI_INT_KEY_0_ADDR   0xC00000C8
+#define NXMAC_ENCR_WPI_INT_KEY_0_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000C8)
 /// Offset of the ENCR_WPI_INT_KEY_0 register from the base address
 #define NXMAC_ENCR_WPI_INT_KEY_0_OFFSET 0x000000C8
 /// Index of the ENCR_WPI_INT_KEY_0 register
@@ -6661,7 +6661,7 @@ __INLINE void nxmac_encr_int_key_ram_word_0_setf(uint32_t encrintkeyramword0)
  */
 
 /// Address of the ENCR_WPI_INT_KEY_1 register
-#define NXMAC_ENCR_WPI_INT_KEY_1_ADDR   0xC00000CC
+#define NXMAC_ENCR_WPI_INT_KEY_1_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000CC)
 /// Offset of the ENCR_WPI_INT_KEY_1 register from the base address
 #define NXMAC_ENCR_WPI_INT_KEY_1_OFFSET 0x000000CC
 /// Index of the ENCR_WPI_INT_KEY_1 register
@@ -6743,7 +6743,7 @@ __INLINE void nxmac_encr_int_key_ram_word_1_setf(uint32_t encrintkeyramword1)
  */
 
 /// Address of the ENCR_WPI_INT_KEY_2 register
-#define NXMAC_ENCR_WPI_INT_KEY_2_ADDR   0xC00000D0
+#define NXMAC_ENCR_WPI_INT_KEY_2_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000D0)
 /// Offset of the ENCR_WPI_INT_KEY_2 register from the base address
 #define NXMAC_ENCR_WPI_INT_KEY_2_OFFSET 0x000000D0
 /// Index of the ENCR_WPI_INT_KEY_2 register
@@ -6825,7 +6825,7 @@ __INLINE void nxmac_encr_int_key_ram_word_2_setf(uint32_t encrintkeyramword2)
  */
 
 /// Address of the ENCR_WPI_INT_KEY_3 register
-#define NXMAC_ENCR_WPI_INT_KEY_3_ADDR   0xC00000D4
+#define NXMAC_ENCR_WPI_INT_KEY_3_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000D4)
 /// Offset of the ENCR_WPI_INT_KEY_3 register from the base address
 #define NXMAC_ENCR_WPI_INT_KEY_3_OFFSET 0x000000D4
 /// Index of the ENCR_WPI_INT_KEY_3 register
@@ -6909,7 +6909,7 @@ __INLINE void nxmac_encr_int_key_ram_word_3_setf(uint32_t encrintkeyramword3)
  */
 
 /// Address of the ENCR_RAM_CONFIG register
-#define NXMAC_ENCR_RAM_CONFIG_ADDR   0xC00000D8
+#define NXMAC_ENCR_RAM_CONFIG_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000D8)
 /// Offset of the ENCR_RAM_CONFIG register from the base address
 #define NXMAC_ENCR_RAM_CONFIG_OFFSET 0x000000D8
 /// Index of the ENCR_RAM_CONFIG register
@@ -7114,7 +7114,7 @@ __INLINE void nxmac_sta_key_start_index_setf(uint8_t stakeystartindex)
  */
 
 /// Address of the RATES register
-#define NXMAC_RATES_ADDR   0xC00000DC
+#define NXMAC_RATES_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000DC)
 /// Offset of the RATES register from the base address
 #define NXMAC_RATES_OFFSET 0x000000DC
 /// Index of the RATES register
@@ -7196,7 +7196,7 @@ __INLINE void nxmac_bss_basic_rate_set_setf(uint16_t bssbasicrateset)
  */
 
 /// Address of the OLBC register
-#define NXMAC_OLBC_ADDR   0xC00000E0
+#define NXMAC_OLBC_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000E0)
 /// Offset of the OLBC register from the base address
 #define NXMAC_OLBC_OFFSET 0x000000E0
 /// Index of the OLBC register
@@ -7380,7 +7380,7 @@ __INLINE void nxmac_olbc_timer_setf(uint16_t olbctimer)
  */
 
 /// Address of the TIMINGS_1 register
-#define NXMAC_TIMINGS_1_ADDR   0xC00000E4
+#define NXMAC_TIMINGS_1_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000E4)
 /// Offset of the TIMINGS_1 register from the base address
 #define NXMAC_TIMINGS_1_OFFSET 0x000000E4
 /// Index of the TIMINGS_1 register
@@ -7563,7 +7563,7 @@ __INLINE void nxmac_mac_core_clk_freq_setf(uint8_t maccoreclkfreq)
  */
 
 /// Address of the TIMINGS_2 register
-#define NXMAC_TIMINGS_2_ADDR   0xC00000E8
+#define NXMAC_TIMINGS_2_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000E8)
 /// Offset of the TIMINGS_2 register from the base address
 #define NXMAC_TIMINGS_2_OFFSET 0x000000E8
 /// Index of the TIMINGS_2 register
@@ -7709,7 +7709,7 @@ __INLINE void nxmac_slot_time_setf(uint8_t slottime)
  */
 
 /// Address of the TIMINGS_3 register
-#define NXMAC_TIMINGS_3_ADDR   0xC00000EC
+#define NXMAC_TIMINGS_3_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000EC)
 /// Offset of the TIMINGS_3 register from the base address
 #define NXMAC_TIMINGS_3_OFFSET 0x000000EC
 /// Index of the TIMINGS_3 register
@@ -7893,7 +7893,7 @@ __INLINE void nxmac_mac_proc_delay_in_mac_clk_setf(uint16_t macprocdelayinmacclk
  */
 
 /// Address of the TIMINGS_4 register
-#define NXMAC_TIMINGS_4_ADDR   0xC00000F0
+#define NXMAC_TIMINGS_4_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000F0)
 /// Offset of the TIMINGS_4 register from the base address
 #define NXMAC_TIMINGS_4_OFFSET 0x000000F0
 /// Index of the TIMINGS_4 register
@@ -8076,7 +8076,7 @@ __INLINE void nxmac_wt_2_crypt_clk_ratio_setf(uint8_t wt2cryptclkratio)
  */
 
 /// Address of the TIMINGS_5 register
-#define NXMAC_TIMINGS_5_ADDR   0xC00000F4
+#define NXMAC_TIMINGS_5_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000F4)
 /// Offset of the TIMINGS_5 register from the base address
 #define NXMAC_TIMINGS_5_OFFSET 0x000000F4
 /// Index of the TIMINGS_5 register
@@ -8221,7 +8221,7 @@ __INLINE void nxmac_sifs_b_setf(uint8_t sifsb)
  */
 
 /// Address of the TIMINGS_6 register
-#define NXMAC_TIMINGS_6_ADDR   0xC00000F8
+#define NXMAC_TIMINGS_6_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000F8)
 /// Offset of the TIMINGS_6 register from the base address
 #define NXMAC_TIMINGS_6_OFFSET 0x000000F8
 /// Index of the TIMINGS_6 register
@@ -8366,7 +8366,7 @@ __INLINE void nxmac_sifs_a_setf(uint8_t sifsa)
  */
 
 /// Address of the TIMINGS_7 register
-#define NXMAC_TIMINGS_7_ADDR   0xC00000FC
+#define NXMAC_TIMINGS_7_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x000000FC)
 /// Offset of the TIMINGS_7 register from the base address
 #define NXMAC_TIMINGS_7_OFFSET 0x000000FC
 /// Index of the TIMINGS_7 register
@@ -8513,7 +8513,7 @@ __INLINE void nxmac_rifs_setf(uint8_t rifs)
  */
 
 /// Address of the TIMINGS_8 register
-#define NXMAC_TIMINGS_8_ADDR   0xC0000100
+#define NXMAC_TIMINGS_8_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000100)
 /// Offset of the TIMINGS_8 register from the base address
 #define NXMAC_TIMINGS_8_OFFSET 0x00000100
 /// Index of the TIMINGS_8 register
@@ -8735,7 +8735,7 @@ __INLINE void nxmac_rx_start_delay_ofdm_setf(uint8_t rxstartdelayofdm)
  */
 
 /// Address of the TIMINGS_9 register
-#define NXMAC_TIMINGS_9_ADDR   0xC0000104
+#define NXMAC_TIMINGS_9_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000104)
 /// Offset of the TIMINGS_9 register from the base address
 #define NXMAC_TIMINGS_9_OFFSET 0x00000104
 /// Index of the TIMINGS_9 register
@@ -8918,7 +8918,7 @@ __INLINE void nxmac_tx_dma_proc_dly_in_mac_clk_setf(uint16_t txdmaprocdlyinmaccl
  */
 
 /// Address of the PROT_TRIG_TIMER register
-#define NXMAC_PROT_TRIG_TIMER_ADDR   0xC000010C
+#define NXMAC_PROT_TRIG_TIMER_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000010C)
 /// Offset of the PROT_TRIG_TIMER register from the base address
 #define NXMAC_PROT_TRIG_TIMER_OFFSET 0x0000010C
 /// Index of the PROT_TRIG_TIMER register
@@ -9036,7 +9036,7 @@ __INLINE void nxmac_edca_trigger_timer_setf(uint8_t edcatriggertimer)
  */
 
 /// Address of the TX_TRIGGER_TIMER register
-#define NXMAC_TX_TRIGGER_TIMER_ADDR   0xC0000110
+#define NXMAC_TX_TRIGGER_TIMER_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000110)
 /// Offset of the TX_TRIGGER_TIMER register from the base address
 #define NXMAC_TX_TRIGGER_TIMER_OFFSET 0x00000110
 /// Index of the TX_TRIGGER_TIMER register
@@ -9182,7 +9182,7 @@ __INLINE void nxmac_tx_absolute_timeout_setf(uint8_t txabsolutetimeout)
  */
 
 /// Address of the RX_TRIGGER_TIMER register
-#define NXMAC_RX_TRIGGER_TIMER_ADDR   0xC0000114
+#define NXMAC_RX_TRIGGER_TIMER_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000114)
 /// Offset of the RX_TRIGGER_TIMER register from the base address
 #define NXMAC_RX_TRIGGER_TIMER_OFFSET 0x00000114
 /// Index of the RX_TRIGGER_TIMER register
@@ -9367,7 +9367,7 @@ __INLINE void nxmac_rx_absolute_timeout_setf(uint8_t rxabsolutetimeout)
  */
 
 /// Address of the MIB_TABLE_WRITE register
-#define NXMAC_MIB_TABLE_WRITE_ADDR   0xC0000118
+#define NXMAC_MIB_TABLE_WRITE_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000118)
 /// Offset of the MIB_TABLE_WRITE register from the base address
 #define NXMAC_MIB_TABLE_WRITE_OFFSET 0x00000118
 /// Index of the MIB_TABLE_WRITE register
@@ -9583,7 +9583,7 @@ __INLINE void nxmac_mib_table_index_setf(uint16_t mibtableindex)
  */
 
 /// Address of the MONOTONIC_COUNTER_1 register
-#define NXMAC_MONOTONIC_COUNTER_1_ADDR   0xC000011C
+#define NXMAC_MONOTONIC_COUNTER_1_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000011C)
 /// Offset of the MONOTONIC_COUNTER_1 register from the base address
 #define NXMAC_MONOTONIC_COUNTER_1_OFFSET 0x0000011C
 /// Index of the MONOTONIC_COUNTER_1 register
@@ -9640,7 +9640,7 @@ __INLINE uint32_t nxmac_monotonic_counter_1_getf(void)
  */
 
 /// Address of the MONOTONIC_COUNTER_2_LO register
-#define NXMAC_MONOTONIC_COUNTER_2_LO_ADDR   0xC0000120
+#define NXMAC_MONOTONIC_COUNTER_2_LO_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000120)
 /// Offset of the MONOTONIC_COUNTER_2_LO register from the base address
 #define NXMAC_MONOTONIC_COUNTER_2_LO_OFFSET 0x00000120
 /// Index of the MONOTONIC_COUNTER_2_LO register
@@ -9721,7 +9721,7 @@ __INLINE void nxmac_monotonic_counter_low_2_setf(uint32_t monotoniccounterlow2)
  */
 
 /// Address of the MONOTONIC_COUNTER_2_HI register
-#define NXMAC_MONOTONIC_COUNTER_2_HI_ADDR   0xC0000124
+#define NXMAC_MONOTONIC_COUNTER_2_HI_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000124)
 /// Offset of the MONOTONIC_COUNTER_2_HI register from the base address
 #define NXMAC_MONOTONIC_COUNTER_2_HI_OFFSET 0x00000124
 /// Index of the MONOTONIC_COUNTER_2_HI register
@@ -9863,7 +9863,7 @@ __INLINE void nxmac_monotonic_counter_high_2_setf(uint16_t monotoniccounterhigh2
  */
 
 /// Address of the ABS_TIMER register
-#define NXMAC_ABS_TIMER_ADDR   0xC0000128
+#define NXMAC_ABS_TIMER_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000128)
 /// Offset of the ABS_TIMER register from the base address
 #define NXMAC_ABS_TIMER_OFFSET 0x00000128
 /// Index of the ABS_TIMER register
@@ -9955,7 +9955,7 @@ __INLINE void nxmac_abs_timer_value_setf(int reg_idx, uint32_t abstimervalue)
  */
 
 /// Address of the MAX_RX_LENGTH register
-#define NXMAC_MAX_RX_LENGTH_ADDR   0xC0000150
+#define NXMAC_MAX_RX_LENGTH_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000150)
 /// Offset of the MAX_RX_LENGTH register from the base address
 #define NXMAC_MAX_RX_LENGTH_OFFSET 0x00000150
 /// Index of the MAX_RX_LENGTH register
@@ -10038,7 +10038,7 @@ __INLINE void nxmac_max_allowed_length_setf(uint32_t maxallowedlength)
  */
 
 /// Address of the EDCA_AC_0 register
-#define NXMAC_EDCA_AC_0_ADDR   0xC0000200
+#define NXMAC_EDCA_AC_0_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000200)
 /// Offset of the EDCA_AC_0 register from the base address
 #define NXMAC_EDCA_AC_0_OFFSET 0x00000200
 /// Index of the EDCA_AC_0 register
@@ -10261,7 +10261,7 @@ __INLINE void nxmac_aifsn_0_setf(uint8_t aifsn0)
  */
 
 /// Address of the EDCA_AC_1 register
-#define NXMAC_EDCA_AC_1_ADDR   0xC0000204
+#define NXMAC_EDCA_AC_1_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000204)
 /// Offset of the EDCA_AC_1 register from the base address
 #define NXMAC_EDCA_AC_1_OFFSET 0x00000204
 /// Index of the EDCA_AC_1 register
@@ -10484,7 +10484,7 @@ __INLINE void nxmac_aifsn_1_setf(uint8_t aifsn1)
  */
 
 /// Address of the EDCA_AC_2 register
-#define NXMAC_EDCA_AC_2_ADDR   0xC0000208
+#define NXMAC_EDCA_AC_2_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000208)
 /// Offset of the EDCA_AC_2 register from the base address
 #define NXMAC_EDCA_AC_2_OFFSET 0x00000208
 /// Index of the EDCA_AC_2 register
@@ -10707,7 +10707,7 @@ __INLINE void nxmac_aifsn_2_setf(uint8_t aifsn2)
  */
 
 /// Address of the EDCA_AC_3 register
-#define NXMAC_EDCA_AC_3_ADDR   0xC000020C
+#define NXMAC_EDCA_AC_3_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000020C)
 /// Offset of the EDCA_AC_3 register from the base address
 #define NXMAC_EDCA_AC_3_OFFSET 0x0000020C
 /// Index of the EDCA_AC_3 register
@@ -10927,7 +10927,7 @@ __INLINE void nxmac_aifsn_3_setf(uint8_t aifsn3)
  */
 
 /// Address of the EDCA_CCA_BUSY register
-#define NXMAC_EDCA_CCA_BUSY_ADDR   0xC0000220
+#define NXMAC_EDCA_CCA_BUSY_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000220)
 /// Offset of the EDCA_CCA_BUSY register from the base address
 #define NXMAC_EDCA_CCA_BUSY_OFFSET 0x00000220
 /// Index of the EDCA_CCA_BUSY register
@@ -11010,7 +11010,7 @@ __INLINE void nxmac_cca_busy_dur_setf(uint32_t ccabusydur)
  */
 
 /// Address of the EDCA_CNTRL register
-#define NXMAC_EDCA_CNTRL_ADDR   0xC0000224
+#define NXMAC_EDCA_CNTRL_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000224)
 /// Offset of the EDCA_CNTRL register from the base address
 #define NXMAC_EDCA_CNTRL_OFFSET 0x00000224
 /// Index of the EDCA_CNTRL register
@@ -11224,7 +11224,7 @@ __INLINE void nxmac_send_cf_end_now_setf(uint8_t sendcfendnow)
  */
 
 /// Address of the QUIET_ELEMENT_1A register
-#define NXMAC_QUIET_ELEMENT_1A_ADDR   0xC0000280
+#define NXMAC_QUIET_ELEMENT_1A_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000280)
 /// Offset of the QUIET_ELEMENT_1A register from the base address
 #define NXMAC_QUIET_ELEMENT_1A_OFFSET 0x00000280
 /// Index of the QUIET_ELEMENT_1A register
@@ -11406,7 +11406,7 @@ __INLINE void nxmac_quiet_count_1_setf(uint8_t quietcount1)
  */
 
 /// Address of the QUIET_ELEMENT_1B register
-#define NXMAC_QUIET_ELEMENT_1B_ADDR   0xC0000284
+#define NXMAC_QUIET_ELEMENT_1B_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000284)
 /// Offset of the QUIET_ELEMENT_1B register from the base address
 #define NXMAC_QUIET_ELEMENT_1B_OFFSET 0x00000284
 /// Index of the QUIET_ELEMENT_1B register
@@ -11488,7 +11488,7 @@ __INLINE void nxmac_quiet_offset_1_setf(uint16_t quietoffset1)
  */
 
 /// Address of the QUIET_ELEMENT_2A register
-#define NXMAC_QUIET_ELEMENT_2A_ADDR   0xC0000288
+#define NXMAC_QUIET_ELEMENT_2A_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000288)
 /// Offset of the QUIET_ELEMENT_2A register from the base address
 #define NXMAC_QUIET_ELEMENT_2A_OFFSET 0x00000288
 /// Index of the QUIET_ELEMENT_2A register
@@ -11670,7 +11670,7 @@ __INLINE void nxmac_quiet_count_2_setf(uint8_t quietcount2)
  */
 
 /// Address of the QUIET_ELEMENT_2B register
-#define NXMAC_QUIET_ELEMENT_2B_ADDR   0xC000028C
+#define NXMAC_QUIET_ELEMENT_2B_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000028C)
 /// Offset of the QUIET_ELEMENT_2B register from the base address
 #define NXMAC_QUIET_ELEMENT_2B_OFFSET 0x0000028C
 /// Index of the QUIET_ELEMENT_2B register
@@ -11750,7 +11750,7 @@ __INLINE void nxmac_quiet_offset_2_setf(uint16_t quietoffset2)
  */
 
 /// Address of the ADD_CCA_BUSY_SEC_20 register
-#define NXMAC_ADD_CCA_BUSY_SEC_20_ADDR   0xC0000290
+#define NXMAC_ADD_CCA_BUSY_SEC_20_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000290)
 /// Offset of the ADD_CCA_BUSY_SEC_20 register from the base address
 #define NXMAC_ADD_CCA_BUSY_SEC_20_OFFSET 0x00000290
 /// Index of the ADD_CCA_BUSY_SEC_20 register
@@ -11830,7 +11830,7 @@ __INLINE void nxmac_cca_busy_dur_sec_20_setf(uint32_t ccabusydursec20)
  */
 
 /// Address of the ADD_CCA_BUSY_SEC_40 register
-#define NXMAC_ADD_CCA_BUSY_SEC_40_ADDR   0xC0000294
+#define NXMAC_ADD_CCA_BUSY_SEC_40_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000294)
 /// Offset of the ADD_CCA_BUSY_SEC_40 register from the base address
 #define NXMAC_ADD_CCA_BUSY_SEC_40_OFFSET 0x00000294
 /// Index of the ADD_CCA_BUSY_SEC_40 register
@@ -11910,7 +11910,7 @@ __INLINE void nxmac_cca_busy_dur_sec_40_setf(uint32_t ccabusydursec40)
  */
 
 /// Address of the ADD_CCA_BUSY_SEC_80 register
-#define NXMAC_ADD_CCA_BUSY_SEC_80_ADDR   0xC0000298
+#define NXMAC_ADD_CCA_BUSY_SEC_80_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000298)
 /// Offset of the ADD_CCA_BUSY_SEC_80 register from the base address
 #define NXMAC_ADD_CCA_BUSY_SEC_80_OFFSET 0x00000298
 /// Index of the ADD_CCA_BUSY_SEC_80 register
@@ -11993,7 +11993,7 @@ __INLINE void nxmac_cca_busy_dur_sec_80_setf(uint32_t ccabusydursec80)
  */
 
 /// Address of the STBC_CNTRL register
-#define NXMAC_STBC_CNTRL_ADDR   0xC0000300
+#define NXMAC_STBC_CNTRL_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000300)
 /// Offset of the STBC_CNTRL register from the base address
 #define NXMAC_STBC_CNTRL_OFFSET 0x00000300
 /// Index of the STBC_CNTRL register
@@ -12218,7 +12218,7 @@ __INLINE void nxmac_cf_end_stbc_dur_setf(uint16_t cfendstbcdur)
  */
 
 /// Address of the START_TX_1 register
-#define NXMAC_START_TX_1_ADDR   0xC0000304
+#define NXMAC_START_TX_1_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000304)
 /// Offset of the START_TX_1 register from the base address
 #define NXMAC_START_TX_1_OFFSET 0x00000304
 /// Index of the START_TX_1 register
@@ -12586,7 +12586,7 @@ __INLINE void nxmac_start_tx_frame_ex_setf(uint8_t starttxframeex)
  */
 
 /// Address of the START_TX_2 register
-#define NXMAC_START_TX_2_ADDR   0xC0000308
+#define NXMAC_START_TX_2_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000308)
 /// Offset of the START_TX_2 register from the base address
 #define NXMAC_START_TX_2_OFFSET 0x00000308
 /// Index of the START_TX_2 register
@@ -12674,7 +12674,7 @@ __INLINE void nxmac_dur_control_frm_setf(uint16_t durcontrolfrm)
  */
 
 /// Address of the START_TX_3 register
-#define NXMAC_START_TX_3_ADDR   0xC000030C
+#define NXMAC_START_TX_3_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000030C)
 /// Offset of the START_TX_3 register from the base address
 #define NXMAC_START_TX_3_OFFSET 0x0000030C
 /// Index of the START_TX_3 register
@@ -13082,7 +13082,7 @@ __INLINE void nxmac_start_tx_num_extn_ss_setf(uint8_t starttxnumextnss)
  */
 
 /// Address of the TX_BW_CNTRL register
-#define NXMAC_TX_BW_CNTRL_ADDR   0xC0000310
+#define NXMAC_TX_BW_CNTRL_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000310)
 /// Offset of the TX_BW_CNTRL register from the base address
 #define NXMAC_TX_BW_CNTRL_OFFSET 0x00000310
 /// Index of the TX_BW_CNTRL register
@@ -13411,7 +13411,7 @@ __INLINE void nxmac_default_bwtxopv_setf(uint8_t defaultbwtxopv)
  */
 
 /// Address of the HTMCS register
-#define NXMAC_HTMCS_ADDR   0xC0000314
+#define NXMAC_HTMCS_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000314)
 /// Offset of the HTMCS register from the base address
 #define NXMAC_HTMCS_OFFSET 0x00000314
 /// Index of the HTMCS register
@@ -13555,7 +13555,7 @@ __INLINE void nxmac_bss_basic_htmcs_set_em_setf(uint16_t bssbasichtmcssetem)
  */
 
 /// Address of the VHTMCS register
-#define NXMAC_VHTMCS_ADDR   0xC000031C
+#define NXMAC_VHTMCS_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000031C)
 /// Offset of the VHTMCS register from the base address
 #define NXMAC_VHTMCS_OFFSET 0x0000031C
 /// Index of the VHTMCS register
@@ -13635,7 +13635,7 @@ __INLINE void nxmac_bss_basic_vhtmcs_set_setf(uint16_t bssbasicvhtmcsset)
  */
 
 /// Address of the LSTP register
-#define NXMAC_LSTP_ADDR   0xC0000320
+#define NXMAC_LSTP_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000320)
 /// Offset of the LSTP register from the base address
 #define NXMAC_LSTP_OFFSET 0x00000320
 /// Index of the LSTP register
@@ -13722,7 +13722,7 @@ __INLINE void nxmac_support_lstp_setf(uint8_t supportlstp)
  */
 
 /// Address of the BFMEE_CONTROL register
-#define NXMAC_BFMEE_CONTROL_ADDR   0xC0000350
+#define NXMAC_BFMEE_CONTROL_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000350)
 /// Offset of the BFMEE_CONTROL register from the base address
 #define NXMAC_BFMEE_CONTROL_OFFSET 0x00000350
 /// Index of the BFMEE_CONTROL register
@@ -14139,7 +14139,7 @@ __INLINE void nxmac_bfmee_enable_setf(uint8_t bfmeeenable)
  */
 
 /// Address of the COEX_CONTROL register
-#define NXMAC_COEX_CONTROL_ADDR   0xC0000400
+#define NXMAC_COEX_CONTROL_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000400)
 /// Offset of the COEX_CONTROL register from the base address
 #define NXMAC_COEX_CONTROL_OFFSET 0x00000400
 /// Index of the COEX_CONTROL register
@@ -14726,7 +14726,7 @@ __INLINE void nxmac_coex_enable_setf(uint8_t coexenable)
  */
 
 /// Address of the COEX_PTI register
-#define NXMAC_COEX_PTI_ADDR   0xC0000404
+#define NXMAC_COEX_PTI_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000404)
 /// Offset of the COEX_PTI register from the base address
 #define NXMAC_COEX_PTI_OFFSET 0x00000404
 /// Index of the COEX_PTI register
@@ -15106,7 +15106,7 @@ __INLINE void nxmac_coex_pti_ack_setf(uint8_t coexptiack)
  */
 
 /// Address of the COEX_STAT register
-#define NXMAC_COEX_STAT_ADDR   0xC0000408
+#define NXMAC_COEX_STAT_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000408)
 /// Offset of the COEX_STAT register from the base address
 #define NXMAC_COEX_STAT_OFFSET 0x00000408
 /// Index of the COEX_STAT register
@@ -15318,7 +15318,7 @@ __INLINE uint8_t nxmac_coex_wlan_tx_abort_state_getf(void)
  */
 
 /// Address of the COEX_INT register
-#define NXMAC_COEX_INT_ADDR   0xC000040C
+#define NXMAC_COEX_INT_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000040C)
 /// Offset of the COEX_INT register from the base address
 #define NXMAC_COEX_INT_OFFSET 0x0000040C
 /// Index of the COEX_INT register
@@ -15533,7 +15533,7 @@ __INLINE void nxmac_coex_wlan_tx_abort_rise_en_setf(uint8_t coexwlantxabortrisee
  */
 
 /// Address of the DEBUG_HWSM_1 register
-#define NXMAC_DEBUG_HWSM_1_ADDR   0xC0000500
+#define NXMAC_DEBUG_HWSM_1_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000500)
 /// Offset of the DEBUG_HWSM_1 register from the base address
 #define NXMAC_DEBUG_HWSM_1_OFFSET 0x00000500
 /// Index of the DEBUG_HWSM_1 register
@@ -15652,7 +15652,7 @@ __INLINE uint8_t nxmac_rx_control_ls_getf(void)
  */
 
 /// Address of the DEBUG_HWSM_2 register
-#define NXMAC_DEBUG_HWSM_2_ADDR   0xC0000504
+#define NXMAC_DEBUG_HWSM_2_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000504)
 /// Offset of the DEBUG_HWSM_2 register from the base address
 #define NXMAC_DEBUG_HWSM_2_OFFSET 0x00000504
 /// Index of the DEBUG_HWSM_2 register
@@ -15769,7 +15769,7 @@ __INLINE uint8_t nxmac_rx_control_cs_getf(void)
  */
 
 /// Address of the DEBUG_PORT_VALUE register
-#define NXMAC_DEBUG_PORT_VALUE_ADDR   0xC000050C
+#define NXMAC_DEBUG_PORT_VALUE_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000050C)
 /// Offset of the DEBUG_PORT_VALUE register from the base address
 #define NXMAC_DEBUG_PORT_VALUE_OFFSET 0x0000050C
 /// Index of the DEBUG_PORT_VALUE register
@@ -15827,7 +15827,7 @@ __INLINE uint32_t nxmac_debug_port_read_getf(void)
  */
 
 /// Address of the DEBUG_PORT_SEL register
-#define NXMAC_DEBUG_PORT_SEL_ADDR   0xC0000510
+#define NXMAC_DEBUG_PORT_SEL_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000510)
 /// Offset of the DEBUG_PORT_SEL register from the base address
 #define NXMAC_DEBUG_PORT_SEL_OFFSET 0x00000510
 /// Index of the DEBUG_PORT_SEL register
@@ -15971,7 +15971,7 @@ __INLINE void nxmac_debug_port_sel_1_setf(uint8_t debugportsel1)
  */
 
 /// Address of the DEBUG_NAV register
-#define NXMAC_DEBUG_NAV_ADDR   0xC0000514
+#define NXMAC_DEBUG_NAV_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000514)
 /// Offset of the DEBUG_NAV register from the base address
 #define NXMAC_DEBUG_NAV_OFFSET 0x00000514
 /// Index of the DEBUG_NAV register
@@ -16056,7 +16056,7 @@ __INLINE void nxmac_nav_counter_setf(uint32_t navcounter)
  */
 
 /// Address of the DEBUG_CW register
-#define NXMAC_DEBUG_CW_ADDR   0xC0000518
+#define NXMAC_DEBUG_CW_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000518)
 /// Offset of the DEBUG_CW register from the base address
 #define NXMAC_DEBUG_CW_OFFSET 0x00000518
 /// Index of the DEBUG_CW register
@@ -16268,7 +16268,7 @@ __INLINE uint8_t nxmac_current_cw_0_getf(void)
  */
 
 /// Address of the DEBUG_QSRC register
-#define NXMAC_DEBUG_QSRC_ADDR   0xC000051C
+#define NXMAC_DEBUG_QSRC_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000051C)
 /// Offset of the DEBUG_QSRC register from the base address
 #define NXMAC_DEBUG_QSRC_OFFSET 0x0000051C
 /// Index of the DEBUG_QSRC register
@@ -16411,7 +16411,7 @@ __INLINE uint8_t nxmac_ac_0qsrc_getf(void)
  */
 
 /// Address of the DEBUG_QLRC register
-#define NXMAC_DEBUG_QLRC_ADDR   0xC0000520
+#define NXMAC_DEBUG_QLRC_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x00000520)
 /// Offset of the DEBUG_QLRC register from the base address
 #define NXMAC_DEBUG_QLRC_OFFSET 0x00000520
 /// Index of the DEBUG_QLRC register
@@ -16552,7 +16552,7 @@ __INLINE uint8_t nxmac_ac_0qlrc_getf(void)
  */
 
 /// Address of the DEBUG_PHY register
-#define NXMAC_DEBUG_PHY_ADDR   0xC000055C
+#define NXMAC_DEBUG_PHY_ADDR   (REG_MAC_CORE_BASE_ADDR + 0x0000055C)
 /// Offset of the DEBUG_PHY register from the base address
 #define NXMAC_DEBUG_PHY_OFFSET 0x0000055C
 /// Index of the DEBUG_PHY register

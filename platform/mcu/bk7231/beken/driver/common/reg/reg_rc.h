@@ -25,7 +25,7 @@
  *     00               CH0_EN   0
  * </pre>
  */
-#define RC_CNTL_STAT_ADDR   0x01050000
+#define RC_CNTL_STAT_ADDR   REG_RC_BASE_ADDR
 #define RC_CNTL_STAT_OFFSET 0x00000000
 #define RC_CNTL_STAT_INDEX  0x00000000
 #define RC_CNTL_STAT_RESET  0x00000000
@@ -169,7 +169,7 @@ __INLINE void rc_ch0_en_setf(uint8_t ch0en)
  *  27:00         TRX_REG_STAT   0x0
  * </pre>
  */
-#define RC_BEKEN_SPI_ADDR   0x01050004
+#define RC_BEKEN_SPI_ADDR   (REG_RC_BASE_ADDR + 0x4)
 #define RC_BEKEN_SPI_OFFSET 0x00000004
 #define RC_BEKEN_SPI_INDEX  0x00000001
 #define RC_BEKEN_SPI_RESET  0x00000000
@@ -229,7 +229,7 @@ __INLINE uint32_t rc_trx_reg_stat_getf(void)
  *  07:00         CH0_OUTPOWER   0x0
  * </pre>
  */
-#define RC_CH0_OUTPOWER_ADDR   0x01050014
+#define RC_CH0_OUTPOWER_ADDR   (REG_RC_BASE_ADDR + 0x00000014)
 #define RC_CH0_OUTPOWER_OFFSET 0x00000014
 #define RC_CH0_OUTPOWER_INDEX  0x00000005
 #define RC_CH0_OUTPOWER_RESET  0x00000000
@@ -267,7 +267,7 @@ __INLINE uint8_t rc_ch0_outpower_getf(void)
  *  07:00      CH0_RX_ON_DELAY   0x0
  * </pre>
  */
-#define RC_CH0_RX_ONOFF_DELAY_ADDR   0x01050020
+#define RC_CH0_RX_ONOFF_DELAY_ADDR   (REG_RC_BASE_ADDR + 0x00000020)
 #define RC_CH0_RX_ONOFF_DELAY_OFFSET 0x00000020
 #define RC_CH0_RX_ONOFF_DELAY_INDEX  0x00000008
 #define RC_CH0_RX_ONOFF_DELAY_RESET  0x00000000
@@ -341,7 +341,7 @@ __INLINE void rc_ch0_rx_on_delay_setf(uint8_t ch0rxondelay)
  *  07:00      CH0_TX_ON_DELAY   0x0
  * </pre>
  */
-#define RC_CH0_TX_ONOFF_DELAY_ADDR   0x0105002C
+#define RC_CH0_TX_ONOFF_DELAY_ADDR   (REG_RC_BASE_ADDR + 0x0000002C)
 #define RC_CH0_TX_ONOFF_DELAY_OFFSET 0x0000002C
 #define RC_CH0_TX_ONOFF_DELAY_INDEX  0x0000000B
 #define RC_CH0_TX_ONOFF_DELAY_RESET  0x00000000
@@ -415,7 +415,7 @@ __INLINE void rc_ch0_tx_on_delay_setf(uint8_t ch0txondelay)
  *  07:00      CH0_PA_ON_DELAY   0x0
  * </pre>
  */
-#define RC_CH0_PA_ONOFF_DELAY_ADDR   0x01050038
+#define RC_CH0_PA_ONOFF_DELAY_ADDR   (REG_RC_BASE_ADDR + 0x00000038)
 #define RC_CH0_PA_ONOFF_DELAY_OFFSET 0x00000038
 #define RC_CH0_PA_ONOFF_DELAY_INDEX  0x0000000E
 #define RC_CH0_PA_ONOFF_DELAY_RESET  0x00000000
@@ -489,7 +489,7 @@ __INLINE void rc_ch0_pa_on_delay_setf(uint8_t ch0paondelay)
  *  07:00    CH0_SHDN_ON_DELAY   0x0
  * </pre>
  */
-#define RC_CH0_SHDN_ONOFF_DELAY_ADDR   0x01050044
+#define RC_CH0_SHDN_ONOFF_DELAY_ADDR   (REG_RC_BASE_ADDR + 0x00000044)
 #define RC_CH0_SHDN_ONOFF_DELAY_OFFSET 0x00000044
 #define RC_CH0_SHDN_ONOFF_DELAY_INDEX  0x00000011
 #define RC_CH0_SHDN_ONOFF_DELAY_RESET  0x00000000
@@ -567,7 +567,7 @@ __INLINE void rc_ch0_shdn_on_delay_setf(uint8_t ch0shdnondelay)
  *     00           F_CH0_SHDN   0
  * </pre>
  */
-#define RC_CH0_FORCE_ADDR   0x01050064
+#define RC_CH0_FORCE_ADDR   (REG_RC_BASE_ADDR + 0x00000064)
 #define RC_CH0_FORCE_OFFSET 0x00000064
 #define RC_CH0_FORCE_INDEX  0x00000019
 #define RC_CH0_FORCE_RESET  0x00000000
@@ -708,7 +708,7 @@ __INLINE void rc_f_ch0_shdn_setf(uint8_t fch0shdn)
  *     00              F_RX_ON   0
  * </pre>
  */
-#define RC_MISC_FORCE_ADDR   0x01050070
+#define RC_MISC_FORCE_ADDR   (REG_RC_BASE_ADDR + 0x00000070)
 #define RC_MISC_FORCE_OFFSET 0x00000070
 #define RC_MISC_FORCE_INDEX  0x0000001C
 #define RC_MISC_FORCE_RESET  0x00000000
@@ -779,7 +779,7 @@ __INLINE void rc_f_rx_on_setf(uint8_t frxon)
  *  11:00         FE_RX_ON_DEL   0x0
  * </pre>
  */
-#define RC_FE_RX_DEL_ADDR   0x01050078
+#define RC_FE_RX_DEL_ADDR   (REG_RC_BASE_ADDR + 0x00000078)
 #define RC_FE_RX_DEL_OFFSET 0x00000078
 #define RC_FE_RX_DEL_INDEX  0x0000001E
 #define RC_FE_RX_DEL_RESET  0x00000000
@@ -822,7 +822,7 @@ __INLINE void rc_fe_rx_on_del_setf(uint16_t ferxondel)
  *  31:00             TRX_REG0   0x0
  * </pre>
  */
-#define RC_TRX_REG0_ADDR   0x01050080
+#define RC_TRX_REG0_ADDR   (REG_RC_BASE_ADDR + 0x00000080)
 #define RC_TRX_REG0_OFFSET 0x00000080
 #define RC_TRX_REG0_INDEX  0x00000020
 #define RC_TRX_REG0_RESET  0x00000000
@@ -865,7 +865,7 @@ __INLINE void rc_trx_reg0_setf(uint32_t trxreg0)
  *  31:00             TRX_REG1   0x0
  * </pre>
  */
-#define RC_TRX_REG1_ADDR   0x01050084
+#define RC_TRX_REG1_ADDR   (REG_RC_BASE_ADDR + 0x00000084)
 #define RC_TRX_REG1_OFFSET 0x00000084
 #define RC_TRX_REG1_INDEX  0x00000021
 #define RC_TRX_REG1_RESET  0x00000000
@@ -908,7 +908,7 @@ __INLINE void rc_trx_reg1_setf(uint32_t trxreg1)
  *  31:00             TRX_REG2   0x0
  * </pre>
  */
-#define RC_TRX_REG2_ADDR   0x01050088
+#define RC_TRX_REG2_ADDR   (REG_RC_BASE_ADDR + 0x00000088)
 #define RC_TRX_REG2_OFFSET 0x00000088
 #define RC_TRX_REG2_INDEX  0x00000022
 #define RC_TRX_REG2_RESET  0x00000000
@@ -951,7 +951,7 @@ __INLINE void rc_trx_reg2_setf(uint32_t trxreg2)
  *  31:00             TRX_REG3   0x0
  * </pre>
  */
-#define RC_TRX_REG3_ADDR   0x0105008C
+#define RC_TRX_REG3_ADDR   (REG_RC_BASE_ADDR + 0x0000008C)
 #define RC_TRX_REG3_OFFSET 0x0000008C
 #define RC_TRX_REG3_INDEX  0x00000023
 #define RC_TRX_REG3_RESET  0x00000000
@@ -994,7 +994,7 @@ __INLINE void rc_trx_reg3_setf(uint32_t trxreg3)
  *  31:00             TRX_REG4   0x0
  * </pre>
  */
-#define RC_TRX_REG4_ADDR   0x01050090
+#define RC_TRX_REG4_ADDR   (REG_RC_BASE_ADDR + 0x00000090)
 #define RC_TRX_REG4_OFFSET 0x00000090
 #define RC_TRX_REG4_INDEX  0x00000024
 #define RC_TRX_REG4_RESET  0x00000000
@@ -1037,7 +1037,7 @@ __INLINE void rc_trx_reg4_setf(uint32_t trxreg4)
  *  31:00             TRX_REG5   0x0
  * </pre>
  */
-#define RC_TRX_REG5_ADDR   0x01050094
+#define RC_TRX_REG5_ADDR   (REG_RC_BASE_ADDR + 0x00000094)
 #define RC_TRX_REG5_OFFSET 0x00000094
 #define RC_TRX_REG5_INDEX  0x00000025
 #define RC_TRX_REG5_RESET  0x00000000
@@ -1080,7 +1080,7 @@ __INLINE void rc_trx_reg5_setf(uint32_t trxreg5)
  *  31:00             TRX_REG6   0x0
  * </pre>
  */
-#define RC_TRX_REG6_ADDR   0x01050098
+#define RC_TRX_REG6_ADDR   (REG_RC_BASE_ADDR + 0x00000098)
 #define RC_TRX_REG6_OFFSET 0x00000098
 #define RC_TRX_REG6_INDEX  0x00000026
 #define RC_TRX_REG6_RESET  0x00000000
@@ -1123,7 +1123,7 @@ __INLINE void rc_trx_reg6_setf(uint32_t trxreg6)
  *  31:00             TRX_REG7   0x0
  * </pre>
  */
-#define RC_TRX_REG7_ADDR   0x0105009C
+#define RC_TRX_REG7_ADDR   (REG_RC_BASE_ADDR + 0x0000009C)
 #define RC_TRX_REG7_OFFSET 0x0000009C
 #define RC_TRX_REG7_INDEX  0x00000027
 #define RC_TRX_REG7_RESET  0x00000000
@@ -1166,7 +1166,7 @@ __INLINE void rc_trx_reg7_setf(uint32_t trxreg7)
  *  31:00             TRX_REG8   0x0
  * </pre>
  */
-#define RC_TRX_REG8_ADDR   0x010500A0
+#define RC_TRX_REG8_ADDR   (REG_RC_BASE_ADDR + 0x000000A0)
 #define RC_TRX_REG8_OFFSET 0x000000A0
 #define RC_TRX_REG8_INDEX  0x00000028
 #define RC_TRX_REG8_RESET  0x00000000
@@ -1209,7 +1209,7 @@ __INLINE void rc_trx_reg8_setf(uint32_t trxreg8)
  *  31:00             TRX_REG9   0x0
  * </pre>
  */
-#define RC_TRX_REG9_ADDR   0x010500A4
+#define RC_TRX_REG9_ADDR   (REG_RC_BASE_ADDR + 0x000000A4)
 #define RC_TRX_REG9_OFFSET 0x000000A4
 #define RC_TRX_REG9_INDEX  0x00000029
 #define RC_TRX_REG9_RESET  0x00000000
@@ -1252,7 +1252,7 @@ __INLINE void rc_trx_reg9_setf(uint32_t trxreg9)
  *  31:00            TRX_REG10   0x0
  * </pre>
  */
-#define RC_TRX_REG10_ADDR   0x010500A8
+#define RC_TRX_REG10_ADDR   (REG_RC_BASE_ADDR + 0x000000A8)
 #define RC_TRX_REG10_OFFSET 0x000000A8
 #define RC_TRX_REG10_INDEX  0x0000002A
 #define RC_TRX_REG10_RESET  0x00000000
@@ -1295,7 +1295,7 @@ __INLINE void rc_trx_reg10_setf(uint32_t trxreg10)
  *  31:00            TRX_REG11   0x0
  * </pre>
  */
-#define RC_TRX_REG11_ADDR   0x010500AC
+#define RC_TRX_REG11_ADDR   (REG_RC_BASE_ADDR + 0x000000AC)
 #define RC_TRX_REG11_OFFSET 0x000000AC
 #define RC_TRX_REG11_INDEX  0x0000002B
 #define RC_TRX_REG11_RESET  0x00000000
@@ -1338,7 +1338,7 @@ __INLINE void rc_trx_reg11_setf(uint32_t trxreg11)
  *  31:00            TRX_REG12   0x0
  * </pre>
  */
-#define RC_TRX_REG12_ADDR   0x010500B0
+#define RC_TRX_REG12_ADDR   (REG_RC_BASE_ADDR + 0x000000B0)
 #define RC_TRX_REG12_OFFSET 0x000000B0
 #define RC_TRX_REG12_INDEX  0x0000002C
 #define RC_TRX_REG12_RESET  0x00000000
@@ -1381,7 +1381,7 @@ __INLINE void rc_trx_reg12_setf(uint32_t trxreg12)
  *  31:00            TRX_REG13   0x0
  * </pre>
  */
-#define RC_TRX_REG13_ADDR   0x010500B4
+#define RC_TRX_REG13_ADDR   (REG_RC_BASE_ADDR + 0x000000B4)
 #define RC_TRX_REG13_OFFSET 0x000000B4
 #define RC_TRX_REG13_INDEX  0x0000002D
 #define RC_TRX_REG13_RESET  0x00000000
@@ -1424,7 +1424,7 @@ __INLINE void rc_trx_reg13_setf(uint32_t trxreg13)
  *  31:00            TRX_REG14   0x0
  * </pre>
  */
-#define RC_TRX_REG14_ADDR   0x010500B8
+#define RC_TRX_REG14_ADDR   (REG_RC_BASE_ADDR + 0x000000B8)
 #define RC_TRX_REG14_OFFSET 0x000000B8
 #define RC_TRX_REG14_INDEX  0x0000002E
 #define RC_TRX_REG14_RESET  0x00000000
@@ -1467,7 +1467,7 @@ __INLINE void rc_trx_reg14_setf(uint32_t trxreg14)
  *  31:00            TRX_REG15   0x0
  * </pre>
  */
-#define RC_TRX_REG15_ADDR   0x010500BC
+#define RC_TRX_REG15_ADDR   (REG_RC_BASE_ADDR + 0x000000BC)
 #define RC_TRX_REG15_OFFSET 0x000000BC
 #define RC_TRX_REG15_INDEX  0x0000002F
 #define RC_TRX_REG15_RESET  0x00000000
@@ -1510,7 +1510,7 @@ __INLINE void rc_trx_reg15_setf(uint32_t trxreg15)
  *  31:00            TRX_REG16   0x0
  * </pre>
  */
-#define RC_TRX_REG16_ADDR   0x010500C0
+#define RC_TRX_REG16_ADDR   (REG_RC_BASE_ADDR + 0x000000C0)
 #define RC_TRX_REG16_OFFSET 0x000000C0
 #define RC_TRX_REG16_INDEX  0x00000030
 #define RC_TRX_REG16_RESET  0x00000000
@@ -1553,7 +1553,7 @@ __INLINE void rc_trx_reg16_setf(uint32_t trxreg16)
  *  31:00            TRX_REG17   0x0
  * </pre>
  */
-#define RC_TRX_REG17_ADDR   0x010500C4
+#define RC_TRX_REG17_ADDR   (REG_RC_BASE_ADDR + 0x000000C4)
 #define RC_TRX_REG17_OFFSET 0x000000C4
 #define RC_TRX_REG17_INDEX  0x00000031
 #define RC_TRX_REG17_RESET  0x00000000
@@ -1596,7 +1596,7 @@ __INLINE void rc_trx_reg17_setf(uint32_t trxreg17)
  *  31:00            TRX_REG18   0x0
  * </pre>
  */
-#define RC_TRX_REG18_ADDR   0x010500C8
+#define RC_TRX_REG18_ADDR   (REG_RC_BASE_ADDR + 0x000000C8)
 #define RC_TRX_REG18_OFFSET 0x000000C8
 #define RC_TRX_REG18_INDEX  0x00000032
 #define RC_TRX_REG18_RESET  0x00000000
@@ -1639,7 +1639,7 @@ __INLINE void rc_trx_reg18_setf(uint32_t trxreg18)
  *  31:00            TRX_REG19   0x0
  * </pre>
  */
-#define RC_TRX_REG19_ADDR   0x010500CC
+#define RC_TRX_REG19_ADDR   (REG_RC_BASE_ADDR + 0x000000CC)
 #define RC_TRX_REG19_OFFSET 0x000000CC
 #define RC_TRX_REG19_INDEX  0x00000033
 #define RC_TRX_REG19_RESET  0x00000000
@@ -1682,7 +1682,7 @@ __INLINE void rc_trx_reg19_setf(uint32_t trxreg19)
  *  31:00            TRX_REG20   0x0
  * </pre>
  */
-#define RC_TRX_REG20_ADDR   0x010500D0
+#define RC_TRX_REG20_ADDR   (REG_RC_BASE_ADDR + 0x000000D0)
 #define RC_TRX_REG20_OFFSET 0x000000D0
 #define RC_TRX_REG20_INDEX  0x00000034
 #define RC_TRX_REG20_RESET  0x00000000
@@ -1725,7 +1725,7 @@ __INLINE void rc_trx_reg20_setf(uint32_t trxreg20)
  *  31:00            TRX_REG21   0x0
  * </pre>
  */
-#define RC_TRX_REG21_ADDR   0x010500D4
+#define RC_TRX_REG21_ADDR   (REG_RC_BASE_ADDR + 0x000000D4)
 #define RC_TRX_REG21_OFFSET 0x000000D4
 #define RC_TRX_REG21_INDEX  0x00000035
 #define RC_TRX_REG21_RESET  0x00000000
@@ -1768,7 +1768,7 @@ __INLINE void rc_trx_reg21_setf(uint32_t trxreg21)
  *  31:00            TRX_REG22   0x0
  * </pre>
  */
-#define RC_TRX_REG22_ADDR   0x010500D8
+#define RC_TRX_REG22_ADDR   (REG_RC_BASE_ADDR + 0x000000D8)
 #define RC_TRX_REG22_OFFSET 0x000000D8
 #define RC_TRX_REG22_INDEX  0x00000036
 #define RC_TRX_REG22_RESET  0x00000000
@@ -1811,7 +1811,7 @@ __INLINE void rc_trx_reg22_setf(uint32_t trxreg22)
  *  31:00            TRX_REG23   0x0
  * </pre>
  */
-#define RC_TRX_REG23_ADDR   0x010500DC
+#define RC_TRX_REG23_ADDR   (REG_RC_BASE_ADDR + 0x000000DC)
 #define RC_TRX_REG23_OFFSET 0x000000DC
 #define RC_TRX_REG23_INDEX  0x00000037
 #define RC_TRX_REG23_RESET  0x00000000
@@ -1854,7 +1854,7 @@ __INLINE void rc_trx_reg23_setf(uint32_t trxreg23)
  *  31:00            TRX_REG24   0x0
  * </pre>
  */
-#define RC_TRX_REG24_ADDR   0x010500E0
+#define RC_TRX_REG24_ADDR   (REG_RC_BASE_ADDR + 0x000000E0)
 #define RC_TRX_REG24_OFFSET 0x000000E0
 #define RC_TRX_REG24_INDEX  0x00000038
 #define RC_TRX_REG24_RESET  0x00000000
@@ -1897,7 +1897,7 @@ __INLINE void rc_trx_reg24_setf(uint32_t trxreg24)
  *  31:00            TRX_REG25   0x0
  * </pre>
  */
-#define RC_TRX_REG25_ADDR   0x010500E4
+#define RC_TRX_REG25_ADDR   (REG_RC_BASE_ADDR + 0x000000E4)
 #define RC_TRX_REG25_OFFSET 0x000000E4
 #define RC_TRX_REG25_INDEX  0x00000039
 #define RC_TRX_REG25_RESET  0x00000000
@@ -1940,7 +1940,7 @@ __INLINE void rc_trx_reg25_setf(uint32_t trxreg25)
  *  31:00            TRX_REG26   0x0
  * </pre>
  */
-#define RC_TRX_REG26_ADDR   0x010500E8
+#define RC_TRX_REG26_ADDR   (REG_RC_BASE_ADDR + 0x000000E8)
 #define RC_TRX_REG26_OFFSET 0x000000E8
 #define RC_TRX_REG26_INDEX  0x0000003A
 #define RC_TRX_REG26_RESET  0x00000000
@@ -1983,7 +1983,7 @@ __INLINE void rc_trx_reg26_setf(uint32_t trxreg26)
  *  31:00            TRX_REG27   0x0
  * </pre>
  */
-#define RC_TRX_REG27_ADDR   0x010500EC
+#define RC_TRX_REG27_ADDR   (REG_RC_BASE_ADDR + 0x000000EC)
 #define RC_TRX_REG27_OFFSET 0x000000EC
 #define RC_TRX_REG27_INDEX  0x0000003B
 #define RC_TRX_REG27_RESET  0x00000000
@@ -2029,7 +2029,7 @@ __INLINE void rc_trx_reg27_setf(uint32_t trxreg27)
  *  11:00          RX_AVG_Q_RD   0x0
  * </pre>
  */
-#define RC_RX_AVG_CALC_ADDR   0x010500F0
+#define RC_RX_AVG_CALC_ADDR   (REG_RC_BASE_ADDR + 0x000000F0)
 #define RC_RX_AVG_CALC_OFFSET 0x000000F0
 #define RC_RX_AVG_CALC_INDEX  0x0000003C
 #define RC_RX_AVG_CALC_RESET  0x00000000
@@ -2139,7 +2139,7 @@ __INLINE void rc_rx_avg_q_rd_setf(uint16_t rxavgqrd)
  *  11:00           RX_DC_Q_RD   0x0
  * </pre>
  */
-#define RC_RX_CALIB_EN_ADDR   0x010500F8
+#define RC_RX_CALIB_EN_ADDR   (REG_RC_BASE_ADDR + 0x000000F8)
 #define RC_RX_CALIB_EN_OFFSET 0x000000F8
 #define RC_RX_CALIB_EN_INDEX  0x0000003E
 #define RC_RX_CALIB_EN_RESET  0x00000000
@@ -2247,7 +2247,7 @@ __INLINE void rc_rx_dc_q_rd_setf(uint16_t rxdcqrd)
  *  09:00      RX_PHASE_ERR_RD   0x0
  * </pre>
  */
-#define RC_RX_ERROR_RD_ADDR   0x010500FC
+#define RC_RX_ERROR_RD_ADDR   (REG_RC_BASE_ADDR + 0x000000FC)
 #define RC_RX_ERROR_RD_OFFSET 0x000000FC
 #define RC_RX_ERROR_RD_INDEX  0x0000003F
 #define RC_RX_ERROR_RD_RESET  0x00000000
@@ -2296,7 +2296,7 @@ __INLINE uint16_t rc_rx_phase_err_rd_getf(void)
  *  09:00            RX_TY2_RD   0x0
  * </pre>
  */
-#define RC_RX_TY2_RD_ADDR   0x01050100
+#define RC_RX_TY2_RD_ADDR   (REG_RC_BASE_ADDR + 0x00000100)
 #define RC_RX_TY2_RD_OFFSET 0x00000100
 #define RC_RX_TY2_RD_INDEX  0x00000040
 #define RC_RX_TY2_RD_RESET  0x00000000
@@ -2329,7 +2329,7 @@ __INLINE uint16_t rc_rx_ty2_rd_getf(void)
  *  11:00           RX_DC_Q_WR   0x0
  * </pre>
  */
-#define RC_RX_DC_WR_ADDR   0x01050104
+#define RC_RX_DC_WR_ADDR   (REG_RC_BASE_ADDR + 0x00000104)
 #define RC_RX_DC_WR_OFFSET 0x00000104
 #define RC_RX_DC_WR_INDEX  0x00000041
 #define RC_RX_DC_WR_RESET  0x00800000
@@ -2403,7 +2403,7 @@ __INLINE void rc_rx_dc_q_wr_setf(uint16_t rxdcqwr)
  *  09:00      RX_PHASE_ERR_WR   0x200
  * </pre>
  */
-#define RC_RX_ERROR_WR_ADDR   0x01050108
+#define RC_RX_ERROR_WR_ADDR   (REG_RC_BASE_ADDR + 0x00000108)
 #define RC_RX_ERROR_WR_OFFSET 0x00000108
 #define RC_RX_ERROR_WR_INDEX  0x00000042
 #define RC_RX_ERROR_WR_RESET  0x02000200
@@ -2478,7 +2478,7 @@ __INLINE void rc_rx_phase_err_wr_setf(uint16_t rxphaseerrwr)
  *  09:00              Q_CONST   0x200
  * </pre>
  */
-#define RC_TX_MODE_CFG_ADDR   0x01050130
+#define RC_TX_MODE_CFG_ADDR   (REG_RC_BASE_ADDR + 0x00000130)
 #define RC_TX_MODE_CFG_OFFSET 0x00000130
 #define RC_TX_MODE_CFG_INDEX  0x0000004C
 #define RC_TX_MODE_CFG_RESET  0x02000200
@@ -2571,7 +2571,7 @@ __INLINE void rc_q_const_setf(uint16_t qconst)
  *  15:12           TX_SIN_AMP   0x0
  * </pre>
  */
-#define RC_TX_SIN_CFG_ADDR   0x01050134
+#define RC_TX_SIN_CFG_ADDR   (REG_RC_BASE_ADDR + 0x00000134)
 #define RC_TX_SIN_CFG_OFFSET 0x00000134
 #define RC_TX_SIN_CFG_INDEX  0x0000004D
 #define RC_TX_SIN_CFG_RESET  0x00000000
@@ -2663,7 +2663,7 @@ __INLINE void rc_tx_sin_amp_setf(uint8_t txsinamp)
  *  09:00         TX_Q_DC_COMP   0x200
  * </pre>
  */
-#define RC_TX_DC_COMP_ADDR   0x0105013C
+#define RC_TX_DC_COMP_ADDR   (REG_RC_BASE_ADDR + 0x0000013C)
 #define RC_TX_DC_COMP_OFFSET 0x0000013C
 #define RC_TX_DC_COMP_INDEX  0x0000004F
 #define RC_TX_DC_COMP_RESET  0x02000200
@@ -2737,7 +2737,7 @@ __INLINE void rc_tx_q_dc_comp_setf(uint16_t txqdccomp)
  *  09:00       TX_Q_GAIN_COMP   0x3FF
  * </pre>
  */
-#define RC_TX_GAIN_COMP_ADDR   0x01050140
+#define RC_TX_GAIN_COMP_ADDR   (REG_RC_BASE_ADDR + 0x00000140)
 #define RC_TX_GAIN_COMP_OFFSET 0x00000140
 #define RC_TX_GAIN_COMP_INDEX  0x00000050
 #define RC_TX_GAIN_COMP_RESET  0x03FF03FF
@@ -2811,7 +2811,7 @@ __INLINE void rc_tx_q_gain_comp_setf(uint16_t txqgaincomp)
  *  09:00          TX_TY2_COMP   0x200
  * </pre>
  */
-#define RC_TX_PHASE_TY2_COMP_ADDR   0x01050144
+#define RC_TX_PHASE_TY2_COMP_ADDR   (REG_RC_BASE_ADDR + 0x00000144)
 #define RC_TX_PHASE_TY2_COMP_OFFSET 0x00000144
 #define RC_TX_PHASE_TY2_COMP_INDEX  0x00000051
 #define RC_TX_PHASE_TY2_COMP_RESET  0x02000200
@@ -2887,7 +2887,7 @@ __INLINE void rc_tx_ty2_comp_setf(uint16_t txty2comp)
  *  15:06   IQ_CONSTANT_IQCAL_P   0x0
  * </pre>
  */
-#define RC_TX_OTHER_CFG_ADDR   0x01050148
+#define RC_TX_OTHER_CFG_ADDR   (REG_RC_BASE_ADDR + 0x00000148)
 #define RC_TX_OTHER_CFG_OFFSET 0x00000148
 #define RC_TX_OTHER_CFG_INDEX  0x00000052
 #define RC_TX_OTHER_CFG_RESET  0x00000000
@@ -3005,7 +3005,7 @@ __INLINE void rc_iq_constant_iqcal_p_setf(uint16_t iqconstantiqcalp)
  *     00         ST_RX_ADC_IQ   0
  * </pre>
  */
-#define RC_AGC_CFG_ADDR   0x01050150
+#define RC_AGC_CFG_ADDR   (REG_RC_BASE_ADDR + 0x00000150)
 #define RC_AGC_CFG_OFFSET 0x00000150
 #define RC_AGC_CFG_INDEX  0x00000054
 #define RC_AGC_CFG_RESET  0x00005480
@@ -3237,7 +3237,7 @@ __INLINE void rc_st_rx_adc_iq_setf(uint8_t strxadciq)
  *  09:00        TRX_SPI_INTLV   0x40
  * </pre>
  */
-#define RC_TRX_SPI_INTLV_ADDR   0x01050170
+#define RC_TRX_SPI_INTLV_ADDR   (REG_RC_BASE_ADDR + 0x00000170)
 #define RC_TRX_SPI_INTLV_OFFSET 0x00000170
 #define RC_TRX_SPI_INTLV_INDEX  0x0000005C
 #define RC_TRX_SPI_INTLV_RESET  0x00000040
@@ -3296,7 +3296,7 @@ __INLINE void rc_trx_spi_intlv_setf(uint16_t trxspiintlv)
  *  31:00            ADDA_REG0   0x0
  * </pre>
  */
-#define RC_ADDA_REG0_ADDR   0x01050190
+#define RC_ADDA_REG0_ADDR   (REG_RC_BASE_ADDR + 0x00000190)
 #define RC_ADDA_REG0_OFFSET 0x00000190
 #define RC_ADDA_REG0_INDEX  0x00000064
 #define RC_ADDA_REG0_RESET  0x00000000
@@ -3339,7 +3339,7 @@ __INLINE void rc_adda_reg0_setf(uint32_t addareg0)
  *  31:00            ADDA_REG1   0x0
  * </pre>
  */
-#define RC_ADDA_REG1_ADDR   0x01050194
+#define RC_ADDA_REG1_ADDR   (REG_RC_BASE_ADDR + 0x00000194)
 #define RC_ADDA_REG1_OFFSET 0x00000194
 #define RC_ADDA_REG1_INDEX  0x00000065
 #define RC_ADDA_REG1_RESET  0x00000000
@@ -3382,7 +3382,7 @@ __INLINE void rc_adda_reg1_setf(uint32_t addareg1)
  *  31:00            ADDA_REG2   0x0
  * </pre>
  */
-#define RC_ADDA_REG2_ADDR   0x01050198
+#define RC_ADDA_REG2_ADDR   (REG_RC_BASE_ADDR + 0x00000198)
 #define RC_ADDA_REG2_OFFSET 0x00000198
 #define RC_ADDA_REG2_INDEX  0x00000066
 #define RC_ADDA_REG2_RESET  0x00000000
@@ -3425,7 +3425,7 @@ __INLINE void rc_adda_reg2_setf(uint32_t addareg2)
  *  31:00            ADDA_REG3   0x0
  * </pre>
  */
-#define RC_ADDA_REG3_ADDR   0x0105019C
+#define RC_ADDA_REG3_ADDR   (REG_RC_BASE_ADDR + 0x0000019C)
 #define RC_ADDA_REG3_OFFSET 0x0000019C
 #define RC_ADDA_REG3_INDEX  0x00000067
 #define RC_ADDA_REG3_RESET  0x00000000
@@ -3468,7 +3468,7 @@ __INLINE void rc_adda_reg3_setf(uint32_t addareg3)
  *  31:00            ADDA_REG4   0x0
  * </pre>
  */
-#define RC_ADDA_REG4_ADDR   0x010501A0
+#define RC_ADDA_REG4_ADDR   (REG_RC_BASE_ADDR + 0x000001A0)
 #define RC_ADDA_REG4_OFFSET 0x000001A0
 #define RC_ADDA_REG4_INDEX  0x00000068
 #define RC_ADDA_REG4_RESET  0x00000000
@@ -3511,7 +3511,7 @@ __INLINE void rc_adda_reg4_setf(uint32_t addareg4)
  *  31:00            ADDA_REG5   0x0
  * </pre>
  */
-#define RC_ADDA_REG5_ADDR   0x010501A4
+#define RC_ADDA_REG5_ADDR   (REG_RC_BASE_ADDR + 0x000001A4)
 #define RC_ADDA_REG5_OFFSET 0x000001A4
 #define RC_ADDA_REG5_INDEX  0x00000069
 #define RC_ADDA_REG5_RESET  0x00000000
@@ -3554,7 +3554,7 @@ __INLINE void rc_adda_reg5_setf(uint32_t addareg5)
  *  05:00        ADDA_REG_STAT   0x0
  * </pre>
  */
-#define RC_ADDA_REG_STAT_ADDR   0x010501A8
+#define RC_ADDA_REG_STAT_ADDR   (REG_RC_BASE_ADDR + 0x000001A8)
 #define RC_ADDA_REG_STAT_OFFSET 0x000001A8
 #define RC_ADDA_REG_STAT_INDEX  0x0000006A
 #define RC_ADDA_REG_STAT_RESET  0x00000000

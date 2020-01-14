@@ -197,7 +197,7 @@ typedef struct _network_InitTypeDef_ap_st
  */
 typedef struct _linkStatus_t
 {
-    msg_sta_states conn_state;       /**< The link to wlan is established or not, 0: disconnected, 1: connected. */
+    int conn_state;       /**< The link to wlan is established or not, 0: disconnected, 1: connected. */
     int wifi_strength;      /**< Signal strength of the current connected AP */
     uint8_t  ssid[32];      /**< SSID of the current connected wlan */
     uint8_t  bssid[6];      /**< BSSID of the current connected wlan */

@@ -3,18 +3,10 @@
 
 #include "typedef.h"
 #include "sys_config.h"
-#define CFG_TEMP_DETECT_VERSION0    0U
-#define CFG_TEMP_DETECT_VERSION1    1U
+#define CALI_MODE_AUTO          0
+#define CALI_MODE_MANUAL        1
 
-#define CFG_TEMP_DIFF_PWR_FREQOFFSET        1
-
-#if (CFG_SOC_NAME == SOC_BK7231)
-#define CFG_TEMP_DETECT_VERSION   CFG_TEMP_DETECT_VERSION0
-#else
-#define CFG_TEMP_DETECT_VERSION   CFG_TEMP_DETECT_VERSION1
-#endif
-
-#if CFG_TEMP_DETECT_VERSION == CFG_TEMP_DETECT_VERSION1
+#if (CFG_SOC_NAME != SOC_BK7231)
 typedef struct tmp_pwr_st {
     unsigned trx0x0c_12_15 : 4;
     signed p_index_delta : 6;
@@ -65,15 +57,15 @@ extern void manual_cal_set_dif_g_n20(UINT32 diff);
 extern void manual_cal_get_current_temperature(void);
 extern int manual_cal_write_macaddr_to_flash(UINT8 *mac_ptr);
 extern int manual_cal_get_macaddr_from_flash(UINT8 *mac_ptr);
+extern int manual_cal_set_rfcali_status_inflash(UINT32 rf_status);
+extern int manual_cal_get_rfcali_status_inflash(UINT32 *rf_status);
 extern void manual_cal_show_otp_flash(void);
 extern void manual_cal_clear_otp_flash(void);
 extern void manual_cal_set_xtal(UINT32 xtal);
 extern void manual_cal_set_lpf_iq(UINT32 lpf_i, UINT32 lpf_q);
 extern void manual_cal_load_lpf_iq_tag_flash(void);
 extern void manual_cal_load_xtal_tag_flash(void);
-#if CFG_TEMP_DETECT_VERSION == CFG_TEMP_DETECT_VERSION1
-void manual_cal_do_xtal_temp_delta_set(INT8 shift);
-#endif
+extern void manual_cal_do_xtal_temp_delta_set(INT8 shift);
 extern void manual_cal_do_xtal_cali(UINT16 cur_val, UINT16 *last, UINT16 thre, UINT16 init_val);
 extern UINT32 manual_cal_get_xtal(void);
 extern INT8 manual_cal_get_dbm_by_rate(UINT32 rate, UINT32 bandwidth);
@@ -96,6 +88,7 @@ extern TMP_PWR_PTR manual_cal_set_tmp_pwr(UINT16 cur_val, UINT16 thre, UINT16 *l
 extern UINT32 manual_cal_load_temp_tag_flash(void);
 extern UINT32 manual_cal_load_adc_cali_flash(void);
 extern void manual_cal_do_single_temperature(void);
+extern void manual_cal_set_rate_dist_for_txpwr(int dist_b, int dist_g, int dist_n40, int dist_ble);
 
 extern void rwnx_cal_set_reg_mod_pa(UINT16 reg_mod, UINT16 reg_pa);
 extern void rwnx_cal_do_temp_detect(UINT16 cur_val, UINT16 thre, UINT16 *last);
@@ -104,6 +97,8 @@ extern void rwnx_cal_set_40M_extra_setting(UINT8 val);
 extern void rwnx_cal_set_40M_setting(void);
 
 extern void rwnx_cal_set_txpwr_for_ble_boardcast(void);
+extern void bk7011_set_rf_config_tssithred_b(int tssi_thred_b);
+extern void bk7011_set_rf_config_tssithred_g(int tssi_thred_g);
 extern void rwnx_cal_recover_txpwr_for_wifi(void);
 
 extern void rwnx_cal_initial_calibration(void);
@@ -121,5 +116,13 @@ extern void bk7011_cal_dcormod_show(void);
 
 extern void rwnx_cal_ble_set_rfconfig(void);
 extern void rwnx_cal_ble_recover_rfconfig(void);
+
+extern void manual_cal_set_setp0(void);
+extern void manual_cal_set_setp1(void);
+extern void manual_cal_clear_setp(void);
+extern void manual_cal_set_rfcal_step0(void);
+extern int manual_cal_rfcali_status(void);
+extern UINT32 manual_cal_check_pwr_idx(UINT32 *level);
+extern UINT32 manual_cal_is_in_rftest_mode(void);
 
 #endif // _BK7011_CAL_PUB_H_

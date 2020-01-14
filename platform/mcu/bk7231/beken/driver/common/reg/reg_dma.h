@@ -43,7 +43,7 @@ __INLINE void dma_ch_lli_root_set(int reg_idx, uint32_t value)
  *  15:00             OFT_FREE   0x0
  * </pre>
  */
-#define DMA_DMA_STATUS_ADDR   0x10A00010
+#define DMA_DMA_STATUS_ADDR   (REG_DMA_BASE_ADDR + 0x00000010)
 #define DMA_DMA_STATUS_OFFSET 0x00000010
 #define DMA_DMA_STATUS_INDEX  0x00000004
 #define DMA_DMA_STATUS_RESET  0x00000000
@@ -166,7 +166,7 @@ __INLINE uint8_t dma_dma_status_ch0_stopped_getf(void)
  *  15:00              LLI_IRQ   0x0
  * </pre>
  */
-#define DMA_INT_RAWSTATUS_ADDR   0x10A00014
+#define DMA_INT_RAWSTATUS_ADDR   (REG_DMA_BASE_ADDR + 0x00000014)
 #define DMA_INT_RAWSTATUS_OFFSET 0x00000014
 #define DMA_INT_RAWSTATUS_INDEX  0x00000005
 #define DMA_INT_RAWSTATUS_RESET  0x00000000
@@ -245,7 +245,7 @@ __INLINE uint16_t dma_int_rawstatus_lli_irq_getf(void)
  *  15:00              LLI_IRQ   0x0
  * </pre>
  */
-#define DMA_INT_UNMASK_SET_ADDR   0x10A00018
+#define DMA_INT_UNMASK_SET_ADDR   (REG_DMA_BASE_ADDR + 0x00000018)
 #define DMA_INT_UNMASK_SET_OFFSET 0x00000018
 #define DMA_INT_UNMASK_SET_INDEX  0x00000006
 #define DMA_INT_UNMASK_SET_RESET  0x00000000
@@ -356,7 +356,7 @@ __INLINE void dma_int_unmask_lli_irq_setf(uint16_t lliirq)
  *  15:00              LLI_IRQ   0x0
  * </pre>
  */
-#define DMA_INT_UNMASK_CLEAR_ADDR   0x10A0001C
+#define DMA_INT_UNMASK_CLEAR_ADDR   (REG_DMA_BASE_ADDR + 0x0000001C)
 #define DMA_INT_UNMASK_CLEAR_OFFSET 0x0000001C
 #define DMA_INT_UNMASK_CLEAR_INDEX  0x00000007
 #define DMA_INT_UNMASK_CLEAR_RESET  0x00000000
@@ -407,7 +407,7 @@ __INLINE void dma_int_unmask_lli_irq_clearf(uint16_t lliirq)
  *  15:00              LLI_IRQ   0x0
  * </pre>
  */
-#define DMA_INT_ACK_ADDR   0x10A00020
+#define DMA_INT_ACK_ADDR   (REG_DMA_BASE_ADDR + 0x00000020)
 #define DMA_INT_ACK_OFFSET 0x00000020
 #define DMA_INT_ACK_INDEX  0x00000008
 #define DMA_INT_ACK_RESET  0x00000000
@@ -518,7 +518,7 @@ __INLINE void dma_int_ack_lli_irq_clearf(uint16_t lliirq)
  *  15:00              LLI_IRQ   0x0
  * </pre>
  */
-#define DMA_INT_STATUS_ADDR   0x10A00024
+#define DMA_INT_STATUS_ADDR   (REG_DMA_BASE_ADDR + 0x00000024)
 #define DMA_INT_STATUS_OFFSET 0x00000024
 #define DMA_INT_STATUS_INDEX  0x00000009
 #define DMA_INT_STATUS_RESET  0x00000000
@@ -596,7 +596,7 @@ __INLINE uint16_t dma_int_status_lli_irq_getf(void)
  *  01:00         CH0_PRIORITY   0x0
  * </pre>
  */
-#define DMA_CHANNEL_PRIORITY_ADDR   0x10A00034
+#define DMA_CHANNEL_PRIORITY_ADDR   (REG_DMA_BASE_ADDR + 0x00000034)
 #define DMA_CHANNEL_PRIORITY_OFFSET 0x00000034
 #define DMA_CHANNEL_PRIORITY_INDEX  0x0000000D
 #define DMA_CHANNEL_PRIORITY_RESET  0x00000000
@@ -697,7 +697,7 @@ __INLINE void dma_channel_priority_ch0_priority_setf(uint8_t ch0priority)
  *     00            CH0_MUTEX   0
  * </pre>
  */
-#define DMA_CHANNEL_MUTEX_SET_ADDR   0x10A00038
+#define DMA_CHANNEL_MUTEX_SET_ADDR   (REG_DMA_BASE_ADDR + 0x00000038)
 #define DMA_CHANNEL_MUTEX_SET_OFFSET 0x00000038
 #define DMA_CHANNEL_MUTEX_SET_INDEX  0x0000000E
 #define DMA_CHANNEL_MUTEX_SET_RESET  0x00000000
@@ -781,7 +781,7 @@ __INLINE void dma_channel_mutex_ch0_mutex_setf(uint8_t ch0mutex)
  *     00            CH0_MUTEX   0
  * </pre>
  */
-#define DMA_CHANNEL_MUTEX_CLEAR_ADDR   0x10A0003C
+#define DMA_CHANNEL_MUTEX_CLEAR_ADDR   (REG_DMA_BASE_ADDR + 0x0000003C)
 #define DMA_CHANNEL_MUTEX_CLEAR_OFFSET 0x0000003C
 #define DMA_CHANNEL_MUTEX_CLEAR_INDEX  0x0000000F
 #define DMA_CHANNEL_MUTEX_CLEAR_RESET  0x00000000
@@ -826,7 +826,7 @@ __INLINE void dma_channel_mutex_ch0_mutex_clearf(uint8_t ch0mutex)
  *     00                DUMMY   0
  * </pre>
  */
-#define DMA_DUMMY_ADDR   0x10A000C0
+#define DMA_DUMMY_ADDR   (REG_DMA_BASE_ADDR + 0x000000C0)
 #define DMA_DUMMY_OFFSET 0x000000C0
 #define DMA_DUMMY_INDEX  0x00000030
 #define DMA_DUMMY_RESET  0x00000000

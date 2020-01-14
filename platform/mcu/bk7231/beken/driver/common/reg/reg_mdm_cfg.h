@@ -48,7 +48,7 @@
  */
 
 /// Address of the RXMODES register
-#define MDM_RXMODES_ADDR   0x01000800
+#define MDM_RXMODES_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000800)
 /// Offset of the RXMODES register from the base address
 #define MDM_RXMODES_OFFSET 0x00000800
 /// Index of the RXMODES register
@@ -550,7 +550,7 @@ __INLINE void mdm_rxallowdsss_setf(uint8_t rxallowdsss)
  */
 
 /// Address of the RXTXPWRCTRL register
-#define MDM_RXTXPWRCTRL_ADDR   0x01000804
+#define MDM_RXTXPWRCTRL_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000804)
 /// Offset of the RXTXPWRCTRL register from the base address
 #define MDM_RXTXPWRCTRL_OFFSET 0x00000804
 /// Index of the RXTXPWRCTRL register
@@ -740,7 +740,7 @@ __INLINE void mdm_rxon_setf(uint8_t rxon)
  */
 
 /// Address of the STOCPECTRL0 register
-#define MDM_STOCPECTRL0_ADDR   0x01000808
+#define MDM_STOCPECTRL0_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000808)
 /// Offset of the STOCPECTRL0 register from the base address
 #define MDM_STOCPECTRL0_OFFSET 0x00000808
 /// Index of the STOCPECTRL0 register
@@ -1352,7 +1352,7 @@ __INLINE void mdm_stotdcompen_setf(uint8_t stotdcompen)
  */
 
 /// Address of the STOCPECTRL1 register
-#define MDM_STOCPECTRL1_ADDR   0x0100080C
+#define MDM_STOCPECTRL1_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x0000080C)
 /// Offset of the STOCPECTRL1 register from the base address
 #define MDM_STOCPECTRL1_OFFSET 0x0000080C
 /// Index of the STOCPECTRL1 register
@@ -1432,7 +1432,7 @@ __INLINE void mdm_stoslopeforced_setf(uint32_t stoslopeforced)
  */
 
 /// Address of the STOCPECTRL2 register
-#define MDM_STOCPECTRL2_ADDR   0x01000810
+#define MDM_STOCPECTRL2_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000810)
 /// Offset of the STOCPECTRL2 register from the base address
 #define MDM_STOCPECTRL2_OFFSET 0x00000810
 /// Index of the STOCPECTRL2 register
@@ -1520,7 +1520,7 @@ __INLINE void mdm_cpeslopeforced_setf(uint32_t cpeslopeforced)
  */
 
 /// Address of the EQUALCTRL register
-#define MDM_EQUALCTRL_ADDR   0x01000814
+#define MDM_EQUALCTRL_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000814)
 /// Offset of the EQUALCTRL register from the base address
 #define MDM_EQUALCTRL_OFFSET 0x00000814
 /// Index of the EQUALCTRL register
@@ -1933,7 +1933,7 @@ __INLINE void mdm_equalcfgsatsb_setf(uint8_t equalcfgsatsb)
  */
 
 /// Address of the SMOOTHCTRL register
-#define MDM_SMOOTHCTRL_ADDR   0x01000818
+#define MDM_SMOOTHCTRL_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000818)
 /// Offset of the SMOOTHCTRL register from the base address
 #define MDM_SMOOTHCTRL_OFFSET 0x00000818
 /// Index of the SMOOTHCTRL register
@@ -2229,7 +2229,7 @@ __INLINE void mdm_tdcycrotval20_setf(uint8_t tdcycrotval20)
  */
 
 /// Address of the DCESTIMCTRL register
-#define MDM_DCESTIMCTRL_ADDR   0x0100081C
+#define MDM_DCESTIMCTRL_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x0000081C)
 /// Offset of the DCESTIMCTRL register from the base address
 #define MDM_DCESTIMCTRL_OFFSET 0x0000081C
 /// Index of the DCESTIMCTRL register
@@ -2487,7 +2487,7 @@ __INLINE void mdm_waithtstf_setf(uint8_t waithtstf)
  */
 
 /// Address of the FECTRL0 register
-#define MDM_FECTRL0_ADDR   0x01000820
+#define MDM_FECTRL0_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000820)
 /// Offset of the FECTRL0 register from the base address
 #define MDM_FECTRL0_OFFSET 0x00000820
 /// Index of the FECTRL0 register
@@ -2670,7 +2670,7 @@ __INLINE void mdm_tx20diggainlin0_setf(uint8_t tx20diggainlin0)
  */
 
 /// Address of the SMOOTHSNRTHR register
-#define MDM_SMOOTHSNRTHR_ADDR   0x01000830
+#define MDM_SMOOTHSNRTHR_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000830)
 /// Offset of the SMOOTHSNRTHR register from the base address
 #define MDM_SMOOTHSNRTHR_OFFSET 0x00000830
 /// Index of the SMOOTHSNRTHR register
@@ -2821,7 +2821,7 @@ __INLINE void mdm_smoothsnrthrmid_setf(uint8_t smoothsnrthrmid)
  */
 
 /// Address of the RXCTRL0 register
-#define MDM_RXCTRL0_ADDR   0x01000834
+#define MDM_RXCTRL0_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000834)
 /// Offset of the RXCTRL0 register from the base address
 #define MDM_RXCTRL0_OFFSET 0x00000834
 /// Index of the RXCTRL0 register
@@ -3181,7 +3181,7 @@ __INLINE void mdm_propmodecfg_setf(uint8_t propmodecfg)
  */
 
 /// Address of the TXCTRL0 register
-#define MDM_TXCTRL0_ADDR   0x01000838
+#define MDM_TXCTRL0_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000838)
 /// Offset of the TXCTRL0 register from the base address
 #define MDM_TXCTRL0_OFFSET 0x00000838
 /// Index of the TXCTRL0 register
@@ -3359,7 +3359,7 @@ __INLINE void mdm_txstartdelay_setf(uint16_t txstartdelay)
  */
 
 /// Address of the RXCTRL1 register
-#define MDM_RXCTRL1_ADDR   0x0100083C
+#define MDM_RXCTRL1_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x0000083C)
 /// Offset of the RXCTRL1 register from the base address
 #define MDM_RXCTRL1_OFFSET 0x0000083C
 /// Index of the RXCTRL1 register
@@ -3470,7 +3470,7 @@ __INLINE void mdm_rxndbpsmax_setf(uint16_t rxndbpsmax)
  */
 
 /// Address of the CLKGATECTRL0 register
-#define MDM_CLKGATECTRL0_ADDR   0x01000840
+#define MDM_CLKGATECTRL0_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000840)
 /// Offset of the CLKGATECTRL0 register from the base address
 #define MDM_CLKGATECTRL0_OFFSET 0x00000840
 /// Index of the CLKGATECTRL0 register
@@ -4692,7 +4692,7 @@ __INLINE void mdm_intlvphyclken_setf(uint8_t intlvphyclken)
  */
 
 /// Address of the CLKGATECTRL1 register
-#define MDM_CLKGATECTRL1_ADDR   0x01000844
+#define MDM_CLKGATECTRL1_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000844)
 /// Offset of the CLKGATECTRL1 register from the base address
 #define MDM_CLKGATECTRL1_OFFSET 0x00000844
 /// Index of the CLKGATECTRL1 register
@@ -4868,7 +4868,7 @@ __INLINE void mdm_mdmbrxclken_setf(uint8_t mdmbrxclken)
  */
 
 /// Address of the MEMCLKCTRL0 register
-#define MDM_MEMCLKCTRL0_ADDR   0x01000848
+#define MDM_MEMCLKCTRL0_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000848)
 /// Offset of the MEMCLKCTRL0 register from the base address
 #define MDM_MEMCLKCTRL0_OFFSET 0x00000848
 /// Index of the MEMCLKCTRL0 register
@@ -4960,7 +4960,7 @@ __INLINE void mdm_agcmemclkctrl_setf(uint8_t agcmemclkctrl)
  */
 
 /// Address of the IRQCTRL register
-#define MDM_IRQCTRL_ADDR   0x0100084C
+#define MDM_IRQCTRL_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x0000084C)
 /// Offset of the IRQCTRL register from the base address
 #define MDM_IRQCTRL_OFFSET 0x0000084C
 /// Index of the IRQCTRL register
@@ -5582,7 +5582,7 @@ __INLINE void mdm_irqccatimeouten_setf(uint8_t irqccatimeouten)
  */
 
 /// Address of the IRQACK register
-#define MDM_IRQACK_ADDR   0x01000850
+#define MDM_IRQACK_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000850)
 /// Offset of the IRQACK register from the base address
 #define MDM_IRQACK_OFFSET 0x00000850
 /// Index of the IRQACK register
@@ -6192,7 +6192,7 @@ __INLINE void mdm_irqccatimeoutack_setf(uint8_t irqccatimeoutack)
  */
 
 /// Address of the TDCYCLSHTRL0 register
-#define MDM_TDCYCLSHTRL0_ADDR   0x01000854
+#define MDM_TDCYCLSHTRL0_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000854)
 /// Offset of the TDCYCLSHTRL0 register from the base address
 #define MDM_TDCYCLSHTRL0_OFFSET 0x00000854
 /// Index of the TDCYCLSHTRL0 register
@@ -6376,7 +6376,7 @@ __INLINE void mdm_ltdcycl2_setf(uint8_t ltdcycl2)
  */
 
 /// Address of the TDCYCLSHTRL1 register
-#define MDM_TDCYCLSHTRL1_ADDR   0x01000858
+#define MDM_TDCYCLSHTRL1_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000858)
 /// Offset of the TDCYCLSHTRL1 register from the base address
 #define MDM_TDCYCLSHTRL1_OFFSET 0x00000858
 /// Index of the TDCYCLSHTRL1 register
@@ -6558,7 +6558,7 @@ __INLINE void mdm_httdcycl2_setf(uint8_t httdcycl2)
  */
 
 /// Address of the SCRAMBLERCTRL register
-#define MDM_SCRAMBLERCTRL_ADDR   0x0100085C
+#define MDM_SCRAMBLERCTRL_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x0000085C)
 /// Offset of the SCRAMBLERCTRL register from the base address
 #define MDM_SCRAMBLERCTRL_OFFSET 0x0000085C
 /// Index of the SCRAMBLERCTRL register
@@ -6641,7 +6641,7 @@ __INLINE void mdm_scramseed_setf(uint8_t scramseed)
  */
 
 /// Address of the TBECTRL0 register
-#define MDM_TBECTRL0_ADDR   0x01000860
+#define MDM_TBECTRL0_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000860)
 /// Offset of the TBECTRL0 register from the base address
 #define MDM_TBECTRL0_OFFSET 0x00000860
 /// Index of the TBECTRL0 register
@@ -6864,7 +6864,7 @@ __INLINE void mdm_tbe_count_adjust_20_setf(uint8_t tbecountadjust20)
  */
 
 /// Address of the TBECTRL1 register
-#define MDM_TBECTRL1_ADDR   0x01000864
+#define MDM_TBECTRL1_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000864)
 /// Offset of the TBECTRL1 register from the base address
 #define MDM_TBECTRL1_OFFSET 0x00000864
 /// Index of the TBECTRL1 register
@@ -7088,7 +7088,7 @@ __INLINE void mdm_peak_search_start_low_snr_setf(uint8_t peaksearchstartlowsnr)
  */
 
 /// Address of the TBECTRL2 register
-#define MDM_TBECTRL2_ADDR   0x01000868
+#define MDM_TBECTRL2_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000868)
 /// Offset of the TBECTRL2 register from the base address
 #define MDM_TBECTRL2_OFFSET 0x00000868
 /// Index of the TBECTRL2 register
@@ -7347,7 +7347,7 @@ __INLINE void mdm_tbe_bias_setf(uint8_t tbebias)
  */
 
 /// Address of the TDFOCTRL0 register
-#define MDM_TDFOCTRL0_ADDR   0x0100086C
+#define MDM_TDFOCTRL0_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x0000086C)
 /// Offset of the TDFOCTRL0 register from the base address
 #define MDM_TDFOCTRL0_OFFSET 0x0000086C
 /// Index of the TDFOCTRL0 register
@@ -7492,7 +7492,7 @@ __INLINE void mdm_auto_corr_compare_ratio_low_snr_setf(uint16_t autocorrcomparer
  */
 
 /// Address of the TDFOCTRL1 register
-#define MDM_TDFOCTRL1_ADDR   0x01000870
+#define MDM_TDFOCTRL1_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000870)
 /// Offset of the TDFOCTRL1 register from the base address
 #define MDM_TDFOCTRL1_OFFSET 0x00000870
 /// Index of the TDFOCTRL1 register
@@ -7638,7 +7638,7 @@ __INLINE void mdm_auto_corr_plat_sum_start_setf(uint16_t autocorrplatsumstart)
  */
 
 /// Address of the TDFOCTRL2 register
-#define MDM_TDFOCTRL2_ADDR   0x01000874
+#define MDM_TDFOCTRL2_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000874)
 /// Offset of the TDFOCTRL2 register from the base address
 #define MDM_TDFOCTRL2_OFFSET 0x00000874
 /// Index of the TDFOCTRL2 register
@@ -7822,7 +7822,7 @@ __INLINE void mdm_auto_corr_plat_fall_search_start_setf(uint16_t autocorrplatfal
  */
 
 /// Address of the TDFOCTRL3 register
-#define MDM_TDFOCTRL3_ADDR   0x01000878
+#define MDM_TDFOCTRL3_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000878)
 /// Offset of the TDFOCTRL3 register from the base address
 #define MDM_TDFOCTRL3_OFFSET 0x00000878
 /// Index of the TDFOCTRL3 register
@@ -8035,7 +8035,7 @@ __INLINE void mdm_auto_corr_fall_count_setf(uint8_t autocorrfallcount)
  */
 
 /// Address of the CLKGATEFCTRL0 register
-#define MDM_CLKGATEFCTRL0_ADDR   0x0100087C
+#define MDM_CLKGATEFCTRL0_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x0000087C)
 /// Offset of the CLKGATEFCTRL0 register from the base address
 #define MDM_CLKGATEFCTRL0_OFFSET 0x0000087C
 /// Index of the CLKGATEFCTRL0 register
@@ -9257,7 +9257,7 @@ __INLINE void mdm_intlvphyclkforce_setf(uint8_t intlvphyclkforce)
  */
 
 /// Address of the CLKGATEFCTRL1 register
-#define MDM_CLKGATEFCTRL1_ADDR   0x01000880
+#define MDM_CLKGATEFCTRL1_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000880)
 /// Offset of the CLKGATEFCTRL1 register from the base address
 #define MDM_CLKGATEFCTRL1_OFFSET 0x00000880
 /// Index of the CLKGATEFCTRL1 register
@@ -9434,7 +9434,7 @@ __INLINE void mdm_mdmbrxclkforce_setf(uint8_t mdmbrxclkforce)
  */
 
 /// Address of the DCOFFSET0 register
-#define MDM_DCOFFSET0_ADDR   0x01000884
+#define MDM_DCOFFSET0_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000884)
 /// Offset of the DCOFFSET0 register from the base address
 #define MDM_DCOFFSET0_OFFSET 0x00000884
 /// Index of the DCOFFSET0 register
@@ -9581,7 +9581,7 @@ __INLINE void mdm_txqdcoffset0_setf(uint8_t txqdcoffset0)
  */
 
 /// Address of the SWRESET register
-#define MDM_SWRESET_ADDR   0x01000894
+#define MDM_SWRESET_ADDR   (REG_MDM_CFG_BASE_ADDR + 0x00000894)
 /// Offset of the SWRESET register from the base address
 #define MDM_SWRESET_OFFSET 0x00000894
 /// Index of the SWRESET register

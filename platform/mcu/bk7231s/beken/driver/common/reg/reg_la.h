@@ -37,7 +37,7 @@
  */
 
 /// Address of the ID_LOW register
-#define LA_ID_LOW_ADDR   0x10E00000
+#define LA_ID_LOW_ADDR   REG_LA_BASE_ADDR
 /// Offset of the ID_LOW register from the base address
 #define LA_ID_LOW_OFFSET 0x00000000
 /// Index of the ID_LOW register
@@ -96,7 +96,7 @@ __INLINE uint32_t la_id_low_getf(int elt_idx)
  */
 
 /// Address of the ID_HIGH register
-#define LA_ID_HIGH_ADDR   0x10E00004
+#define LA_ID_HIGH_ADDR   (REG_LA_BASE_ADDR + 0x00000004)
 /// Offset of the ID_HIGH register from the base address
 #define LA_ID_HIGH_OFFSET 0x00000004
 /// Index of the ID_HIGH register
@@ -155,7 +155,7 @@ __INLINE uint32_t la_id_high_getf(int elt_idx)
  */
 
 /// Address of the VERSION register
-#define LA_VERSION_ADDR   0x10E00008
+#define LA_VERSION_ADDR   (REG_LA_BASE_ADDR + 0x00000008)
 /// Offset of the VERSION register from the base address
 #define LA_VERSION_OFFSET 0x00000008
 /// Index of the VERSION register
@@ -216,7 +216,7 @@ __INLINE uint32_t la_version_getf(int elt_idx)
  */
 
 /// Address of the CNTRL register
-#define LA_CNTRL_ADDR   0x10E0000C
+#define LA_CNTRL_ADDR   (REG_LA_BASE_ADDR + 0x0000000C)
 /// Offset of the CNTRL register from the base address
 #define LA_CNTRL_OFFSET 0x0000000C
 /// Index of the CNTRL register
@@ -332,7 +332,7 @@ __INLINE void la_start_setf(int elt_idx, uint8_t start)
  */
 
 /// Address of the STATUS register
-#define LA_STATUS_ADDR   0x10E00010
+#define LA_STATUS_ADDR   (REG_LA_BASE_ADDR + 0x00000010)
 /// Offset of the STATUS register from the base address
 #define LA_STATUS_OFFSET 0x00000010
 /// Index of the STATUS register
@@ -483,7 +483,7 @@ __INLINE uint8_t la_started_getf(int elt_idx)
  */
 
 /// Address of the SAMPLING_MASK_LOW register
-#define LA_SAMPLING_MASK_LOW_ADDR   0x10E00014
+#define LA_SAMPLING_MASK_LOW_ADDR   (REG_LA_BASE_ADDR + 0x00000014)
 /// Offset of the SAMPLING_MASK_LOW register from the base address
 #define LA_SAMPLING_MASK_LOW_OFFSET 0x00000014
 /// Index of the SAMPLING_MASK_LOW register
@@ -567,7 +567,7 @@ __INLINE void la_sampling_mask_low_setf(int elt_idx, uint32_t samplingmasklow)
  */
 
 /// Address of the SAMPLING_MASK_MED register
-#define LA_SAMPLING_MASK_MED_ADDR   0x10E00018
+#define LA_SAMPLING_MASK_MED_ADDR   (REG_LA_BASE_ADDR + 0x00000018)
 /// Offset of the SAMPLING_MASK_MED register from the base address
 #define LA_SAMPLING_MASK_MED_OFFSET 0x00000018
 /// Index of the SAMPLING_MASK_MED register
@@ -651,7 +651,7 @@ __INLINE void la_sampling_mask_med_setf(int elt_idx, uint32_t samplingmaskmed)
  */
 
 /// Address of the SAMPLING_MASK_HIGH register
-#define LA_SAMPLING_MASK_HIGH_ADDR   0x10E0001C
+#define LA_SAMPLING_MASK_HIGH_ADDR   (REG_LA_BASE_ADDR + 0x0000001C)
 /// Offset of the SAMPLING_MASK_HIGH register from the base address
 #define LA_SAMPLING_MASK_HIGH_OFFSET 0x0000001C
 /// Index of the SAMPLING_MASK_HIGH register
@@ -735,7 +735,7 @@ __INLINE void la_sampling_mask_high_setf(int elt_idx, uint32_t samplingmaskhigh)
  */
 
 /// Address of the TRIGGER_MASK_LOW register
-#define LA_TRIGGER_MASK_LOW_ADDR   0x10E00020
+#define LA_TRIGGER_MASK_LOW_ADDR   (REG_LA_BASE_ADDR + 0x00000020)
 /// Offset of the TRIGGER_MASK_LOW register from the base address
 #define LA_TRIGGER_MASK_LOW_OFFSET 0x00000020
 /// Index of the TRIGGER_MASK_LOW register
@@ -819,7 +819,7 @@ __INLINE void la_trigger_mask_med_setf(int elt_idx, uint32_t triggermaskmed)
  */
 
 /// Address of the TRIGGER_MASK_MED register
-#define LA_TRIGGER_MASK_MED_ADDR   0x10E00024
+#define LA_TRIGGER_MASK_MED_ADDR   (REG_LA_BASE_ADDR + 0x00000024)
 /// Offset of the TRIGGER_MASK_MED register from the base address
 #define LA_TRIGGER_MASK_MED_OFFSET 0x00000024
 /// Index of the TRIGGER_MASK_MED register
@@ -903,7 +903,7 @@ __INLINE void la_trigger_mask_low_setf(int elt_idx, uint32_t triggermasklow)
  */
 
 /// Address of the TRIGGER_MASK_HIGH register
-#define LA_TRIGGER_MASK_HIGH_ADDR   0x10E00028
+#define LA_TRIGGER_MASK_HIGH_ADDR   (REG_LA_BASE_ADDR + 0x00000028)
 /// Offset of the TRIGGER_MASK_HIGH register from the base address
 #define LA_TRIGGER_MASK_HIGH_OFFSET 0x00000028
 /// Index of the TRIGGER_MASK_HIGH register
@@ -987,7 +987,7 @@ __INLINE void la_trigger_mask_high_setf(int elt_idx, uint32_t triggermaskhigh)
  */
 
 /// Address of the TRIGGER_VALUE_LOW register
-#define LA_TRIGGER_VALUE_LOW_ADDR   0x10E0002C
+#define LA_TRIGGER_VALUE_LOW_ADDR   (REG_LA_BASE_ADDR + 0x0000002C)
 /// Offset of the TRIGGER_VALUE_LOW register from the base address
 #define LA_TRIGGER_VALUE_LOW_OFFSET 0x0000002C
 /// Index of the TRIGGER_VALUE_LOW register
@@ -1071,7 +1071,7 @@ __INLINE void la_trigger_value_low_setf(int elt_idx, uint32_t triggervaluelow)
  */
 
 /// Address of the TRIGGER_VALUE_MED register
-#define LA_TRIGGER_VALUE_MED_ADDR   0x10E00030
+#define LA_TRIGGER_VALUE_MED_ADDR   (REG_LA_BASE_ADDR + 0x00000030)
 /// Offset of the TRIGGER_VALUE_MED register from the base address
 #define LA_TRIGGER_VALUE_MED_OFFSET 0x00000030
 /// Index of the TRIGGER_VALUE_MED register
@@ -1155,7 +1155,7 @@ __INLINE void la_trigger_value_med_setf(int elt_idx, uint32_t triggervaluemed)
  */
 
 /// Address of the TRIGGER_VALUE_HIGH register
-#define LA_TRIGGER_VALUE_HIGH_ADDR   0x10E00034
+#define LA_TRIGGER_VALUE_HIGH_ADDR   (REG_LA_BASE_ADDR + 0x00000034)
 /// Offset of the TRIGGER_VALUE_HIGH register from the base address
 #define LA_TRIGGER_VALUE_HIGH_OFFSET 0x00000034
 /// Index of the TRIGGER_VALUE_HIGH register
@@ -1239,7 +1239,7 @@ __INLINE void la_trigger_value_high_setf(int elt_idx, uint32_t triggervaluehigh)
  */
 
 /// Address of the TRIGGER_POINT register
-#define LA_TRIGGER_POINT_ADDR   0x10E00038
+#define LA_TRIGGER_POINT_ADDR   (REG_LA_BASE_ADDR + 0x00000038)
 /// Offset of the TRIGGER_POINT register from the base address
 #define LA_TRIGGER_POINT_OFFSET 0x00000038
 /// Index of the TRIGGER_POINT register
@@ -1323,7 +1323,7 @@ __INLINE void la_trigger_point_setf(int elt_idx, uint16_t triggerpoint)
  */
 
 /// Address of the FIRSTSAMPLE register
-#define LA_FIRSTSAMPLE_ADDR   0x10E0003C
+#define LA_FIRSTSAMPLE_ADDR   (REG_LA_BASE_ADDR + 0x0000003C)
 /// Offset of the FIRSTSAMPLE register from the base address
 #define LA_FIRSTSAMPLE_OFFSET 0x0000003C
 /// Index of the FIRSTSAMPLE register

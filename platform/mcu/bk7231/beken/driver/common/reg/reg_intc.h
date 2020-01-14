@@ -32,7 +32,7 @@
  */
 
 /// Address of the IRQ_STATUS register
-#define INTC_IRQ_STATUS_ADDR   0x10910000
+#define INTC_IRQ_STATUS_ADDR   REG_INTC_BASE_ADDR
 /// Offset of the IRQ_STATUS register from the base address
 #define INTC_IRQ_STATUS_OFFSET 0x00000000
 /// Index of the IRQ_STATUS register
@@ -63,7 +63,7 @@ __INLINE uint32_t intc_irq_status_get(int reg_idx)
  */
 
 /// Address of the IRQ_RAW_STATUS register
-#define INTC_IRQ_RAW_STATUS_ADDR   0x10910008
+#define INTC_IRQ_RAW_STATUS_ADDR   (REG_INTC_BASE_ADDR + 0x00000008)
 /// Offset of the IRQ_RAW_STATUS register from the base address
 #define INTC_IRQ_RAW_STATUS_OFFSET 0x00000008
 /// Index of the IRQ_RAW_STATUS register
@@ -94,7 +94,7 @@ __INLINE uint32_t intc_irq_raw_status_get(int reg_idx)
  */
 
 /// Address of the IRQ_UNMASK_SET register
-#define INTC_IRQ_UNMASK_SET_ADDR   0x10910010
+#define INTC_IRQ_UNMASK_SET_ADDR   (REG_INTC_BASE_ADDR + 0x00000010)
 /// Offset of the IRQ_UNMASK_SET register from the base address
 #define INTC_IRQ_UNMASK_SET_OFFSET 0x00000010
 /// Index of the IRQ_UNMASK_SET register
@@ -137,7 +137,7 @@ __INLINE void intc_irq_unmask_set(int reg_idx, uint32_t value)
  */
 
 /// Address of the IRQ_UNMASK_CLEAR register
-#define INTC_IRQ_UNMASK_CLEAR_ADDR   0x10910018
+#define INTC_IRQ_UNMASK_CLEAR_ADDR   (REG_INTC_BASE_ADDR + 0x00000018)
 /// Offset of the IRQ_UNMASK_CLEAR register from the base address
 #define INTC_IRQ_UNMASK_CLEAR_OFFSET 0x00000018
 /// Index of the IRQ_UNMASK_CLEAR register
@@ -168,7 +168,7 @@ __INLINE void intc_irq_unmask_clear(int reg_idx, uint32_t value)
  */
 
 /// Address of the IRQ_POLARITY register
-#define INTC_IRQ_POLARITY_ADDR   0x10910020
+#define INTC_IRQ_POLARITY_ADDR   (REG_INTC_BASE_ADDR + 0x00000020)
 /// Offset of the IRQ_POLARITY register from the base address
 #define INTC_IRQ_POLARITY_OFFSET 0x00000020
 /// Index of the IRQ_POLARITY register
@@ -211,7 +211,7 @@ __INLINE void intc_irq_polarity_set(int reg_idx, uint32_t value)
  */
 
 /// Address of the IRQ_INDEX register
-#define INTC_IRQ_INDEX_ADDR   0x10910040
+#define INTC_IRQ_INDEX_ADDR   (REG_INTC_BASE_ADDR + 0x00000040)
 /// Offset of the IRQ_INDEX register from the base address
 #define INTC_IRQ_INDEX_OFFSET 0x00000040
 /// Index of the IRQ_INDEX register

@@ -42,7 +42,7 @@
  */
 
 /// Address of the RWNXAGCGAINRG register
-#define AGC_RWNXAGCGAINRG_ADDR   0x01002000
+#define AGC_RWNXAGCGAINRG_ADDR   (REG_AGC_BASE_ADDR + 0x00002000)
 /// Offset of the RWNXAGCGAINRG register from the base address
 #define AGC_RWNXAGCGAINRG_OFFSET 0x00002000
 /// Index of the RWNXAGCGAINRG register
@@ -342,7 +342,7 @@ __INLINE void agc_rfgainmindb_setf(uint8_t rfgainmindb)
  */
 
 /// Address of the RWNXAGCLNAVGAREF0 register
-#define AGC_RWNXAGCLNAVGAREF0_ADDR   0x01002004
+#define AGC_RWNXAGCLNAVGAREF0_ADDR   (REG_AGC_BASE_ADDR + 0x00002004)
 /// Offset of the RWNXAGCLNAVGAREF0 register from the base address
 #define AGC_RWNXAGCLNAVGAREF0_OFFSET 0x00002004
 /// Index of the RWNXAGCLNAVGAREF0 register
@@ -604,7 +604,7 @@ __INLINE void agc_lnaldb_setf(uint8_t lnaldb)
  */
 
 /// Address of the RWNXAGCLNAVGAREF1 register
-#define AGC_RWNXAGCLNAVGAREF1_ADDR   0x01002008
+#define AGC_RWNXAGCLNAVGAREF1_ADDR   (REG_AGC_BASE_ADDR + 0x00002008)
 /// Offset of the RWNXAGCLNAVGAREF1 register from the base address
 #define AGC_RWNXAGCLNAVGAREF1_OFFSET 0x00002008
 /// Index of the RWNXAGCLNAVGAREF1 register
@@ -865,7 +865,7 @@ __INLINE void agc_lnamlthrdb_setf(uint8_t lnamlthrdb)
  */
 
 /// Address of the RWNXAGCACI20MARG0 register
-#define AGC_RWNXAGCACI20MARG0_ADDR   0x0100200C
+#define AGC_RWNXAGCACI20MARG0_ADDR   (REG_AGC_BASE_ADDR + 0x0000200C)
 /// Offset of the RWNXAGCACI20MARG0 register from the base address
 #define AGC_RWNXAGCACI20MARG0_OFFSET 0x0000200C
 /// Index of the RWNXAGCACI20MARG0 register
@@ -1088,7 +1088,7 @@ __INLINE void agc_aci20margmcs0_setf(uint8_t aci20margmcs0)
  */
 
 /// Address of the RWNXAGCACI20MARG1 register
-#define AGC_RWNXAGCACI20MARG1_ADDR   0x01002010
+#define AGC_RWNXAGCACI20MARG1_ADDR   (REG_AGC_BASE_ADDR + 0x00002010)
 /// Offset of the RWNXAGCACI20MARG1 register from the base address
 #define AGC_RWNXAGCACI20MARG1_OFFSET 0x00002010
 /// Index of the RWNXAGCACI20MARG1 register
@@ -1309,7 +1309,7 @@ __INLINE void agc_aci20margmcs4_setf(uint8_t aci20margmcs4)
  */
 
 /// Address of the RWNXAGCACI20MARG2 register
-#define AGC_RWNXAGCACI20MARG2_ADDR   0x01002014
+#define AGC_RWNXAGCACI20MARG2_ADDR   (REG_AGC_BASE_ADDR + 0x00002014)
 /// Offset of the RWNXAGCACI20MARG2 register from the base address
 #define AGC_RWNXAGCACI20MARG2_OFFSET 0x00002014
 /// Index of the RWNXAGCACI20MARG2 register
@@ -1456,7 +1456,7 @@ __INLINE void agc_aci20margmcs8_setf(uint8_t aci20margmcs8)
  */
 
 /// Address of the RWNXAGCACI40MARG0 register
-#define AGC_RWNXAGCACI40MARG0_ADDR   0x01002018
+#define AGC_RWNXAGCACI40MARG0_ADDR   (REG_AGC_BASE_ADDR + 0x00002018)
 /// Offset of the RWNXAGCACI40MARG0 register from the base address
 #define AGC_RWNXAGCACI40MARG0_OFFSET 0x00002018
 /// Index of the RWNXAGCACI40MARG0 register
@@ -1679,7 +1679,7 @@ __INLINE void agc_aci40margmcs0_setf(uint8_t aci40margmcs0)
  */
 
 /// Address of the RWNXAGCACI40MARG1 register
-#define AGC_RWNXAGCACI40MARG1_ADDR   0x0100201C
+#define AGC_RWNXAGCACI40MARG1_ADDR   (REG_AGC_BASE_ADDR + 0x0000201C)
 /// Offset of the RWNXAGCACI40MARG1 register from the base address
 #define AGC_RWNXAGCACI40MARG1_OFFSET 0x0000201C
 /// Index of the RWNXAGCACI40MARG1 register
@@ -1900,7 +1900,7 @@ __INLINE void agc_aci40margmcs4_setf(uint8_t aci40margmcs4)
  */
 
 /// Address of the RWNXAGCACI40MARG2 register
-#define AGC_RWNXAGCACI40MARG2_ADDR   0x01002020
+#define AGC_RWNXAGCACI40MARG2_ADDR   (REG_AGC_BASE_ADDR + 0x00002020)
 /// Offset of the RWNXAGCACI40MARG2 register from the base address
 #define AGC_RWNXAGCACI40MARG2_OFFSET 0x00002020
 /// Index of the RWNXAGCACI40MARG2 register
@@ -2047,7 +2047,7 @@ __INLINE void agc_aci40margmcs8_setf(uint8_t aci40margmcs8)
  */
 
 /// Address of the RWNXAGCACI80MARG0 register
-#define AGC_RWNXAGCACI80MARG0_ADDR   0x01002024
+#define AGC_RWNXAGCACI80MARG0_ADDR   (REG_AGC_BASE_ADDR + 0x00002024)
 /// Offset of the RWNXAGCACI80MARG0 register from the base address
 #define AGC_RWNXAGCACI80MARG0_OFFSET 0x00002024
 /// Index of the RWNXAGCACI80MARG0 register
@@ -2270,7 +2270,7 @@ __INLINE void agc_aci80margmcs0_setf(uint8_t aci80margmcs0)
  */
 
 /// Address of the RWNXAGCACI80MARG1 register
-#define AGC_RWNXAGCACI80MARG1_ADDR   0x01002028
+#define AGC_RWNXAGCACI80MARG1_ADDR   (REG_AGC_BASE_ADDR + 0x00002028)
 /// Offset of the RWNXAGCACI80MARG1 register from the base address
 #define AGC_RWNXAGCACI80MARG1_OFFSET 0x00002028
 /// Index of the RWNXAGCACI80MARG1 register
@@ -2491,7 +2491,7 @@ __INLINE void agc_aci80margmcs4_setf(uint8_t aci80margmcs4)
  */
 
 /// Address of the RWNXAGCACI80MARG2 register
-#define AGC_RWNXAGCACI80MARG2_ADDR   0x0100202C
+#define AGC_RWNXAGCACI80MARG2_ADDR   (REG_AGC_BASE_ADDR + 0x0000202C)
 /// Offset of the RWNXAGCACI80MARG2 register from the base address
 #define AGC_RWNXAGCACI80MARG2_OFFSET 0x0000202C
 /// Index of the RWNXAGCACI80MARG2 register
@@ -2638,7 +2638,7 @@ __INLINE void agc_aci80margmcs8_setf(uint8_t aci80margmcs8)
  */
 
 /// Address of the RWNXAGCCGH register
-#define AGC_RWNXAGCCGH_ADDR   0x01002030
+#define AGC_RWNXAGCCGH_ADDR   (REG_AGC_BASE_ADDR + 0x00002030)
 /// Offset of the RWNXAGCCGH register from the base address
 #define AGC_RWNXAGCCGH_OFFSET 0x00002030
 /// Index of the RWNXAGCCGH register
@@ -2861,7 +2861,7 @@ __INLINE void agc_chgvganlthr_setf(uint8_t chgvganlthr)
  */
 
 /// Address of the RWNXAGCSAT register
-#define AGC_RWNXAGCSAT_ADDR   0x01002034
+#define AGC_RWNXAGCSAT_ADDR   (REG_AGC_BASE_ADDR + 0x00002034)
 /// Offset of the RWNXAGCSAT register from the base address
 #define AGC_RWNXAGCSAT_OFFSET 0x00002034
 /// Index of the RWNXAGCSAT register
@@ -3082,7 +3082,7 @@ __INLINE void agc_satthrdbv_setf(uint8_t satthrdbv)
  */
 
 /// Address of the RWNXAGCCROSS register
-#define AGC_RWNXAGCCROSS_ADDR   0x01002038
+#define AGC_RWNXAGCCROSS_ADDR   (REG_AGC_BASE_ADDR + 0x00002038)
 /// Offset of the RWNXAGCCROSS register from the base address
 #define AGC_RWNXAGCCROSS_OFFSET 0x00002038
 /// Index of the RWNXAGCCROSS register
@@ -3229,7 +3229,7 @@ __INLINE void agc_crossupthrqdbm_setf(uint16_t crossupthrqdbm)
  */
 
 /// Address of the RWNXAGCRAMP register
-#define AGC_RWNXAGCRAMP_ADDR   0x0100203C
+#define AGC_RWNXAGCRAMP_ADDR   (REG_AGC_BASE_ADDR + 0x0000203C)
 /// Offset of the RWNXAGCRAMP register from the base address
 #define AGC_RWNXAGCRAMP_OFFSET 0x0000203C
 /// Index of the RWNXAGCRAMP register
@@ -3452,7 +3452,7 @@ __INLINE void agc_rampupgapqdb_setf(uint8_t rampupgapqdb)
  */
 
 /// Address of the RWNXAGCSTABDIS register
-#define AGC_RWNXAGCSTABDIS_ADDR   0x01002040
+#define AGC_RWNXAGCSTABDIS_ADDR   (REG_AGC_BASE_ADDR + 0x00002040)
 /// Offset of the RWNXAGCSTABDIS register from the base address
 #define AGC_RWNXAGCSTABDIS_OFFSET 0x00002040
 /// Index of the RWNXAGCSTABDIS register
@@ -3677,7 +3677,7 @@ __INLINE void agc_platdpqdb_setf(uint8_t platdpqdb)
  */
 
 /// Address of the RWNXAGCDCCOMP0 register
-#define AGC_RWNXAGCDCCOMP0_ADDR   0x01002044
+#define AGC_RWNXAGCDCCOMP0_ADDR   (REG_AGC_BASE_ADDR + 0x00002044)
 /// Offset of the RWNXAGCDCCOMP0 register from the base address
 #define AGC_RWNXAGCDCCOMP0_OFFSET 0x00002044
 /// Index of the RWNXAGCDCCOMP0 register
@@ -3976,7 +3976,7 @@ __INLINE void agc_dcadczerotime50ns_setf(uint8_t dcadczerotime50ns)
  */
 
 /// Address of the RWNXAGCDCCOMP1 register
-#define AGC_RWNXAGCDCCOMP1_ADDR   0x01002048
+#define AGC_RWNXAGCDCCOMP1_ADDR   (REG_AGC_BASE_ADDR + 0x00002048)
 /// Offset of the RWNXAGCDCCOMP1 register from the base address
 #define AGC_RWNXAGCDCCOMP1_OFFSET 0x00002048
 /// Index of the RWNXAGCDCCOMP1 register
@@ -4198,7 +4198,7 @@ __INLINE void agc_dcagc20zerotime50ns_setf(uint8_t dcagc20zerotime50ns)
  */
 
 /// Address of the RWNXAGCDCCOMP2 register
-#define AGC_RWNXAGCDCCOMP2_ADDR   0x0100204C
+#define AGC_RWNXAGCDCCOMP2_ADDR   (REG_AGC_BASE_ADDR + 0x0000204C)
 /// Offset of the RWNXAGCDCCOMP2 register from the base address
 #define AGC_RWNXAGCDCCOMP2_OFFSET 0x0000204C
 /// Index of the RWNXAGCDCCOMP2 register
@@ -4385,7 +4385,7 @@ __INLINE void agc_deldcstablecc_setf(uint8_t deldcstablecc)
  */
 
 /// Address of the RWNXAGCEVTSAT register
-#define AGC_RWNXAGCEVTSAT_ADDR   0x01002050
+#define AGC_RWNXAGCEVTSAT_ADDR   (REG_AGC_BASE_ADDR + 0x00002050)
 /// Offset of the RWNXAGCEVTSAT register from the base address
 #define AGC_RWNXAGCEVTSAT_OFFSET 0x00002050
 /// Index of the RWNXAGCEVTSAT register
@@ -4684,7 +4684,7 @@ __INLINE void agc_evt0tgtadd_setf(uint16_t evt0tgtadd)
  */
 
 /// Address of the RWNXAGCEVTDET register
-#define AGC_RWNXAGCEVTDET_ADDR   0x01002054
+#define AGC_RWNXAGCEVTDET_ADDR   (REG_AGC_BASE_ADDR + 0x00002054)
 /// Offset of the RWNXAGCEVTDET register from the base address
 #define AGC_RWNXAGCEVTDET_OFFSET 0x00002054
 /// Index of the RWNXAGCEVTDET register
@@ -4983,7 +4983,7 @@ __INLINE void agc_evt1tgtadd_setf(uint16_t evt1tgtadd)
  */
 
 /// Address of the RWNXAGCEVTDIS register
-#define AGC_RWNXAGCEVTDIS_ADDR   0x01002058
+#define AGC_RWNXAGCEVTDIS_ADDR   (REG_AGC_BASE_ADDR + 0x00002058)
 /// Offset of the RWNXAGCEVTDIS register from the base address
 #define AGC_RWNXAGCEVTDIS_OFFSET 0x00002058
 /// Index of the RWNXAGCEVTDIS register
@@ -5282,7 +5282,7 @@ __INLINE void agc_evt2tgtadd_setf(uint16_t evt2tgtadd)
  */
 
 /// Address of the RWNXAGCEVTDSSSDET register
-#define AGC_RWNXAGCEVTDSSSDET_ADDR   0x0100205C
+#define AGC_RWNXAGCEVTDSSSDET_ADDR   (REG_AGC_BASE_ADDR + 0x0000205C)
 /// Offset of the RWNXAGCEVTDSSSDET register from the base address
 #define AGC_RWNXAGCEVTDSSSDET_OFFSET 0x0000205C
 /// Index of the RWNXAGCEVTDSSSDET register
@@ -5583,7 +5583,7 @@ __INLINE void agc_evt3tgtadd_setf(uint16_t evt3tgtadd)
  */
 
 /// Address of the RWNXAGCCNTL register
-#define AGC_RWNXAGCCNTL_ADDR   0x01002060
+#define AGC_RWNXAGCCNTL_ADDR   (REG_AGC_BASE_ADDR + 0x00002060)
 /// Offset of the RWNXAGCCNTL register from the base address
 #define AGC_RWNXAGCCNTL_OFFSET 0x00002060
 /// Index of the RWNXAGCCNTL register
@@ -5946,7 +5946,7 @@ __INLINE void agc_combpathsel_setf(uint8_t combpathsel)
  */
 
 /// Address of the RWNXAGCDSP0 register
-#define AGC_RWNXAGCDSP0_ADDR   0x01002064
+#define AGC_RWNXAGCDSP0_ADDR   (REG_AGC_BASE_ADDR + 0x00002064)
 /// Offset of the RWNXAGCDSP0 register from the base address
 #define AGC_RWNXAGCDSP0_OFFSET 0x00002064
 /// Index of the RWNXAGCDSP0 register
@@ -6169,7 +6169,7 @@ __INLINE void agc_adcpowbiasqdb_setf(uint8_t adcpowbiasqdb)
  */
 
 /// Address of the RWNXAGCDSP1 register
-#define AGC_RWNXAGCDSP1_ADDR   0x01002068
+#define AGC_RWNXAGCDSP1_ADDR   (REG_AGC_BASE_ADDR + 0x00002068)
 /// Offset of the RWNXAGCDSP1 register from the base address
 #define AGC_RWNXAGCDSP1_OFFSET 0x00002068
 /// Index of the RWNXAGCDSP1 register
@@ -6391,7 +6391,7 @@ __INLINE void agc_inbdpow20pbiasqdb_setf(uint8_t inbdpow20pbiasqdb)
  */
 
 /// Address of the RWNXAGCDSP2 register
-#define AGC_RWNXAGCDSP2_ADDR   0x0100206C
+#define AGC_RWNXAGCDSP2_ADDR   (REG_AGC_BASE_ADDR + 0x0000206C)
 /// Offset of the RWNXAGCDSP2 register from the base address
 #define AGC_RWNXAGCDSP2_OFFSET 0x0000206C
 /// Index of the RWNXAGCDSP2 register
@@ -6576,7 +6576,7 @@ __INLINE void agc_fe20gain_setf(uint8_t fe20gain)
  */
 
 /// Address of the RWNXAGCCCA0 register
-#define AGC_RWNXAGCCCA0_ADDR   0x01002070
+#define AGC_RWNXAGCCCA0_ADDR   (REG_AGC_BASE_ADDR + 0x00002070)
 /// Offset of the RWNXAGCCCA0 register from the base address
 #define AGC_RWNXAGCCCA0_OFFSET 0x00002070
 /// Index of the RWNXAGCCCA0 register
@@ -6800,7 +6800,7 @@ __INLINE void agc_ccadetrampup_setf(uint8_t ccadetrampup)
  */
 
 /// Address of the RWNXAGCCCA1 register
-#define AGC_RWNXAGCCCA1_ADDR   0x01002074
+#define AGC_RWNXAGCCCA1_ADDR   (REG_AGC_BASE_ADDR + 0x00002074)
 /// Offset of the RWNXAGCCCA1 register from the base address
 #define AGC_RWNXAGCCCA1_OFFSET 0x00002074
 /// Index of the RWNXAGCCCA1 register
@@ -7061,7 +7061,7 @@ __INLINE void agc_ccarisethrdbm_setf(uint8_t ccarisethrdbm)
  */
 
 /// Address of the RWNXAGCCCACTRL register
-#define AGC_RWNXAGCCCACTRL_ADDR   0x01002078
+#define AGC_RWNXAGCCCACTRL_ADDR   (REG_AGC_BASE_ADDR + 0x00002078)
 /// Offset of the RWNXAGCCCACTRL register from the base address
 #define AGC_RWNXAGCCCACTRL_OFFSET 0x00002078
 /// Index of the RWNXAGCCCACTRL register
@@ -7430,7 +7430,7 @@ __INLINE void agc_ccaenergyen_setf(uint8_t ccaenergyen)
  */
 
 /// Address of the RWNXAGCCCASTATE0 register
-#define AGC_RWNXAGCCCASTATE0_ADDR   0x0100207C
+#define AGC_RWNXAGCCCASTATE0_ADDR   (REG_AGC_BASE_ADDR + 0x0000207C)
 /// Offset of the RWNXAGCCCASTATE0 register from the base address
 #define AGC_RWNXAGCCCASTATE0_OFFSET 0x0000207C
 /// Index of the RWNXAGCCCASTATE0 register
@@ -7574,7 +7574,7 @@ __INLINE void agc_rxstatecca20psel_setf(uint16_t rxstatecca20psel)
  */
 
 /// Address of the RWNXAGCCCASTATE1 register
-#define AGC_RWNXAGCCCASTATE1_ADDR   0x01002080
+#define AGC_RWNXAGCCCASTATE1_ADDR   (REG_AGC_BASE_ADDR + 0x00002080)
 /// Offset of the RWNXAGCCCASTATE1 register from the base address
 #define AGC_RWNXAGCCCASTATE1_OFFSET 0x00002080
 /// Index of the RWNXAGCCCASTATE1 register
@@ -7654,7 +7654,7 @@ __INLINE void agc_rxstatecca40ssel_setf(uint16_t rxstatecca40ssel)
  */
 
 /// Address of the RWNXAGCCCATIMEOUT register
-#define AGC_RWNXAGCCCATIMEOUT_ADDR   0x01002084
+#define AGC_RWNXAGCCCATIMEOUT_ADDR   (REG_AGC_BASE_ADDR + 0x00002084)
 /// Offset of the RWNXAGCCCATIMEOUT register from the base address
 #define AGC_RWNXAGCCCATIMEOUT_OFFSET 0x00002084
 /// Index of the RWNXAGCCCATIMEOUT register
@@ -7739,7 +7739,7 @@ __INLINE void agc_ccatimeout_setf(uint32_t ccatimeout)
  */
 
 /// Address of the RWNXAGCSNR0 register
-#define AGC_RWNXAGCSNR0_ADDR   0x01002088
+#define AGC_RWNXAGCSNR0_ADDR   (REG_AGC_BASE_ADDR + 0x00002088)
 /// Offset of the RWNXAGCSNR0 register from the base address
 #define AGC_RWNXAGCSNR0_OFFSET 0x00002088
 /// Index of the RWNXAGCSNR0 register
@@ -8038,7 +8038,7 @@ __INLINE void agc_nfvgathrl0_setf(uint8_t nfvgathrl0)
  */
 
 /// Address of the RWNXAGCSNR1 register
-#define AGC_RWNXAGCSNR1_ADDR   0x0100208C
+#define AGC_RWNXAGCSNR1_ADDR   (REG_AGC_BASE_ADDR + 0x0000208C)
 /// Offset of the RWNXAGCSNR1 register from the base address
 #define AGC_RWNXAGCSNR1_OFFSET 0x0000208C
 /// Index of the RWNXAGCSNR1 register
@@ -8259,7 +8259,7 @@ __INLINE void agc_nfvgathrh0_setf(uint8_t nfvgathrh0)
  */
 
 /// Address of the RWNXAGCSNR2 register
-#define AGC_RWNXAGCSNR2_ADDR   0x01002090
+#define AGC_RWNXAGCSNR2_ADDR   (REG_AGC_BASE_ADDR + 0x00002090)
 /// Offset of the RWNXAGCSNR2 register from the base address
 #define AGC_RWNXAGCSNR2_OFFSET 0x00002090
 /// Index of the RWNXAGCSNR2 register
@@ -8482,7 +8482,7 @@ __INLINE void agc_nfvall0db_setf(uint8_t nfvall0db)
  */
 
 /// Address of the RWNXAGCSNR3 register
-#define AGC_RWNXAGCSNR3_ADDR   0x01002094
+#define AGC_RWNXAGCSNR3_ADDR   (REG_AGC_BASE_ADDR + 0x00002094)
 /// Offset of the RWNXAGCSNR3 register from the base address
 #define AGC_RWNXAGCSNR3_OFFSET 0x00002094
 /// Index of the RWNXAGCSNR3 register
@@ -8705,7 +8705,7 @@ __INLINE void agc_nfvalm0db_setf(uint8_t nfvalm0db)
  */
 
 /// Address of the RWNXAGCSNR4 register
-#define AGC_RWNXAGCSNR4_ADDR   0x01002098
+#define AGC_RWNXAGCSNR4_ADDR   (REG_AGC_BASE_ADDR + 0x00002098)
 /// Offset of the RWNXAGCSNR4 register from the base address
 #define AGC_RWNXAGCSNR4_OFFSET 0x00002098
 /// Index of the RWNXAGCSNR4 register
@@ -8928,7 +8928,7 @@ __INLINE void agc_nfvalh0db_setf(uint8_t nfvalh0db)
  */
 
 /// Address of the RWNXAGCCOMP register
-#define AGC_RWNXAGCCOMP_ADDR   0x0100209C
+#define AGC_RWNXAGCCOMP_ADDR   (REG_AGC_BASE_ADDR + 0x0000209C)
 /// Offset of the RWNXAGCCOMP register from the base address
 #define AGC_RWNXAGCCOMP_OFFSET 0x0000209C
 /// Index of the RWNXAGCCOMP register
@@ -9151,7 +9151,7 @@ __INLINE void agc_powsupthrdbm_setf(uint8_t powsupthrdbm)
  */
 
 /// Address of the RWNXAGCRADAR register
-#define AGC_RWNXAGCRADAR_ADDR   0x010020A0
+#define AGC_RWNXAGCRADAR_ADDR   (REG_AGC_BASE_ADDR + 0x000020A0)
 /// Offset of the RWNXAGCRADAR register from the base address
 #define AGC_RWNXAGCRADAR_OFFSET 0x000020A0
 /// Index of the RWNXAGCRADAR register
@@ -9373,7 +9373,7 @@ __INLINE void agc_fomsing_setf(uint8_t fomsing)
  */
 
 /// Address of the RWNXAGCRADARTIM register
-#define AGC_RWNXAGCRADARTIM_ADDR   0x010020A4
+#define AGC_RWNXAGCRADARTIM_ADDR   (REG_AGC_BASE_ADDR + 0x000020A4)
 /// Offset of the RWNXAGCRADARTIM register from the base address
 #define AGC_RWNXAGCRADARTIM_OFFSET 0x000020A4
 /// Index of the RWNXAGCRADARTIM register
@@ -9553,7 +9553,7 @@ __INLINE void agc_pulseirqtimeout_setf(uint8_t pulseirqtimeout)
  */
 
 /// Address of the RWNXAGCDSP3 register
-#define AGC_RWNXAGCDSP3_ADDR   0x010020A8
+#define AGC_RWNXAGCDSP3_ADDR   (REG_AGC_BASE_ADDR + 0x000020A8)
 /// Offset of the RWNXAGCDSP3 register from the base address
 #define AGC_RWNXAGCDSP3_OFFSET 0x000020A8
 /// Index of the RWNXAGCDSP3 register
@@ -9622,7 +9622,7 @@ __INLINE void agc_inbdpowdbvthr_setf(uint8_t inbdpowdbvthr)
 /// @}
 
 /* On SOC platform, write agc value to (0x01C0A000) may not right */
-#define PHY_AGC_UCODE_ADDR               (0x0100A000)
+#define PHY_AGC_UCODE_ADDR               ((REG_AGC_BASE_ADDR + 0x0000A000))
 
 #endif // _REG_AGC_H_
 

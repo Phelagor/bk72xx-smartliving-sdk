@@ -108,7 +108,7 @@ static int get_link_stat(hal_wifi_module_t *m, hal_wifi_link_stat_t *out_stat)
 	
     ret = bk_wlan_get_link_status(&link_status);
 
-	if(link_status.conn_state == MSG_GOT_IP)
+	if(link_status.conn_state == RW_EVT_STA_GOT_IP)
 	{
 		out_stat->is_connected = 1;
 	}

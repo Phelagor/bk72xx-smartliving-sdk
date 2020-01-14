@@ -11,6 +11,7 @@
 #include "ate_app.h"
 #include "cmd_evm.h"
 #include "cmd_rx_sensitivity.h"
+#include "arm_arch.h"
 #include "board.h"
 #include "uart_pub.h"
 #include "ate_app.h"
@@ -46,9 +47,50 @@ static void rx_sens_cmd_test(char *pcWriteBuffer, int xWriteBufferLen, int argc,
     }
 }
 
+static void reg_write_read_test(char *pcWriteBuffer, int xWriteBufferLen, int argc, char **argv)
+{
+	UINT32 reg_addr, reg_value;
+	if(strncmp(argv[1], "-r", 2) == 0) {
+		if(argc != 3) {
+			printf("bkreg -r addr\r\n");
+			return;
+		}
+
+		hexstr2bin(argv[2], &reg_addr, 4);
+		reg_addr = ntohl(reg_addr);
+		aos_cli_printf("bkreg R: addr:0x%08x, value:0x%08x\r\n", reg_addr, REG_READ(reg_addr));
+	}
+	else if(strncmp(argv[1], "-w", 2) == 0) {
+		if(argc != 4) {
+			printf("bkreg -w addr value\r\n");
+			return;
+		}
+
+		hexstr2bin(argv[2], &reg_addr, 4);
+		reg_addr = ntohl(reg_addr);
+
+		hexstr2bin(argv[3], &reg_value, 4);
+		reg_value = ntohl(reg_value);
+
+		REG_WRITE(reg_addr, reg_value);
+
+		extern INT32 rwnx_cal_save_trx_rcbekn_reg_val(void);
+		// when write trx and rc beken regs, updata registers save.
+		if( (reg_addr & 0xfff0000) == 0x1050000)
+			rwnx_cal_save_trx_rcbekn_reg_val();
+
+		aos_cli_printf("bkreg W: addr:0x%08x, value:0x%08x - check:0x%08x\r\n",
+			reg_addr, reg_value, REG_READ(reg_addr));
+	}
+	else {
+		printf("bkreg -w/r addr [value]\r\n");
+	}
+}
+
 static const struct cli_command cli_cmd_rftest[] = {
 	{"txevm",       "txevm [-m] [-c] [-l] [-r] [-w]", tx_evm_cmd_test},
 	{"rxsens",      "rxsens [-m] [-d] [-c] [-l]",     rx_sens_cmd_test},
+	{"bkreg",		"bkreg -w/r addr [value]",		  reg_write_read_test},
 };
 #endif
 
